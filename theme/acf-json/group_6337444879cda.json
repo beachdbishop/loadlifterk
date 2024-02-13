@@ -1,0 +1,141 @@
+{
+    "key": "group_6337444879cda",
+    "title": "Block: Ad",
+    "fields": [
+        {
+            "key": "field_6337444a6ed80",
+            "label": "Background Image",
+            "name": "ll_ad_image",
+            "type": "image",
+            "instructions": "Upload an image to be used in the background of this ad.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": 800,
+            "min_height": 200,
+            "min_size": "",
+            "max_width": 2000,
+            "max_height": 1000,
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_633745236ed81",
+            "label": "Link",
+            "name": "ll_ad_link",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_6337455c6ed82",
+            "label": "Text",
+            "name": "ll_ad_text",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": 255,
+            "placeholder": "Come learn the 5 best ways to protect your business from X",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_633745a26ed83",
+            "label": "Button Text",
+            "name": "ll_ad_button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": 128,
+            "placeholder": "Details",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_633745eb6ed84",
+            "label": "Width",
+            "name": "ll_ad_width",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Full-width?",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_633746616ed85",
+            "label": "Extra Classes",
+            "name": "ll_ad_extra_classes",
+            "type": "text",
+            "instructions": "Add any additional Tailwindcss classes you need on this ad",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "my-8",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "loadlifter\/ad"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1664567004
+}

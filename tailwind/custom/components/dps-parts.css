@@ -1,0 +1,31 @@
+[class*="dps-grid-"] {
+	display: grid;
+	gap: 1rem;
+	max-width: 28rem !important;
+	margin-inline: auto;
+}
+@media (min-width: 768px) {
+	.dps-grid-4max,
+	.dps-grid-3max {
+		max-width: none !important;
+	}
+	.dps-grid-4max {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+	.dps-grid-3max {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+@media (min-width: 1024px) {
+	.dps-grid-4max {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+}
+
+
+.dps-inline > *:not(:last-child)::after {
+	content: ", ";
+}
+.dps-inline > *:last-child::before {
+	content: "and ";
+}

@@ -1,0 +1,85 @@
+/* Details */
+
+summary {
+	list-style: none;
+	cursor: pointer;
+
+	> * {
+		display: inline;
+	}
+}
+
+summary::marker,
+summary::-webkit-details-marker {
+	display: none;
+}
+details[open] summary::marker,
+details[open] summary::-webkit-details-marker {
+	display: none;
+}
+
+.accordions {
+	@apply mb-8 lg:my-12;
+
+	details {
+		@apply mb-[2px];
+	}
+
+	details[open] summary {
+		@apply before:content-['-'];
+	}
+
+	summary {
+		@apply font-head px-4 pb-2 pt-1 text-3xl before:mr-1 before:font-mono before:content-['+'] hover:before:animate-pulse;
+	}
+
+	.details-inner {
+		@apply bg-neutral-50 px-2 pb-4 will-change-transform dark:bg-neutral-800 dark:text-neutral-300 lg:px-4 lg:pb-6 lg:pt-4;
+	}
+}
+
+.accordions.is-style-default {
+	details[open] summary {
+		@apply text-neutral-900;
+	}
+
+	summary {
+		@apply bg-neutral-200 text-neutral-700;
+
+		&::before {
+			color: #a3a3a3;
+		}
+	}
+}
+
+.accordions.is-style-aqua {
+	details[] summary {
+		@apply text-white;
+	}
+
+	summary {
+		@apply bg-aqua-700 text-aqua-50;
+
+		&::before {
+			@apply text-aqua-100;
+		}
+	}
+}
+
+.accordions.is-style-green {
+	details[] summary {
+		@apply text-white;
+	}
+
+	summary {
+		@apply bg-atlantis-700 text-atlantis-50;
+
+		&::before {
+			@apply text-atlantis-100;
+		}
+	}
+}
+
+details[open] summary ~ * {
+	@apply animate-[fade-in-from-top_300ms];
+}

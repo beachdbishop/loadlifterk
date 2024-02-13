@@ -1,0 +1,77 @@
+/* Styles for Forms and HubSpot Form Embeds */
+
+.container-contact-form {
+	@apply mb-4 min-h-[590px] border border-neutral-400 bg-neutral-50 p-4 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-400 print:hidden lg:mb-0 lg:p-8;
+}
+
+/* TODO: Double-check that all these are needed since I have enabled the Tailwind Forms plugin */
+form {
+	@apply print:hidden;
+}
+.gform_fields {
+	@apply grid grid-flow-row auto-rows-max gap-2 md:gap-4;
+}
+
+fieldset {
+	@apply mb-2;
+}
+
+label {
+	@apply font-head;
+}
+
+.gfield_description {
+	@apply text-base;
+}
+
+input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]),
+select,
+textarea {
+	@apply focus:border-atlantis-500/80 w-full border border-neutral-400 bg-white dark:border-neutral-600 dark:bg-neutral-700 dark:text-neutral-200 dark:focus:bg-neutral-950;
+}
+
+select {
+	@apply py-1;
+}
+
+input[type="checkbox"] {
+	@apply text-atlantis-500 checked:border-atlantis-500 focus:ring-atlantis-200/80 pointer-events-none -mt-0.5 mr-1 shrink-0 rounded border-2 border-neutral-200 focus:outline-none focus:ring dark:border-neutral-600 dark:bg-neutral-700 md:mr-2;
+}
+
+input[type="radio"] {
+	@apply text-atlantis-500 checked:border-atlantis-500 focus:ring-atlantis-200/80 pointer-events-none -mt-0.5 mr-1 shrink-0 border-2 border-neutral-200 focus:outline-none focus:ring dark:border-neutral-600 dark:bg-neutral-700 md:mr-2;
+}
+
+input[type="submit"],
+button.ab-button {
+	@apply font-head bg-aqua-800 hover:bg-aqua-500 focus:ring-atlantis-200/80 active:bg-aqua-500 inline-flex items-center justify-center rounded-lg px-5 py-3 font-bold text-white shadow-neutral-800 hover:shadow-xl focus:outline-none focus:ring active:shadow-sm sm:w-auto lg:text-lg;
+}
+
+.gfield_required {
+	@apply text-sm lg:text-base font-bold text-orange-700 before:content-['_'] dark:text-orange-400;
+}
+
+/* .hbspt-form {
+	span.hs-form-required {
+		@apply font-bold text-orange-600 dark:text-orange-400;
+	}
+
+	.hs-error-msg {
+		@apply text-base font-bold italic text-red-600 dark:text-red-400;
+	}
+
+	.invalid {
+		@apply border-2 !border-red-600 dark:!border-red-400;
+	}
+} */
+
+.form-columns-2 {
+	@apply md:grid md:grid-cols-2 md:gap-2 lg:gap-8;
+}
+
+/* date fields might be a problem */
+
+
+.gform_footer {
+	margin-top: 0.5em;
+}

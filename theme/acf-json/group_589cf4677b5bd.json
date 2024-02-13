@@ -1,0 +1,231 @@
+{
+    "key": "group_589cf4677b5bd",
+    "title": "Landing Page Options",
+    "fields": [
+        {
+            "key": "field_5e6a8ed8fddd6",
+            "label": "Service\/Industry",
+            "name": "ll_svc_ind",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "not_service": "Not Service or Industry",
+                "intl_tax": "International Tax",
+                "cyber_pen": "Cyber - Pen. Testing",
+                "cyber_vciso": "Cyber - vCISO",
+                "cyber_soc2": "Cyber - SOC2",
+                "ca-us-tax": "Can-U.S. Tax",
+                "cost_seg": "Cost Segregation",
+                "pppassist": "PPP Loan Forgiveness Assistance",
+                "cannabis": "Cannabis",
+                "constr": "Construction",
+                "finprof": "Financial & Professional Services",
+                "healthcare": "Healthcare",
+                "manufacturing": "Manufacturing",
+                "nonprofit": "Nonprofit",
+                "realestate": "Real Estate",
+                "resthosp": "Restaurant & Hospitality",
+                "technology": "Technology"
+            },
+            "default_value": false,
+            "return_format": "array",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5c4f429dd838e",
+            "label": "State in Focus",
+            "name": "ll_page_state",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Alabama": "Alabama",
+                "Alaska": "Alaska",
+                "Arizona": "Arizona",
+                "Arkansas": "Arkansas",
+                "California": "California",
+                "Colorado": "Colorado",
+                "Connecticut": "Connecticut",
+                "Delaware": "Delaware",
+                "Florida": "Florida",
+                "Georgia": "Georgia",
+                "Hawaii": "Hawaii",
+                "Idaho": "Idaho",
+                "Illinois": "Illinois",
+                "Indiana": "Indiana",
+                "Iowa": "Iowa",
+                "Kansas": "Kansas",
+                "Kentucky": "Kentucky",
+                "Louisiana": "Louisiana",
+                "Maine": "Maine",
+                "Maryland": "Maryland",
+                "Massachusetts": "Massachusetts",
+                "Michigan": "Michigan",
+                "Minnesota": "Minnesota",
+                "Mississippi": "Mississippi",
+                "Missouri": "Missouri",
+                "Montana": "Montana",
+                "Nebraska": "Nebraska",
+                "Nevada": "Nevada",
+                "New Hampshire": "New Hampshire",
+                "New Jersey": "New Jersey",
+                "New Mexico": "New Mexico",
+                "New York": "New York",
+                "North Carolina": "North Carolina",
+                "North Dakota": "North Dakota",
+                "Ohio": "Ohio",
+                "Oklahoma": "Oklahoma",
+                "Oregon": "Oregon",
+                "Pennsylvania": "Pennsylvania",
+                "Rhode Island": "Rhode Island",
+                "South Carolina": "South Carolina",
+                "South Dakota": "South Dakota",
+                "Tennessee": "Tennessee",
+                "Texas": "Texas",
+                "Utah": "Utah",
+                "Vermont": "Vermont",
+                "Virginia": "Virginia",
+                "Washington": "Washington",
+                "West Virginia": "West Virginia",
+                "Wisconsin": "Wisconsin",
+                "Wyoming": "Wyoming"
+            },
+            "default_value": false,
+            "return_format": "label",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_61eaf9290807a",
+            "label": "City in Focus",
+            "name": "ll_page_city",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_650e188c096a9",
+            "label": "Google Map URL",
+            "name": "ll_page_gmap_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "From a cookie-less session, go to maps.google.com, search the city. Then click Share > Embed a map > Copy HTML. Paste only the URL in the src attribute of that snippet.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61eaf9290807a",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https:\/\/www.google.com\/maps\/embed?pb=..."
+        },
+        {
+            "key": "field_644b06a4f8144",
+            "label": "HubSpot Form HTML",
+            "name": "ll_hs_form_html",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 12,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_644b06f6f8145",
+            "label": "Below the Fold Content",
+            "name": "ll_below_fold",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "tpl-landing-page.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "tpl-landing-page-cyber.php"
+            }
+        ]
+    ],
+    "menu_order": 3,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1699396777
+}

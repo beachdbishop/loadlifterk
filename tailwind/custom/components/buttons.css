@@ -1,0 +1,22 @@
+/*   B u t t o n s   */
+
+.wp-block-button__link {
+	@apply font-head focus:ring-aqua-200/80 inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold no-underline shadow-neutral-800 hover:shadow-xl focus:outline-none focus:ring sm:w-auto lg:text-lg;
+}
+
+.wp-block-button__link:not(.has-background) {
+	@apply hover:bg-aqua-700 hover:text-white;
+}
+
+.is-style-outline > .wp-block-button__link:not(.has-text-color) {
+	@apply hover:border-aqua-500 hover:text-aqua-500 border-2 border-solid border-current bg-transparent text-current hover:shadow-none;
+}
+
+/* on dark bg color? */
+.on-darkbg .wp-block-button__link:not(.has-background) {
+	@apply bg-aqua-200 text-brand-gray-dark hover:bg-aqua-500 hover:text-aqua-100;
+}
+
+.on-darkbg .is-style-outline > .wp-block-button__link:not(.has-text-color) {
+	@apply hover:border-aqua-200 hover:text-aqua-200 hover:bg-transparent;
+}

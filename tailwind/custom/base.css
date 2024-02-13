@@ -1,0 +1,183 @@
+/**
+ * Custom styles to immediately follow Tailwind’s `base` layer
+ *
+ * “Add things like base typography styles [or] opinionated global resets.”
+ *
+ * — from https://tailwindcss.com/docs/plugins#adding-base-styles
+ */
+
+/**
+ * This uses the background and foreground colors declared in the
+ * `theme.json` file and is applied both to the frontend and in the block
+ * editor.
+*/
+:root {
+	--nav-height: 124px;
+	overscroll-behavior-x: contain;
+}
+
+html {
+	@apply scroll-pt-[52px] scroll-smooth md:scroll-pt-[76px] lg:scroll-pt-[100px];
+}
+
+body {
+	@apply font-body text-neutral-800 dark:text-neutral-300 print:bg-transparent print:text-neutral-900;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: var(--wp--preset--font-family--serenity);
+	font-weight: 300;
+}
+
+/* @supports (text-wrap: balance) {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		text-wrap: balance;
+	}
+} */
+
+h1 {
+	font-size: 3rem;
+	line-height: 1;
+}
+h2 {
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+}
+h3 {
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+}
+h4 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+h5 {
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+}
+
+h6 {
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.025em;
+}
+
+a:not([class]) {
+	color: currentColor;
+}
+:focus {
+	outline: 2px dashed;
+}
+main:focus {
+	outline: none;
+}
+[href]:hover {
+	text-decoration: none;
+}
+
+dl {
+	margin: 0;
+	padding: 0;
+}
+
+dt {
+	margin-top: 0.5rem;
+	font-weight: 700;
+}
+
+dd {
+	border-bottom-width: 1px;
+	border-color: rgb(245 245 245 / 1);
+	display: list-item;
+	list-style-type: square;
+	margin-left: 2rem;
+	padding-bottom: 0.5rem;
+}
+
+dd::marker {
+	color: theme('colors.atlantis.300');
+}
+
+table caption {
+	caption-side: bottom;
+}
+
+/* Custom Animations */
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.animate-fade-in {
+	animation: fade-in 500ms ease-in-out;
+}
+
+@keyframes fade-in-from-bottom {
+	0% {
+		opacity: 0;
+		transform: translateY(64px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.animate-fade-in-from-bottom {
+	animation: fade-in-from-bottom 700ms ease-in-out;
+}
+
+@keyframes fade-in-from-top {
+	0% {
+		opacity: 0;
+		transform: translateY(-32px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.animate-fade-in-from-top {
+	animation: fade-in-from-top 700ms ease-in-out;
+}
+
+@keyframes sway {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.animate-sway {
+	animation: sway 21s ease infinite;
+}
+
+@keyframes move-bg {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-680px);
+	}
+}
+.animate-move-bg {
+	animation-name: move-bg;
+	animation-duration: 8s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}

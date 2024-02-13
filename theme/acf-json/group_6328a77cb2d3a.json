@@ -1,0 +1,65 @@
+{
+    "key": "group_6328a77cb2d3a",
+    "title": "Block: Callout",
+    "fields": [
+        {
+            "key": "field_632900cd94234",
+            "label": "Title",
+            "name": "ll_callout_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Callout",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63f001bd2587e",
+            "label": "FA Icon",
+            "name": "ll_callout_icon",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "fa-regular fa-notebook",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "loadlifter\/callout"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Fields for Callout block",
+    "show_in_rest": 0,
+    "modified": 1677522484
+}

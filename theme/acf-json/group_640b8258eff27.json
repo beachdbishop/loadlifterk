@@ -1,0 +1,65 @@
+{
+    "key": "group_640b8258eff27",
+    "title": "Block: Accordion",
+    "fields": [
+        {
+            "key": "field_640b8259a0553",
+            "label": "Summary",
+            "name": "ll_accordion_summary",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Summary",
+            "maxlength": 255,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_640b842f4c8b6",
+            "label": "Intial State",
+            "name": "ll_accordion_initial_state",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Show this accordion open on page load ... or closed?",
+            "default_value": 0,
+            "ui_on_text": "Open",
+            "ui_off_text": "Closed",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "loadlifter\/accordion"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1678486065
+}

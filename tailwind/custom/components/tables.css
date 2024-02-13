@@ -1,0 +1,19 @@
+.prose table th {
+	@apply border-b-2 border-solid border-neutral-300;
+}
+.prose table td {
+	@apply border-y border-solid border-neutral-200;
+}
+.prose table:has(> colgroup) {
+	@apply table-fixed;
+}
+.table-oldtab {
+	@apply oldstyle-nums tabular-nums;
+}
+.num {
+	@apply text-right tabular-nums;
+}
+
+/* .wp-block-table table {
+	@apply border border-solid border-neutral-600;
+} */

@@ -1,0 +1,131 @@
+/* Lists */
+
+ol.is-style-default {
+	list-style: decimal;
+	/* list-style-position: inside; */
+}
+ul.is-style-default {
+	list-style: disc;
+	/* list-style-position: inside; */
+}
+
+.list-square {
+	list-style-type: square;
+}
+
+.list-checked li::before {
+	content: "\f058";
+}
+
+.is-style-list-none,
+.prose .is-style-list-none {
+	@apply list-none pl-0;
+	list-style-type: none;
+	padding-left: 0;
+
+	li {
+		padding-left: 0;
+	}
+}
+
+.is-style-list-square,
+.prose .is-style-list-square {
+	list-style-type: square;
+}
+
+.is-style-list-columns-2 {
+	@apply columns-1 lg:columns-2;
+}
+.is-style-list-columns-2 li {
+	@apply break-inside-avoid-column;
+}
+.is-style-list-columns-2 li:first-of-type {
+	@apply mt-0;
+}
+
+/* inspiration: https://codepen.io/joshwcomeau/pen/VwxwYbG */
+[class*="is-style-list-divide-"],
+.prose [class*="is-style-list-divide-"] {
+	@apply list-none p-0;
+
+	li {
+		@apply pl-0;
+
+		&:not(:last-of-type) {
+			@apply border-b-2 border-dotted;
+		}
+	}
+}
+
+.is-style-list-divide-light li:not(:last-of-type) {
+	@apply border-neutral-400;
+}
+.is-style-list-divide-gray li:not(:last-of-type) {
+	@apply border-brand-gray;
+}
+.is-style-list-divide-green li:not(:last-of-type) {
+	@apply border-atlantis-200;
+}
+.is-style-list-divide-aqua li:not(:last-of-type) {
+	@apply border-aqua-200;
+}
+
+.is-style-list-checked {
+	list-style-type: none;
+}
+.is-style-list-checked li {
+	list-style-type: none !important;
+	padding-left: 10px;
+	position: relative;
+}
+.is-style-list-checked li::before {
+	content: "";
+	display: inline-block;
+	height: 20px;
+	left: -20px;
+}
+
+.is-style-circle,
+.is-style-circle-atlantis,
+.is-style-circle-aqua {
+	@apply my-4 flex w-full flex-wrap justify-center gap-2 md:gap-8 lg:my-8 lg:gap-14;
+}
+.is-style-circle > *,
+.is-style-circle-atlantis > *,
+.is-style-circle-aqua > * {
+	@apply font-body flex aspect-square w-[128px] items-center justify-center rounded-full text-center text-lg font-bold leading-snug text-white/80;
+}
+.is-style-circle a,
+.is-style-circle-atlantis a,
+.is-style-circle-aqua a {
+	@apply text-white/80 hover:text-white;
+}
+
+.is-style-circle li {
+	@apply bg-neutral-600;
+}
+.is-style-circle h5 {
+	@apply text-neutral-600;
+}
+.is-style-circle-atlantis li {
+	@apply bg-atlantis-500;
+}
+.is-style-circle-atlantis h5 {
+	@apply text-atlantis-500;
+}
+.is-style-circle-aqua li {
+	@apply bg-aqua-500;
+}
+.is-style-circle-aqua h5 {
+	@apply text-aqua-500;
+}
+
+.is-style-boxed {
+	@apply -mx-2 list-none !pl-0 md:mb-4 md:grid md:grid-cols-2 md:gap-4 lg:mb-8 lg:grid-cols-3 lg:gap-8;
+}
+.is-style-boxed > li {
+	@apply !my-0 rounded-lg border border-solid border-neutral-900/10 p-4 text-base lg:p-8;
+}
+.is-style-boxed li > strong {
+	@apply mb-4;
+}

@@ -1,0 +1,65 @@
+{
+    "key": "group_56bd08795058e",
+    "title": "Site Settings",
+    "fields": [
+        {
+            "key": "field_56fd9a03ca290",
+            "label": "SEO Footer Text",
+            "name": "seo_footer_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "This text is shown in the footer throughout the site. It's also usable via the [seo_about] shortcode.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_6075c6657aefe",
+            "label": "Last Updated",
+            "name": "last_updated",
+            "aria-label": "",
+            "type": "date_time_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "Y-m-d H:i:s",
+            "return_format": "Y-m-d H:i:s",
+            "first_day": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1706198407
+}

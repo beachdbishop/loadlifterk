@@ -1,0 +1,65 @@
+/* Cards that flip */
+.ind-card-flips {
+	--card-size: 288px;
+	--card-front-bg: #f5f5f5;
+	--card-front-icon: #262626;
+	--card-back-bg: #262626;
+	--card-front-text: #e5e5e5;
+	--card-back-text: #f5f5f5;
+	@apply flex flex-wrap place-content-center gap-4 lg:gap-8;
+
+	.card:hover .card-content,
+	.card:active .card-content,
+	.card:focus .card-content {
+		transform: rotateY(180deg);
+	}
+
+	.card-back p,
+	.card-back li {
+		@apply text-sm;
+	}
+}
+
+.ind-card-flips.is-style-default {
+	--card-front-bg: #f5f5f5;
+	--card-front-text: #262626;
+	--card-front-icon: #00668e;
+	--card-back-bg: #404040;
+}
+
+.ind-card-flips.is-style-blue {
+	--card-front-bg: #00668e;
+	--card-front-text: #f5f5f5;
+	--card-front-icon: #092f42;
+	--card-back-bg: #092f42;
+}
+
+.ind-card-flips.is-style-red {
+	--card-front-bg: #ce182d;
+	--card-front-text: #f5f5f5;
+	--card-front-icon: #940418;
+	--card-back-bg: #940418;
+}
+
+@media (prefers-color-scheme: dark) {
+	.ind-card-flips.is-style-default {
+		--card-front-bg: #262626;
+		--card-front-text: #f5f5f5;
+		--card-front-icon: #67e8f9;
+		--card-back-bg: #404040;
+	}
+
+	.ind-card-flips.is-style-blue {
+		--card-front-bg: #092f42;
+		--card-front-text: #d4d4d4;
+		--card-front-icon: #00668e;
+		--card-back-bg: #404040;
+	}
+
+	.ind-card-flips.is-style-red {
+		--card-front-bg: #940418;
+		--card-front-text: #d4d4d4;
+		--card-front-icon: #ce182d;
+		--card-back-bg: #404040;
+	}
+}

@@ -1,0 +1,113 @@
+{
+    "key": "group_574f585dca566",
+    "title": "Post Options",
+    "fields": [
+        {
+            "key": "field_574f586dc354e",
+            "label": "Hide Author Info",
+            "name": "ll_hide_author",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Prevent display of the author box for this specific post.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Hidden",
+            "ui_off_text": "Shown",
+            "ui": 1
+        },
+        {
+            "key": "field_657a2c649aab3",
+            "label": "Hide Social Share component",
+            "name": "ll_hide_socialshare",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Prevent display of the social share component.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Hidden",
+            "ui_off_text": "Shown",
+            "ui": 1
+        },
+        {
+            "key": "field_6005096f3d3f9",
+            "label": "Hide Related Posts",
+            "name": "ll_hide_related",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Prevent display of the related posts below the post content.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Hidden",
+            "ui_off_text": "Shown",
+            "ui": 1
+        },
+        {
+            "key": "field_636189e8493ae",
+            "label": "Content Source",
+            "name": "ll_content_source",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "--": "Unknown",
+                "original": "Original Content",
+                "checkpoint": "TopLine (Checkpoint)",
+                "other": "Other"
+            },
+            "default_value": false,
+            "return_format": "array",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1702505643
+}

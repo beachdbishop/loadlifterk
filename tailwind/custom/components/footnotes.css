@@ -1,0 +1,11 @@
+/* Footnotes
+ * Converted from Easy Footnotes plugin to work w/ WP 6.3 native Footnote block.
+ */
+
+ ol.wp-block-footnotes {
+	@apply max-w-prose text-sm lg:text-base;
+}
+
+sup.fn a {
+	@apply text-atlantis-500 no-underline hover:text-current;
+}

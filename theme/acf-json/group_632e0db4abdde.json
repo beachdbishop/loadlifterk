@@ -1,0 +1,270 @@
+{
+    "key": "group_632e0db4abdde",
+    "title": "Author Meta",
+    "fields": [
+        {
+            "key": "field_632e0db5dc4ea",
+            "label": "Headshot",
+            "name": "ll_user_headshot",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": 380,
+            "min_height": 508,
+            "min_size": "",
+            "max_width": 760,
+            "max_height": 1016,
+            "max_size": 1,
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_6335d43c38ec6",
+            "label": "Designations",
+            "name": "ll_user_designations",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "CPA",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6335d76dfcc85",
+            "label": "Organization",
+            "name": "ll_user_organization",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "BeachFleischman",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6335d3fb38ec5",
+            "label": "Displayed Title",
+            "name": "ll_user_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Tax Senior Manager",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_634b4cabf97b6",
+            "label": "Level",
+            "name": "ll_user_level",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "100": "Principal",
+                "200": "Senior Advisor",
+                "300": "Senior Manager",
+                "400": "Manager",
+                "500": "Supervisor",
+                "600": "Senior",
+                "700": "Associate",
+                "800": "Subsidiary or Partner",
+                "900": "Exclude"
+            },
+            "default_value": 100,
+            "return_format": "array",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_634b4d82f97b7",
+            "label": "Department",
+            "name": "ll_user_department",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6335d76dfcc85",
+                        "operator": "==",
+                        "value": "BeachFleischman"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "aa": "Accounting & Assurance",
+                "ffvs": "Financial Forensics & Valuation Services",
+                "intops": "Internal Operations",
+                "oaas": "Outsourced Accounting & Advisory Services",
+                "soar": "Strategic Operations & Advisory Resources",
+                "tax": "Tax"
+            },
+            "default_value": [],
+            "return_format": "array",
+            "allow_custom": 0,
+            "layout": "vertical",
+            "toggle": 0,
+            "save_custom": 0,
+            "custom_choice_button_text": "Add new choice"
+        },
+        {
+            "key": "field_634b4dd8f97b8",
+            "label": "Location",
+            "name": "ll_user_location",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6335d76dfcc85",
+                        "operator": "==",
+                        "value": "BeachFleischman"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "phoenix": "Phoenix, AZ",
+                "tucson": "Tucson, AZ"
+            },
+            "default_value": "tucson",
+            "return_format": "array",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_634b4e11f97b9",
+            "label": "Industry Expertise",
+            "name": "ll_user_industries",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "industries",
+                "page"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "return_format": "object",
+            "min": "",
+            "max": "",
+            "elements": "",
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_634b4f5af97ba",
+            "label": "Featured Services",
+            "name": "ll_user_services",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page",
+                "industries"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "return_format": "object",
+            "min": "",
+            "max": 0,
+            "elements": "",
+            "bidirectional_target": []
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "user_form",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1706198431
+}

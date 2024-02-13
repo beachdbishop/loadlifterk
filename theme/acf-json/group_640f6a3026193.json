@@ -1,0 +1,246 @@
+{
+    "key": "group_640f6a3026193",
+    "title": "Industry and Service Content Fields",
+    "fields": [
+        {
+            "key": "field_6424a9679d8fd",
+            "label": "Industry Post Category",
+            "name": "ll_ind_category",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "Select the associated post category. The 3 most recent posts in this category will be displayed on this page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "object",
+            "field_type": "select",
+            "allow_null": 0,
+            "multiple": 0,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_6442d3a946bd3",
+            "label": "Show 'standard' CTA",
+            "name": "ll_ind_show_standard_cta",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "True will result in showing the standard heading, body, and button linking to the contact form. False will result in showing whatever is in the custom CTA HTML field.",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6442d43e46bd4",
+            "label": "CTA Heading",
+            "name": "ll_ind_cta_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6442d3a946bd3",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Let's get started",
+            "maxlength": 255,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6442d4af46bd5",
+            "label": "CTA Body",
+            "name": "ll_ind_cta_body",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6442d3a946bd3",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Interested in learning about our bookkeeping and accounting solutions? Complete the form on this page and a team member will reach out to you shortly.",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_6442d51146bd6",
+            "label": "CTA Button Text",
+            "name": "ll_ind_cta_button_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6442d3a946bd3",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Contact Us",
+            "maxlength": 48,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6424b697635c7",
+            "label": "Custom CTA HTML",
+            "name": "ll_ind_cta_html",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<section class=\"full-bleed not-prose bg-brand-blue text-neutral-100 ll-equal-vert-padding\">\r\n    <div class=\"px-2 md:container md:mx-auto md:px-0\">\r\n        <div class=\"flex flex-col items-start gap-4 sm:flex-row sm:items-center lg:gap-8\">\r\n            <div class=\"prose lg:prose-xl \">\r\n                <h3 class=\"mb-2 text-neutral-100\">Partner with our INDUSTRY team!<\/h3>\r\n                <p class=\"text-neutral-100\">BeachFleischman provides accounting, assurance, tax, and comprehensive advisory services for INDUSTRY businesses. We look forward to connecting with you!<\/p>\r\n            <\/div>\r\n            <div class=\"\">\r\n                <a href=\"#contact\" class=\"p-4 rounded-lg bg-brand-blue-dark text-neutral-200 border-2 border-brand-blue-dark hover:bg-transparent hover:text-brand-blue-pale hover:border-brand-blue-pale\">Contact&nbsp;Us<\/a>\r\n            <\/div>\r\n        <\/div>\r\n        <div>&nbsp;<\/div>\r\n    <\/div>\r\n<\/section>",
+            "maxlength": "",
+            "rows": 14,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_6424b7cf635c8",
+            "label": "People",
+            "name": "ll_ind_people",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "people"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "return_format": "id",
+            "min": "",
+            "max": "",
+            "elements": "",
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_6424b870635c9",
+            "label": "People Display Style",
+            "name": "ll_ind_people_display_style",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "Note: For now, if you select slider, be sure to add the [a11yslider \/] shortcode to the WP content area in order to enqueue the proper CSS and JS.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "hide": "Hide",
+                "grid": "Grid",
+                "slider": "Slider"
+            },
+            "default_value": "grid",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_6424b8cc635ca",
+            "label": "Industry Groups HTML",
+            "name": "ll_ind_groups_html",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<h3>Industry Involvement<\/h3>\r\n<p class=\"mt-4 mb-8\">We don't just work with INDUSTRY companies, either. We are active members of several INDUSTRY-related organizations, including:<\/p>\r\n<div class=\"flex flex-col flex-wrap items-center max-w-5xl gap-4 mx-auto -m-4 place-content-center md:place-content-between md:flex-row lg:gap-8\">\r\n    <a href=\"https:\/\/azcannabar.org\/\" rel=\"noopener noreferrer\"><img src=\"https:\/\/beachfleischman.com\/wp-content\/uploads\/2021\/04\/logo-acba.jpg\" alt=\"logo: Arizona Cannabis Bar Association\" width=\"190\" height=\"55\"><\/a>\r\n    <a href=\"https:\/\/accce.org\/\" rel=\"noopener noreferrer\"><img src=\"https:\/\/beachfleischman.com\/wp-content\/uploads\/2021\/03\/accce-logo_j01un2.png\" alt=\"logo: Association of Certified Commercial Cannabis Experts\" height=\"55\"><\/a>\r\n    <a href=\"https:\/\/www.azc3.org\/\" rel=\"noopener noreferrer\"><img src=\"https:\/\/staging3.bfcfs.com\/wp-content\/uploads\/2023\/03\/logo-azc3.png\" alt=\"logo: Arizona Cannabis Chamber of Commerce\" width=\"355\" height=\"55\"><\/a>\r\n<\/div>",
+            "maxlength": "",
+            "rows": 14,
+            "placeholder": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "tpl-service-page.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1706220152
+}

@@ -1,0 +1,88 @@
+.a11y-slider-container {
+	@apply my-4 md:mx-auto;
+}
+.a11y-slider-container:has(.slider-people) {
+	@apply max-w-full;
+}
+
+.a11y-slider-container > button {
+	@apply font-head hover:text-aqua-500 hover:border-aqua-500 focus:ring-aqua-200/80 active:bg-atlantis-700 mb-2 rounded-lg border bg-transparent px-5 py-3 font-semibold text-neutral-600 shadow-neutral-800 hover:shadow-xl focus:outline-none focus:ring active:shadow-sm dark:border-neutral-400 dark:text-neutral-400 sm:w-auto lg:text-lg;
+}
+
+.on-darkbg .a11y-slider-container > button {
+	@apply font-head focus:ring-aqua-200/80 mb-2 rounded-lg border border-neutral-400 bg-transparent px-5 py-3 font-semibold text-neutral-400 shadow-neutral-800 hover:border-white hover:text-white hover:shadow-xl focus:outline-none focus:ring active:shadow-sm sm:w-auto lg:text-lg;
+}
+
+.a11y-slider-next {
+	@apply float-none md:float-right;
+}
+
+[data-autoplaying] {
+	@apply ml-4 whitespace-normal;
+}
+[data-autoplaying]::after {
+	@apply static transform-none bg-none text-xs opacity-100;
+}
+[data-autoplaying][data-autoplaying="true"]::after {
+	content: " (Playing)";
+}
+[data-autoplaying][data-autoplaying="false"]::after {
+	content: " (Paused)";
+}
+
+.a11y-slider-dots {
+	@apply flex list-none items-center justify-center p-0;
+}
+.a11y-slider-dots li {
+	@apply mx-1 my-2 block h-4 w-4 p-0;
+}
+.a11y-slider-dots button {
+	@apply border-brand-gray block h-full w-full rounded-full border border-solid bg-transparent -indent-[9999px] text-[0px] text-current dark:border-neutral-500;
+}
+.a11y-slider-dots li button.active,
+.a11y-slider-dots li button:focus,
+.a11y-slider-dots li button:hover {
+	@apply bg-brand-gray dark:bg-neutral-200;
+}
+
+.on-darkbg .a11y-slider-dots button {
+	@apply border-white bg-transparent;
+}
+.on-darkbg .a11y-slider-dots li button.active,
+.on-darkbg .a11y-slider-dots li button:focus,
+.on-darkbg .a11y-slider-dots li button:hover {
+	@apply bg-white;
+}
+
+.slider {
+	/* @apply my-4; */
+}
+
+.slider-quotes > * {
+	@apply bg-white/80 dark:bg-neutral-900/80;
+}
+.slider-quotes .a11y-slider-active {
+	@apply bg-white dark:bg-neutral-900;
+}
+
+.slide .quote {
+	@apply before:content-['"'] after:content-['"'];
+}
+
+.slider-people {
+	@apply flex gap-2 pb-4 pt-2 lg:pb-8;
+}
+.slider-people > * {
+	@apply w-52 shrink-0 grow-0 basis-auto md:w-64;
+}
+
+@media screen and (max-width: 743px) {
+	.a11y-slider-autoplay,
+	.a11y-slider-next,
+	.a11y-slider-prev {
+		display: block;
+		float: none;
+		width: 100%;
+		margin: 0 0 10px;
+	}
+}

@@ -1,0 +1,402 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"settings": {
+		"color": {
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"palette": [
+				{
+					"slug": "white",
+					"color": "#ffffff",
+					"name": "White"
+				},
+				{
+					"slug": "black",
+					"color": "#000000",
+					"name": "Black"
+				},
+				{
+					"slug": "brand-gray-pale",
+					"color": "#f5f5f5",
+					"name": "Brand Gray Pale"
+				},
+				{
+					"slug": "brand-gray",
+					"color": "#58595b",
+					"name": "Brand Gray"
+				},
+				{
+					"slug": "brand-gray-dark",
+					"color": "#414042",
+					"name": "Brand Gray Dark"
+				},
+				{
+					"slug": "atlantis-50",
+					"color": "#f7faea",
+					"name": "Atlantis 50"
+				},
+				{
+					"slug": "atlantis-100",
+					"color": "#eff6d5",
+					"name": "Atlantis 100"
+				},
+				{
+					"slug": "atlantis-200",
+					"color": "#e1edb0",
+					"name": "Atlantis 200"
+				},
+				{
+					"slug": "atlantis-300",
+					"color": "#d1e486",
+					"name": "Atlantis 300"
+				},
+				{
+					"slug": "atlantis-400",
+					"color": "#c2db5c",
+					"name": "Atlantis 400"
+				},
+				{
+					"slug": "atlantis-500",
+					"color": "#b2d235",
+					"name": "Atlantis 500"
+				},
+				{
+					"slug": "atlantis-600",
+					"color": "#90ab26",
+					"name": "Atlantis 600"
+				},
+				{
+					"slug": "atlantis-700",
+					"color": "#6d811d",
+					"name": "Atlantis 700"
+				},
+				{
+					"slug": "atlantis-800",
+					"color": "#4a5813",
+					"name": "Atlantis 800"
+				},
+				{
+					"slug": "atlantis-900",
+					"color": "#232a09",
+					"name": "Atlantis 900"
+				},
+				{
+					"slug": "atlantis-950",
+					"color": "#121505",
+					"name": "Atlantis 950"
+				},
+				{
+					"slug": "aqua-50",
+					"color": "#ebf9fa",
+					"name": "Aqua 50"
+				},
+				{
+					"slug": "aqua-100",
+					"color": "#dbf3f5",
+					"name": "Aqua 100"
+				},
+				{
+					"slug": "aqua-200",
+					"color": "#b3e6ea",
+					"name": "aqua 200"
+				},
+				{
+					"slug": "aqua-300",
+					"color": "#8fdbe0",
+					"name": "aqua 300"
+				},
+				{
+					"slug": "aqua-400",
+					"color": "#6bcfd6",
+					"name": "aqua 400"
+				},
+				{
+					"slug": "aqua-500",
+					"color": "#45c2cc",
+					"name": "aqua 500"
+				},
+				{
+					"slug": "aqua-600",
+					"color": "#2fa4ac",
+					"name": "aqua 600"
+				},
+				{
+					"slug": "aqua-700",
+					"color": "#237a80",
+					"name": "aqua 700"
+				},
+				{
+					"slug": "aqua-800",
+					"color": "#175054",
+					"name": "aqua 800"
+				},
+				{
+					"slug": "aqua-900",
+					"color": "#0c2a2c",
+					"name": "aqua 900"
+				},
+				{
+					"slug": "aqua-950",
+					"color": "#051314",
+					"name": "aqua 950"
+				}
+			]
+		},
+		"typography": {
+			"dropCap": false,
+			"fluid": true,
+			"textDecoration": false,
+			"fontFamilies": [
+				{
+					"fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif",
+					"name": "System Font",
+					"slug": "system-font"
+				},
+				{
+					"fontFamily": "\"Serenity\", sans-serif",
+					"name": "Serenity",
+					"slug": "serenity",
+					"fontFace": [
+						{
+							"fontFamily": "Serenity",
+							"fontWeight": "300",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./fonts/serenity-light-webfont.woff2" ]
+						},
+						{
+							"fontFamily": "Serenity",
+							"fontWeight": "300",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./fonts/serenity-lightitalic-webfont.woff2" ]
+						},
+						{
+							"fontFamily": "Serenity",
+							"fontWeight": "700",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./fonts/serenity-bold-webfont.woff2" ]
+						},
+						{
+							"fontFamily": "Serenity",
+							"fontWeight": "700",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./fonts/serenity-bolditalic-webfont.woff2" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "serif",
+					"name": "System Serif",
+					"slug": "system-serif"
+				}
+			],
+			"fontSizes": [
+				{
+					"name": "Extra Small",
+					"size": "0.75rem",
+					"fluid": {
+						"min": "0.75rem",
+						"max": "0.875rem"
+					},
+					"slug": "xs"
+				},
+				{
+					"name": "Small",
+					"size": "0.875rem",
+					"fluid": {
+						"min": "0.875rem",
+						"max": "1rem"
+					},
+					"slug": "sm"
+				},
+				{
+					"name": "Base",
+					"size": "1rem",
+					"fluid": {
+						"min": "1rem",
+						"max": "1.125rem"
+					},
+					"slug": "base"
+				},
+				{
+					"name": "Large",
+					"size": "1.125rem",
+					"fluid": {
+						"min": "1.125rem",
+						"max": "1.25rem"
+					},
+					"slug": "lg"
+				},
+				{
+					"name": "Extra Large",
+					"size": "1.25rem",
+					"fluid": {
+						"min": "1.25rem",
+						"max": "1.5rem"
+					},
+					"slug": "xl"
+				},
+				{
+					"name": "2 XL",
+					"size": "1.5rem",
+					"fluid": {
+						"min": "1.5rem",
+						"max": "1.875rem"
+					},
+					"slug": "2xl"
+				},
+				{
+					"name": "3 XL",
+					"size": "1.875rem",
+					"fluid": {
+						"min": "1.875rem",
+						"max": "2.25rem"
+					},
+					"slug": "3xl"
+				},
+				{
+					"name": "4 XL",
+					"size": "2.25rem",
+					"fluid": {
+						"min": "2.25rem",
+						"max": "2.875rem"
+					},
+					"slug": "4xl"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "60rem",
+			"wideSize": "80rem"
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/button": {
+				"border": {
+					"radius": "8px"
+				},
+				"color": {
+					"background": "var(--wp--preset--color--aqua-700)",
+					"text": "var(--wp--preset--color--aqua-50)"
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--base)",
+					"textDecoration": "none"
+				}
+			},
+			"core/post-title": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--serenity)",
+					"fontWeight": "300",
+					"fontSize": "var(--wp--preset--font-size--3xl)"
+				}
+			},
+			"core/pullquote": {
+				"border": {
+					"width": "1px 0"
+				}
+			},
+			"core/query-title": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--serenity)",
+					"fontWeight": "300",
+					"fontSize": "var(--wp--preset--font-size--2xl)"
+				}
+			},
+			"core/quote": {
+				"border": {
+					"width": "1px"
+				}
+			},
+			"core/site-title": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--serenity)",
+					"fontSize": "var(--wp--preset--font-size--4xl)",
+					"fontWeight": "normal"
+				}
+			}
+		},
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--serenity)",
+					"fontWeight": "300",
+					"fontSize": "var(--wp--preset--font-size--4xl)"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--serenity)",
+					"fontWeight": "300",
+					"fontSize": "var(--wp--preset--font-size--3xl)"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--serenity)",
+					"fontWeight": "300",
+					"fontSize": "var(--wp--preset--font-size--2xl)"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--serenity)",
+					"fontWeight": "300",
+					"fontSize": "var(--wp--preset--font-size--xl)"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--serenity)",
+					"fontWeight": "300",
+					"fontSize": "var(--wp--preset--font-size--lg)"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--serenity)",
+					"fontWeight": "300",
+					"textTransform": "uppercase",
+					"fontSize": "var(--wp--preset--font-size--base)"
+				}
+			},
+			"link": {
+				"typography": {
+					"textDecoration": "underline"
+				},
+				"border": {
+					"bottom": {
+						"width": "1px",
+						"color": "currentColor",
+						"style": "solid"
+					}
+				},
+				":hover": {
+					"typography": {
+						"textDecoration": "underline"
+					},
+					"border": {
+						"bottom": {
+							"width": "2px",
+							"color": "#333",
+							"style": "dotted"
+						}
+					}
+				}
+			}
+		},
+		"spacing": {
+			"blockGap": "1.5rem"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--open-sans)",
+			"fontSize": "var(--wp--preset--font-size--base)"
+		}
+	}
+}

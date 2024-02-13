@@ -1,0 +1,217 @@
+{
+    "key": "group_6336305994613",
+    "title": "Post and Page Options",
+    "fields": [
+        {
+            "key": "field_6336305aa87d8",
+            "label": "Normal Contact Form Location",
+            "name": "ll_normal_contact_form_location",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Automatically display the contact form in the default location",
+            "default_value": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_65aa9282f23aa",
+            "label": "HubSpot Form HTML",
+            "name": "ls_hs_form_html",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6336305aa87d8",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 12,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_650b40583c3f5",
+            "label": "Page Hero Video",
+            "name": "ll_page_hero_video",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Provide a CDN URL where the video is hosted. Video will loop automatically. Be sure to set matching Featured Image based on early video frame.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_63618b5520b38",
+            "label": "Hide Featured Image",
+            "name": "ll_hide_featured_image",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Prevent display of the featured image.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Hidden",
+            "ui_off_text": "Shown",
+            "ui": 1
+        },
+        {
+            "key": "field_657b78086b1ca",
+            "label": "Hero CTA1 Text",
+            "name": "ll_hero_cta1_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_657b78526b1cc",
+            "label": "Hero CTA1 URL",
+            "name": "ll_hero_cta1_url",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Provide the desired URL or anchor name to link to.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_657b78416b1cb",
+            "label": "Hero CTA2 Text",
+            "name": "ll_hero_cta2_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_657b78786b1cd",
+            "label": "Hero CTA2 URL",
+            "name": "ll_hero_cta2_url",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Provide the desired URL or anchor name to link to.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_636a8f8c20eee",
+            "label": "Post-specific CSS",
+            "name": "ll_postpage_css",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Note: this gets appended to the main stylesheet of the document with <code>wp_add_inline_style<\/code>. Pay attention to what you're adding!",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": ".table230823 { border: 1px solid hotpink; }",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1705677492
+}

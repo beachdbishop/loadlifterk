@@ -1,0 +1,113 @@
+{
+    "key": "group_63618a693848a",
+    "title": "Page Options",
+    "fields": [
+        {
+            "key": "field_63618a69e27e0",
+            "label": "Page Icon",
+            "name": "ll_page_icon",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Provide unique Font Awesome icon class... i.e. &lt;i class=\"fa-duotone fa-house-building\"&gt;&lt;\/i&gt; would warrant \"fa-house-building\". The template will take care of the rest.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6361893108ba0",
+            "label": "Page Title Override",
+            "name": "ll_page_title_override",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63618e32d05d6",
+            "label": "Brand Message",
+            "name": "ll_brand_message",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "nope": "",
+                "gen1": "Nearshore Accounting & Bookkeeping",
+                "gen2": "Easy for you. Right for your business.",
+                "gen3": "Some other phrase"
+            },
+            "default_value": false,
+            "return_format": "array",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5a7b6a05d1061",
+            "label": "Footer Text",
+            "name": "ll_seo_footer",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Add SEO footer text (up to the copyright+year sentence... that gets included automatically.)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 6,
+            "placeholder": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1706201602
+}
