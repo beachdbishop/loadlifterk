@@ -19,44 +19,219 @@
  */
 .page-title,
 .entry-title {
-	@apply mb-6 break-words text-4xl text-neutral-900 md:mb-8 lg:text-5xl;
+	margin-bottom: 1.5rem;
+	overflow-wrap: break-word;
+	font-size: 2.25rem/* 36px */;
+  line-height: 2.5rem;
+	color: theme(colors.neutral.900);
 }
 
-/**
- * Layout styles for centered content areas
- *
- * If you are controlling the width of your content area with styles applied
- * to its container, you can delete the following styles whose selectors begin
- * with `.page-content >` and `.entry-content >`. For more details, please see
- * the following:
- *
- * https://make.wordpress.org/core/2021/06/29/on-layout-and-content-width-in-wordpress-5-8/
- */
-.page-content > *,
-.entry-content > * {
-	/* Content width from the `theme.json` file */
-	/* @apply max-w-content mx-auto; */
-}
+
 
 .entry-content > .alignwide {
-	/* Wide width from the `theme.json` file */
-	@apply max-w-wide;
+	max-width: 80rem;
 }
-
 .entry-content > .alignfull {
-	@apply max-w-none;
+	max-width: none;
 }
 
-.entry-content > .alignleft {
-	@apply float-left mr-8;
+.entry-content .aligncenter {
+	margin-inline: auto;
+}
+.entry-content .alignleft {
+	float: left;
+	margin-bottom: 1rem;
+	margin-right: 1rem;
+}
+.entry-content .alignright {
+	float: right;
+	margin-bottom: 1rem;
+	margin-left: 1rem;
 }
 
-.entry-content > .alignright {
-	@apply float-right ml-8;
+
+.bg-brandmarkmono {
+	--mark-mono-size: 320px;
+	background-image: url("/wp-content/themes/loadlifter/theme/img/brandmarkmono.svg");
+	background-position: -140px 32px;
+	background-size: var(--mark-mono-size);
+	background-repeat: no-repeat;
+	min-height: calc(var(--mark-mono-size) + 2em);
+}
+
+.single-post .empty-feat-img {
+	display: none;
+}
+
+.head-last-bold strong:last-child {
+	font-weight: bold;
+}
+
+aside .timestamp {
+	margin-block: 1rem;
+	display: block;
+	width: 100%;
+	border-bottom-width: 1px;
+	border-top-width: 1px;
+	border-color: theme(colors.neutral.200);
+	padding-block: 1rem;
+}
+.date-updated::before {
+	content: "(Updated: ";
+}
+.date-updated::after {
+	content: ")";
+}
+
+.list--tags {
+	line-height: 1.625;
+}
+.list--tags a {
+	white-space: nowrap;
+	background-color: theme(colors.neutral.100);
+	border-radius: 8px 0 8px;
+	padding-inline: 0.5rem;
+	padding-block: 0.25rem;
+	font-size: 14px;
+	color: theme(colors.neutral.600);
+}
+.list--tags a:hover {
+	background-color: theme(colors.aqua.400);
+	color: theme(colors.aqua.900);
+}
+
+.catlist a { font-weight: 700; }
+
+.logogrid {
+	margin-inline: auto;
+	margin-block: 4rem;
+	display: grid;
+	max-width: max-content;
+	grid-template-columns: repeat(1, minmax(0, 1fr));
+	place-content: center;
+	column-gap: 8rem;
+	row-gap: 2rem;
+}
+.logogrid > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.logogrid > div img {
+	max-height: 55px;
+}
+
+.has-upperright-corner-gradient-amber-300 {
+	background-image: linear-gradient(225deg, theme(colors.amber.300) 0%, theme(colors.amber.300) 36px, transparent 36px);
+}
+
+.post-card.type-people .image__featured--inner {
+	background-position: center -5rem;
+}
+
+.card-headshot {
+	--s: 200px; /* size of the image */
+	--b: 4px; /* border thickness */
+	--g: 8px; /* gap */
+	--c: #00668e; /* color */
+
+	width: var(--s);
+	aspect-ratio: 1;
+	transition: filter 0.3s ease-in-out;
+}
+.headshot-wrapper img {	z-index: 2; }
+
+
+/* CTA */
+.page-cta {
+	background-color: theme(colors.atlantis.400);
+	color: theme(colors.neutral.900);
+
+	> div:first-child {
+		display: flex;
+		gap: 1rem;
+
+		> div:first-child {
+			flex-grow: 1;
+		}
+
+		> div:last-child {
+			flex-shrink: 0;
+		}
+	}
+
+	h2 {
+		line-height: 1;
+	}
+	p {
+		max-width: 70ch;
+	}
+
+	.print-fallback {
+		display: none;
+	}
+}
+
+
+.page-services .service-item {
+	border-style: solid;
+	border-color: theme(colors.aqua.300);
+}
+.page-services .service-item:not(:last-of-type) {
+	border-bottom-width: 2px;
+}
+
+
+/* Openings */
+.container-openings-list {
+	margin-top: 2rem;
+	border-width: 2px;
+	border-style: solid;
+	border-color: theme(colors.neutral.500);
+	border-radius: 0.5rem;
+	background-color: white;
+	padding: 2rem;
+}
+
+#openings {
+	--accent: var(--wp--preset--color--atlantis-500);
+	background-image: linear-gradient(225deg, var(--accent) 0%, var(--accent) 30px, transparent 30px);
+	border-color: var(--accent);
+	border-width: 0.25rem;
+	border-style: solid;
+	/* border-radius: 0.5rem; */
+	padding: 1rem;
+
+	h3 {
+		color: var(--wp--preset--color--atlantis-800);
+	}
+}
+
+
+@media (prefers-color-scheme: dark) {
+	.page-services .service-item {
+		border-color: theme(colors.aqua.700);
+	}
+
+	#openings {
+		--accent: var(--wp--preset--color--atlantis-800);
+
+		h3 {
+			color: var(--wp--preset--color--atlantis-200);
+		}
+	}
+
+	.container-openings-list {
+		background-color: theme(colors.neutral.900);
+	}
 }
 
 
 @media (min-width: 768px) {
+	.peepgrid {
+		grid-template-rows: 500px auto;
+	}
+
 	.ll-page-grid {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 		grid-template-areas:
@@ -72,120 +247,6 @@
 	.ll-page-grid-area-c {
 		grid-area: ccc; /* FORM */
 	}
-}
-
-/* .page-hero .brand-message::before {
-	background-image: linear-gradient(to-left, theme('colors.atlantis.500') 0, transparent 100%);
-	content: '';
-	display: inline-block;
-	width: 4rem;
-	height: calc(2rem + 1lh);
-	position: relative;
-	top: 0;
-	left: -5rem;
-
-
-} */
-
-.page-hero .brand-message {
-	background-image: linear-gradient(to right, theme(colors.atlantis.500) 0%, theme(colors.atlantis.500) 10%, transparent 0)
-}
-@media (min-width: 1280px) {
-	.page-hero .brand-message {
-		background-image: linear-gradient(to right, theme(colors.atlantis.500) 0%, theme(colors.atlantis.500) 30%, transparent 0)
-	}
-}
-
-
-/* TODO: Turn this into a component? */
-.logogrid {
-	@apply mx-auto my-16 grid max-w-max grid-cols-1 place-content-center gap-x-32 gap-y-8 sm:grid-cols-3 md:gap-x-16 lg:gap-x-32;
-}
-.logogrid > div {
-	@apply flex items-center justify-center;
-}
-.logogrid > div img {
-	@apply max-h-[55px];
-}
-
-
-.has-upperright-corner-gradient-amber-300 {
-	background-image: linear-gradient(
-		225deg,
-		#fcd34d 0%,
-		#fcd34d 36px,
-		transparent 36px
-	);
-}
-
-.social-links a {
-	@apply hover:text-aqua-500 text-inherit;
-}
-footer .social-links a {
-	@apply text-inherit hover:text-atlantis-500;
-}
-/* .on-darkbg .social-links a {
-	@apply hover:text-aqua-200 bg-transparent text-neutral-300 hover:bg-neutral-700;
-} */
-
-/* Quotes */
-.wp-block-quote p {
-	@apply my-4 text-xl lg:text-2xl;
-}
-.wp-block-quote cite {
-	@apply font-head text-base not-italic before:content-['—'] lg:text-lg;
-}
-
-.wp-block-quote.is-style-default {
-	@apply text-aqua-800 border-aqua-500 quote dark:text-aqua-200 relative rounded-lg border-b-4 border-l-0 border-r-0 border-t-4 p-4 lg:px-8;
-}
-
-
-.breadcrumbs {
-	@apply truncate text-base;
-	/* font-size: 1rem; */
-}
-/* via: https://mtekk.us/archives/guides/trimming-breadcrumb-title-lengths-with-css/ */
-.breadcrumbs > span:last-child span {
-	@apply font-semibold;
-}
-
-
-
-@media (min-width: 768px) {
-	.peepgrid {
-		grid-template-rows: 500px auto;
-	}
-}
-
-.headshot-wrapper img {
-	@apply z-[2];
-}
-
-/* Pagination */
-ul.page-numbers {
-	@apply max-w-content font-head text-aqua-800 mx-auto my-4 flex list-none flex-wrap justify-center gap-4 md:my-8 lg:my-16;
-}
-a.page-numbers {
-	@apply text-aqua-800 hover:text-aqua-700;
-}
-span.current {
-	@apply opacity-50;
-}
-
-.page-services .service-item {
-	border-style: solid;
-	border-color: theme(colors.aqua.300);
-}
-.page-services .service-item:not(:last-of-type) {
-	border-bottom-width: 2px;
-}
-@media (prefers-color-scheme: dark) {
-	.page-services .service-item {
-		border-color: theme(colors.aqua.700);
-	}
-}
-@media (min-width: 768px) {
 
 	.page-services .service-item:nth-child(1) {
 		border-right-width: 1px;
@@ -204,205 +265,5 @@ span.current {
 		border-top-width: 1px;
 		border-bottom-width: 0;
 		border-left-width: 1px;
-	}
-}
-
-/* Paragraphs / Callouts / Notes */
-p[class*="is-style-note-"] {
-	@apply mb-4 w-full rounded-lg border border-solid px-8 py-4 leading-snug md:max-w-xl lg:max-w-2xl xl:max-w-4xl;
-}
-.is-style-note-info {
-	@apply border-cyan-100 bg-cyan-50 text-cyan-800 dark:border-cyan-400 dark:bg-cyan-800 dark:text-cyan-100;
-
-	strong {
-		@apply text-cyan-700 dark:text-white;
-	}
-}
-.is-style-note-success {
-	@apply border-emerald-100 bg-emerald-50 text-emerald-800 dark:border-emerald-400 dark:bg-emerald-800 dark:text-emerald-100;
-
-	strong {
-		@apply text-emerald-700 dark:text-white;
-	}
-}
-.is-style-note-warning {
-	@apply border-amber-100 bg-amber-50 text-amber-800 dark:border-amber-400 dark:bg-amber-800 dark:text-amber-100;
-
-	strong {
-		@apply text-amber-700 dark:text-white;
-	}
-}
-.is-style-note-error {
-	@apply border-red-100 bg-red-50 text-red-800 dark:border-red-400 dark:bg-red-800 dark:text-red-100;
-
-	strong {
-		@apply text-red-700 dark:text-white;
-	}
-}
-
-/* Openings */
-.container-openings-list {
-	@apply mt-8 rounded-lg border-2 border-solid border-neutral-500 bg-white p-8 dark:bg-neutral-900;
-}
-
-/* Scrollbar */
-/* via: https://css-tricks.com/the-current-state-of-styling-scrollbars-in-css/ */
-.styled-scrollbars {
-	--scrollbar-foreground: #262626;
-	--scrollbar-background: #d4d4d4;
-	/* Foreground, Background */
-	scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
-}
-.styled-scrollbars::-webkit-scrollbar {
-	width: 16px; /* Mostly for vertical scrollbars */
-	height: 16px; /* Mostly for horizontal scrollbars */
-}
-.styled-scrollbars::-webkit-scrollbar-thumb {
-	/* Foreground */
-	background-color: var(--scrollbar-foreground);
-	border-radius: 8px 0 8px;
-}
-.styled-scrollbars::-webkit-scrollbar-track {
-	/* Background */
-	background-color: var(--scrollbar-background);
-}
-
-/* Block: Ad */
-.llad:not([class*="is-style-"]) {
-	/* Default = Clear */
-	@apply bg-transparent;
-	background-color: transparent;
-}
-.llad.is-style-green {
-	background-color: var(--wp--preset--color--atlantis-500);
-}
-.llad.is-style-aqua {
-	background-color: var(--wp--preset--color--aqua-500);
-}
-.llad.is-style-brand-gray {
-	background-color: var(--wp--preset--color--brand-gray);
-}
-
-/* Block: Callout */
-.llcallout {
-	--title-bg: #e5e5e5; /* neutral-200 */
-	--title-color: #171717; /* neutral-900 */
-	border-color: var(--title-bg);
-}
-.llcallout .acf-innerblocks-container {
-	padding: 0.5rem;
-}
-.llcallout-title {
-	background-color: var(--title-bg);
-	color: var(--title-color);
-}
-.llcallout.is-style-note {
-	--title-bg: #bfdbfe; /* blue-200 */
-	--title-color: #1e3a8a; /* blue-900 */
-}
-.llcallout.is-style-info {
-	--title-bg: #a5f3fc; /* cyan-200 */
-	--title-color: #164e63; /* cyan-900 */
-}
-.llcallout.is-style-tip {
-	--title-bg: #99f6e4; /* teal-200 */
-	--title-color: #134e4a; /* teal-900 */
-}
-.llcallout.is-style-success {
-	--title-bg: #bbf7d0; /* green-200 */
-	--title-color: #14532d; /* green-900 */
-}
-.llcallout.is-style-warning {
-	--title-bg: #fed7aa; /* orange-200 */
-	--title-color: #7c2d12; /* orange-900 */
-}
-.llcallout.is-style-danger {
-	--title-bg: #fecaca; /* red-200 */
-	--title-color: #7f1d1d; /* red-900 */
-}
-.llcallout.is-style-example {
-	--title-bg: #e9d5ff; /* purple-200 */
-	--title-color: #581c87; /* purple-900 */
-}
-.llcallout.is-style-quote {
-	--title-bg: #e5e5e5; /* neutral-200 */
-	--title-color: #171717; /* neutral-900 */
-}
-
-@media (prefers-color-scheme: dark) {
-	.llcallout {
-		--title-bg: #404040; /* neutral-700 */
-		--title-color: #fafafa; /* neutral-50 */
-	}
-	.llcallout.is-style-note {
-		--title-bg: #1d4ed8; /* blue-700 */
-		--title-color: #eff6ff; /* blue-50 */
-	}
-	.llcallout.is-style-info {
-		--title-bg: #0e7490; /* cyan-700 */
-		--title-color: #ecfeff; /* cyan-50 */
-	}
-	.llcallout.is-style-tip {
-		--title-bg: #0f766e; /* teal-700 */
-		--title-color: #f0fdfa; /* teal-50 */
-	}
-	.llcallout.is-style-success {
-		--title-bg: #15803d; /* green-700 */
-		--title-color: #f0fdf4; /* green-50 */
-	}
-	.llcallout.is-style-warning {
-		--title-bg: #c2410c; /* orange-700 */
-		--title-color: #fff7ed; /* orange-50 */
-	}
-	.llcallout.is-style-danger {
-		--title-bg: #b91c1c; /* red-700 */
-		--title-color: #fef2f2; /* red-50 */
-	}
-	.llcallout.is-style-example {
-		--title-bg: #7e22ce; /* purple-700 */
-		--title-color: #faf5ff; /* purple-50 */
-	}
-	.llcallout.is-style-quote {
-		--title-bg: #404040; /* neutral-700 */
-		--title-color: #fafafa; /* neutral-50 */
-	}
-}
-
-.card-headshot {
-	--s: 200px; /* size of the image */
-	--b: 4px; /* border thickness */
-	--g: 8px; /* gap */
-	--c: #00668e; /* color */
-
-	width: var(--s);
-	aspect-ratio: 1;
-	transition: filter 0.3s ease-in-out;
-}
-
-.post-card.type-people .image__featured--inner {
-	background-position: center -5rem;
-}
-
-.cards-ic {
-	list-style-type: none;
-	margin-top: 1rem;
-}
-.card-ic:focus-within a:focus {
-	text-decoration-line: none;
-}
-.card-ic .card-meta a {
-	position: relative;
-	padding: 0.5rem 0;
-}
-.card-ic .card-text {
-	max-width: 60ch;
-	padding-inline: 0.5rem;
-}
-.card-ic + .card-ic {
-	margin-top: 1.5rem;
-}
-@supports (display: grid) {
-	.card-ic + .card-ic {
-		margin-top: 0;
 	}
 }

@@ -9,7 +9,7 @@
  * @package Load_Lifter_K
  */
 
-get_template_part( 'template-parts/layout/footer', 'content' );
+get_template_part( 'template-parts/layout/footer', 'simple' );
 ?>
 
 </div>

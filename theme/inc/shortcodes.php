@@ -73,29 +73,29 @@ function ll_count_clients_shortcode() {
 	$acfout = get_field( 'count_clients', 'option' );
 	return number_format( $acfout );
 }
-add_shortcode( 'count_clients', 'll_count_clients_shortcode' );
+// add_shortcode( 'count_clients', 'll_count_clients_shortcode' );
 
 // Shareholder count shortcode
 function ll_count_principals_shortcode() {
 	$acfout = get_field( 'count_shareholders', 'option' );
 	return number_format( $acfout );
 }
-add_shortcode( 'count_shareholders', 'll_count_principals_shortcode' );
-add_shortcode( 'count_principals', 'll_count_principals_shortcode' );
+// add_shortcode( 'count_shareholders', 'll_count_principals_shortcode' );
+// add_shortcode( 'count_principals', 'll_count_principals_shortcode' );
 
 // CPA count shortcode
 function ll_count_cpas_shortcode() {
 	$acfout = get_field( 'count_cpas', 'option' );
 	return number_format( $acfout );
 }
-add_shortcode( 'count_cpas', 'll_count_cpas_shortcode' );
+// add_shortcode( 'count_cpas', 'll_count_cpas_shortcode' );
 
 // Employee count shortcode
 function ll_count_employees_shortcode() {
 	$acfout = get_field( 'count_employees', 'option' );
 	return number_format( $acfout );
 }
-add_shortcode( 'count_employees', 'll_count_employees_shortcode' );
+// add_shortcode( 'count_employees', 'll_count_employees_shortcode' );
 
 
 /* * * * O T H E R * * * */
@@ -116,3 +116,16 @@ function ll_svgpart_shortcode( $atts ) {
 	}
 }
 add_shortcode( 'svg', 'll_svgpart_shortcode' );
+
+
+function ll_litevimeoembed_shortcode( $atts ) {
+	extract( shortcode_atts( [
+		'id' => '',
+		'style' => '',
+	], $atts ) );
+
+	$html_out = sprintf( '<script type="module" src="https://cdn.jsdelivr.net/npm/lite-vimeo-embed/+esm"></script><lite-vimeo videoid="%1$s" style="%2$s"></lite-vimeo>', $id, $style );
+
+	return $html_out;
+}
+add_shortcode( 'litevimeo', 'll_litevimeoembed_shortcode' );

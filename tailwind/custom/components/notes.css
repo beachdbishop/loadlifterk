@@ -1,0 +1,100 @@
+/* Paragraphs / Notes */
+p[class*="is-style-note-"] {
+	/* margin-bottom: 1rem; */
+	width: 100%;
+	border-radius: 0.5rem;
+	border-width: 1px;
+	border-style: solid;
+	padding-inline: 2rem;
+	padding-block: 1rem;
+	line-height: 1.375;
+	border-color: var(--_border);
+	background-color: var(--_bg);
+	color: var(--_text);
+}
+.is-style-note-info {
+	--_border: theme(colors.cyan.100);
+	--_bg: theme(colors.cyan.50);
+	--_text: theme(colors.cyan.800);
+}
+.is-style-note-info strong {
+	color: theme(colors.cyan.700);
+}
+
+.is-style-note-success {
+	--_border: theme(colors.emerald.100);
+	--_bg: theme(colors.emerald.50);
+	--_text: theme(colors.emerald.800);
+}
+.is-style-note-success strong {
+	color: theme(colors.emerald.700);
+}
+
+.is-style-note-warning {
+	--_border: theme(colors.amber.100);
+	--_bg: theme(colors.amber.50);
+	--_text: theme(colors.amber.800);
+}
+.is-style-note-warning strong {
+	color: theme(colors.amber.700);
+}
+.is-style-note-error {
+	--_border: theme(colors.red.100);
+	--_bg: theme(colors.red.50);
+	--_text: theme(colors.red.800);
+}
+.is-style-note-error strong {
+	color: theme(colors.red.700);
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+	.is-style-note-info {
+		--_border: theme(colors.cyan.400);
+		--_bg: theme(colors.cyan.800);
+		--_text: theme(colors.cyan.100);
+	}
+	.is-style-note-success {
+		--_border: theme(colors.emerald.400);
+		--_bg: theme(colors.emerald.800);
+		--_text: theme(colors.emerald.100);
+	}
+	.is-style-note-warning {
+		--_border: theme(colors.amber.400);
+		--_bg: theme(colors.amber.800);
+		--_text: theme(colors.amber.100);
+	}
+	.is-style-note-error {
+		--_border: theme(colors.red.400);
+		--_bg: theme(colors.red.800);
+		--_text: theme(colors.red.100);
+	}
+	.is-style-note-info strong,
+	.is-style-note-success strong,
+	.is-style-note-warning strong,
+	.is-style-note-error strong {
+		color: white;
+	}
+}
+
+
+@media screen and (min-width: 768px) {
+	p[class*="is-style-note-"] {
+		max-width: 36rem;
+	}
+}
+
+
+@media screen and (min-width: 1024px) {
+	p[class*="is-style-note-"] {
+		max-width: 42rem;
+	}
+}
+
+
+@media (min-width: 1280px) {
+	p[class*="is-style-note-"] {
+		max-width: 56rem;
+	}
+}

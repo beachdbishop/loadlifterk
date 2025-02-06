@@ -1,0 +1,22 @@
+
+.ll-img-float-right {
+	float: right;
+	margin: 0 0 1rem 2rem !important;
+}
+
+.ll-img-float-left {
+	float: left;
+	margin: 0 2rem 1rem 0 !important;
+}
+
+.ll-img-float-right,
+.ll-img-float-left {
+	max-width: 150px;
+}
+
+@media screen and (min-width: 768px) {
+	.ll-img-float-right,
+	.ll-img-float-left {
+		max-width: unset;
+	}
+}

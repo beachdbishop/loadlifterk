@@ -1,0 +1,22 @@
+{
+	"defaults": {
+		"ignore": [ "notice" ],
+		"standard": "WCAG2AA",
+		"reporters": [
+			"cli",
+			[
+				"pa11y-ci-reporter-html",
+				{ "destination": "./_pa11y/" }
+			]
+		],
+		"hideElements": "form[id*='hsForm_'] > iframe"
+	},
+	"urls": [
+		"https://kuadradev.local/",
+		"https://kuadradev.local/contact/",
+		"https://kuadradev.local/solutions/bookkeeping/",
+		"https://kuadradev.local/about/",
+		"https://kuadradev.local/careers/",
+		"https://kuadradev.local/careers/bilingual-accountant/"
+	]
+}

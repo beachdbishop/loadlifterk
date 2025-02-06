@@ -13,5 +13,10 @@
 
 .entry-header,
 .entry-content {
-	@apply px-8;
+	padding-inline: theme(padding.8);
+}
+
+lite-vimeo {
+	min-height: 1rem;
+	background-color: theme(colors.neutral.500);
 }

@@ -1,0 +1,84 @@
+/* Block: Callout */
+.llcallout {
+	--_title-bg: theme(colors.neutral.200);
+	--_title-color: theme(colors.neutral.900);
+	border-color: var(--_title-bg);
+}
+.llcallout .acf-innerblocks-container {
+	padding: 0.5rem;
+}
+.llcallout-title {
+	background-color: var(--_title-bg);
+	color: var(--_title-color);
+}
+.llcallout.is-style-note {
+	--_title-bg: theme(colors.blue.200);
+	--_title-color: theme(colors.blue.900);
+}
+.llcallout.is-style-info {
+	--_title-bg: theme(colors.cyan.200);
+	--_title-color: theme(colors.cyan.900);
+}
+.llcallout.is-style-tip {
+	--_title-bg: theme(colors.teal.200);
+	--_title-color: theme(colors.teal.900);
+}
+.llcallout.is-style-success {
+	--_title-bg: theme(colors.green.200);
+	--_title-color: theme(colors.green.900);
+}
+.llcallout.is-style-warning {
+	--_title-bg: theme(colors.orange.200);
+	--_title-color: theme(colors.orange.900);
+}
+.llcallout.is-style-danger {
+	--_title-bg: theme(colors.red.200);
+	--_title-color: theme(colors.red.900);
+}
+.llcallout.is-style-example {
+	--_title-bg: theme(colors.purple.200);
+	--_title-color: theme(colors.purple.900);
+}
+.llcallout.is-style-quote {
+	--_title-bg: theme(colors.neutral.200);
+	--_title-color: theme(colors.neutral.900);
+}
+
+@media (prefers-color-scheme: dark) {
+	.llcallout {
+		--_title-bg: theme(colors.neutral.700);
+		--_title-color: theme(colors.neutral.50);
+	}
+	.llcallout.is-style-note {
+		--_title-bg: theme(colors.blue.700);
+		--_title-color: theme(colors.blue.50);
+	}
+	.llcallout.is-style-info {
+		--_title-bg: theme(colors.cyan.700);
+		--_title-color: theme(colors.cyan.50);
+	}
+	.llcallout.is-style-tip {
+		--_title-bg: theme(colors.teal.700);
+		--_title-color: theme(colors.teal.50);
+	}
+	.llcallout.is-style-success {
+		--_title-bg: theme(colors.green.700);
+		--_title-color: theme(colors.green.50);
+	}
+	.llcallout.is-style-warning {
+		--_title-bg: theme(colors.orange.700);
+		--_title-color: theme(colors.orange.50);
+	}
+	.llcallout.is-style-danger {
+		--_title-bg: theme(colors.red.700);
+		--_title-color: theme(colors.red.50);
+	}
+	.llcallout.is-style-example {
+		--_title-bg: theme(colors.purple.700);
+		--_title-color: theme(colors.purple.50);
+	}
+	.llcallout.is-style-quote {
+		--_title-bg: theme(colors.neutral.700);
+		--_title-color: theme(colors.neutral.50);
+	}
+}

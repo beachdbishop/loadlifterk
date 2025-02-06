@@ -1,0 +1,12 @@
+.breadcrumbs {
+	overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+	font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.breadcrumbs > span:last-child span {
+	font-weight: 600;
+	/* via: https://mtekk.us/archives/guides/trimming-breadcrumb-title-lengths-with-css/ */
+}

@@ -9,11 +9,10 @@
 
 
 add_action( 'wp_head', function() {
-	echo '<link rel="icon" href="/favicon.ico" sizes="32x32" />';
-	echo '<link rel="icon" href="/icon.svg" type="image/svg+xml" />';
-	echo '<link rel="apple-touch-icon" href="/apple-touch-icon.png" />';
-	echo '<link rel="manifest" href="/manifest.webmanifest" />';
-	echo "\n\r";
+	echo '<link rel="icon" href="/favicon.ico" sizes="32x32" />' . "\r\n";
+	echo '<link rel="icon" href="/icon.svg" type="image/svg+xml" />' . "\r\n";
+	echo '<link rel="apple-touch-icon" href="/apple-touch-icon.png" />' . "\r\n";
+	echo '<link rel="manifest" href="/manifest.webmanifest" />' . "\r\n";
 });
 
 
@@ -293,13 +292,13 @@ endif;
 
 if ( ! function_exists( 'll_page_title' ) ) :
 	function ll_page_title( $h1, $h2 ) {
-		echo '<div class="px-2 md:container xl:px-4">
+		echo '<div class="px-2 container xl:px-4">
 			<h1 class="leading-none tracking-light lg:text-6xl">'.$h1.'</h1>
 			<h2 class="mt-4 text-2xl leading-normal max-w-[42ch] text-atlantis-200 lg:text-4xl">'.$h2.'</h2>
 		</div>';
 
 		if ( function_exists( 'bcn_display' ) && !is_front_page() ) {
-			echo '<div class="breadcrumbs | px-2 md:container xl:px-4 font-head text-neutral-600" typeof="BreadcrumbList" vocab="https://schema.org">' . bcn_display( true ) . '</div>
+			echo '<div class="breadcrumbs | px-2 container xl:px-4 font-head text-neutral-600" typeof="BreadcrumbList" vocab="https://schema.org">' . bcn_display( true ) . '</div>
 			</div>';
 		}
 	}
@@ -307,39 +306,65 @@ endif;
 
 
 /* Used on Pages */
-if ( ! function_exists( 'll_page_hero' ) ) :
-	function ll_page_hero( $h1, $h2, $cta1_text = null, $cta1_url = null, $cta2_text = null, $cta2_url = null ) {
-		// $easedGradient = 'linear-gradient(to right, hsla(0, 0%, 16%, 0.9) 0%, hsla(0, 0%, 16%, 0.891) 8.1%, hsla(0, 0%, 16%, 0.866) 15.5%, hsla(0, 0%, 16%, 0.827) 22.5%, hsla(0, 0%, 16%, 0.777) 29%, hsla(0, 0%, 16%, 0.719) 35.3%, hsla(0, 0%, 16%, 0.654) 41.2%, hsla(0, 0%, 16%, 0.585) 47.1%, hsla(0, 0%, 16%, 0.515) 52.9%, hsla(0, 0%, 16%, 0.446) 58.8%, hsla(0, 0%, 16%, 0.381) 64.7%, hsla(0, 0%, 16%, 0.323) 71%, hsla(0, 0%, 16%, 0.273) 77.5%, hsla(0, 0%, 16%, 0.234) 84.5%, hsla(0, 0%, 16%, 0.209) 91.9%, hsla(0, 0%, 16%, 0.2) 100%)';
-		// $moreA11yGradient = 'linear-gradient(to right, hsl(0 0% 16% / 0.95) 0%, hsl(0 0% 16% / 0.8) 40%, hsl(0 0% 16% / 0.6) 50%, hsl(0 0% 16% / 0.2) 80%, hsl(0 0% 16% / 0) 100% )';
-		$whiteA11yGradient = 'linear-gradient(to right, rgb(255 255 255 / 0.95) 0%, rgb(255 255 255 / 0.8) 40%, rgb(255 255 255 / 0.2) 60%, rgb(255 255 255 / 0) 100%)';
+// if ( ! function_exists( 'll_page_hero' ) ) :
+// 	function ll_page_hero( $h1, $h2, $cta1_text = null, $cta1_url = null, $cta2_text = null, $cta2_url = null ) {
+// 		// $easedGradient = 'linear-gradient(to right, hsla(0, 0%, 16%, 0.9) 0%, hsla(0, 0%, 16%, 0.891) 8.1%, hsla(0, 0%, 16%, 0.866) 15.5%, hsla(0, 0%, 16%, 0.827) 22.5%, hsla(0, 0%, 16%, 0.777) 29%, hsla(0, 0%, 16%, 0.719) 35.3%, hsla(0, 0%, 16%, 0.654) 41.2%, hsla(0, 0%, 16%, 0.585) 47.1%, hsla(0, 0%, 16%, 0.515) 52.9%, hsla(0, 0%, 16%, 0.446) 58.8%, hsla(0, 0%, 16%, 0.381) 64.7%, hsla(0, 0%, 16%, 0.323) 71%, hsla(0, 0%, 16%, 0.273) 77.5%, hsla(0, 0%, 16%, 0.234) 84.5%, hsla(0, 0%, 16%, 0.209) 91.9%, hsla(0, 0%, 16%, 0.2) 100%)';
+// 		// $moreA11yGradient = 'linear-gradient(to right, hsl(0 0% 16% / 0.95) 0%, hsl(0 0% 16% / 0.8) 40%, hsl(0 0% 16% / 0.6) 50%, hsl(0 0% 16% / 0.2) 80%, hsl(0 0% 16% / 0) 100% )';
+// 		$whiteA11yGradient = 'linear-gradient(to right, rgb(255 255 255 / 0.95) 0%, rgb(255 255 255 / 0.8) 40%, rgb(255 255 255 / 0.2) 60%, rgb(255 255 255 / 0) 100%)';
 
-		$hero_html = '<style>.page-hero { background-color: #F7FAEA; background-image: linear-gradient(to right, rgb(255 255 255 / 0.8) 0%, rgb(255 255 255 / 0.8) 100%), var(--ll--page-feat-img); } @media (min-width: 768px) { .page-hero { background-image: ' . $whiteA11yGradient . ', var(--ll--page-feat-img); } } @media print { .page-hero { background-color: transparent; background-image: none; } }</style>';
+// 		$hero_html = '<style>.page-hero { background-color: #F7FAEA; background-image: linear-gradient(to right, rgb(255 255 255 / 0.8) 0%, rgb(255 255 255 / 0.8) 100%), var(--ll--page-feat-img); } @media (min-width: 768px) { .page-hero { background-image: ' . $whiteA11yGradient . ', var(--ll--page-feat-img); } } @media print { .page-hero { background-color: transparent; background-image: none; } }</style>';
 
-		$hero_html .= '<div class="page-hero | ll-equal-vert-padding bg-no-repeat bg-[right_33%_center] bg-cover lg:bg-center print:py-8">';
-		$hero_html .= '<div class="flex flex-col justify-center px-2 min-h-[240px] md:container md:min-h-hero lg:px-4 print:min-h-fit"><div class="">';
-		$hero_html .= '<h1 class="leading-none tracking-light max-w-[28ch] text-shadow-sm shadow-neutral-50 lg:text-6xl dark:text-neutral-800">' . $h1 . '</h1>';
-		$hero_html .= '<div class="brand-message | full-bleed my-6"><div>';
-		$hero_html .= '<h2 class="max-w-fit p-4 lg:pr-8 text-2xl font-bold leading-normal bg-atlantis-500 lg:text-4xl dark:text-neutral-800">' . $h2 . '</h2>';
-		$hero_html .= '</div></div>';
+// 		$hero_html .= '<div class="page-hero | ll-equal-vert-padding bg-no-repeat bg-[right_33%_center] bg-cover lg:bg-center print:py-8">';
+// 		$hero_html .= '<div class="flex flex-col justify-center px-2 min-h-[240px] md:container md:min-h-hero lg:px-4 print:min-h-fit"><div class="">';
+// 		$hero_html .= '<h1 class="leading-none tracking-light max-w-[28ch] text-shadow-sm shadow-neutral-50 lg:text-6xl dark:text-neutral-800">' . $h1 . '</h1>';
+// 		$hero_html .= '<div class="brand-message | full-bleed my-6"><div>';
+// 		$hero_html .= '<h2 class="max-w-fit p-4 lg:pr-8 text-2xl font-bold leading-normal bg-atlantis-500 lg:text-4xl dark:text-neutral-800">' . $h2 . '</h2>';
+// 		$hero_html .= '</div></div>';
 
-		if ( ( !empty( $cta1_text ) ) && ( !empty( $cta1_url ) ) ) {
-			$hero_html .= '<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex ">
-				<div class="inline-block m-0">
-					<a class="border-2 inline-flex items-center justify-center px-5 py-3 font-head font-semibold no-underline rounded-lg text-neutral-100 !bg-aqua-700 border-aqua-700 shadow-md shadow-neutral-950 hover:border-white hover:text-white" href="' . $cta1_url . '">' . $cta1_text . '</a>
-				</div>';
-				if ( ( !empty( $cta2_text ) ) && ( !empty( $cta2_url ) ) ) {
-					$hero_html .= '<div class="inline-block m-0">
-						<a class="border-2 inline-flex items-center justify-center px-5 py-3 font-head font-semibold no-underline rounded-lg bg-transparent border-neutral-200 text-neutral-200 shadow-md shadow-neutral-950 hover:bg-transparent hover:border-atlantis-200 hover:text-atlantis-200" href="' . $cta2_url . '">' . $cta2_text . '</a>
-					</div>';
-				}
-			$hero_html .= '</div>';
-		}
+// 		if ( ( !empty( $cta1_text ) ) && ( !empty( $cta1_url ) ) ) {
+// 			$hero_html .= '<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex ">
+// 				<div class="inline-block m-0">
+// 					<a class="border-2 inline-flex items-center justify-center px-5 py-3 font-head font-semibold no-underline rounded-lg text-neutral-100 !bg-aqua-700 border-aqua-700 shadow-md shadow-neutral-950 hover:border-white hover:text-white" href="' . $cta1_url . '">' . $cta1_text . '</a>
+// 				</div>';
+// 				if ( ( !empty( $cta2_text ) ) && ( !empty( $cta2_url ) ) ) {
+// 					$hero_html .= '<div class="inline-block m-0">
+// 						<a class="border-2 inline-flex items-center justify-center px-5 py-3 font-head font-semibold no-underline rounded-lg bg-transparent border-neutral-200 text-neutral-200 shadow-md shadow-neutral-950 hover:bg-transparent hover:border-atlantis-200 hover:text-atlantis-200" href="' . $cta2_url . '">' . $cta2_text . '</a>
+// 					</div>';
+// 				}
+// 			$hero_html .= '</div>';
+// 		}
 
-		$hero_html .= '</div></div>';
-		$hero_html .= '<nav class="breadcrumbs | md:container px-2 lg:px-4 font-head text-neutral-800 print:mt-8" aria-label="Breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org">' . bcn_display( true ) . '</nav>';
-		$hero_html .= '</div>';
+// 		$hero_html .= '</div></div>';
+// 		$hero_html .= '<nav class="breadcrumbs | md:container px-2 lg:px-4 font-head text-neutral-800 print:mt-8" aria-label="Breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org">' . bcn_display( true ) . '</nav>';
+// 		$hero_html .= '</div>';
 
-		return $hero_html;
+// 		return $hero_html;
+// 	}
+// endif;
+
+
+if ( ! function_exists( 'll_better_page_hero' ) ) :
+	function ll_better_page_hero( $h1, $h2, $cta1_text = null, $cta1_url = null, $cta2_text = null, $cta2_url = null ) {
+		?>
+
+		<div class="page-hero | wp-block-cover bg-white print:py-8">
+			<span aria-hidden="true" class="page-hero-overlay | z-[1] absolute top-0 right-0 bottom-0 left-0"></span>
+			<?php echo the_post_thumbnail( 'full', ['class' => 'wp-block-cover__image-background not-transparent wp-post-image'] ); ?>
+
+			<div class="wp-block-cover__inner-container p-2 container flex flex-col gap-0 | lg:p-4">
+				<div class="flex flex-col justify-center min-h-her min-h-52 md:min-h-72 lg:min-h-[400px]">
+					<h1 class="text-neutral-800 has-text-color max-w-[20ch] leading-none tracking-light text-balance text-shadow shadow-white | dark:text-neutral-800"><?php echo $h1; ?></h1>
+					<div class="brand-message-3 | mt-5">
+						<h2 class="has-text-color "><?php echo $h2; ?></h2>
+					</div>
+				</div>
+				<?php if ( !is_front_page() ) { ?>
+					<nav class="breadcrumbs | grow-0 font-head text-neutral-800 | print:mt-8" aria-label="Breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org"><?php echo bcn_display( true ); ?></nav>
+				<?php } ?>
+			</div>
+		</div>
+
+		<?php
 	}
 endif;
 
@@ -597,18 +622,18 @@ if ( ! function_exists( 'll_a11y_icon_link' ) ) :
 endif;
 
 
-if ( ! function_exists( 'll_footer_address' ) ) :
-	function ll_footer_address( $addr ) {
-		echo '<div class=" md:pt-2">
-			<address class="space-y-2 not-italic text-shadow shadow-neutral-900 print:text-shadow-none" property="address" typeof="PostalAddress">
-				<p class="street-address | font-head leading-none " property="streetAddress">' . $addr['street1'] . '</p>
-				<p class="locality | font-head leading-none "><span property="addressLocality">' . $addr['city'] . '</span>, <span class="state" property="addressRegion">' . $addr['state'] . '</span> <span class="zip" property="postalCode">' . $addr['zip'] . '</span></p>
-				<p class="font-semibold leading-none font-head " property="telephone">P: <a href="tel:'. ll_format_phone_number( $addr['phone'] ) .'" rel="nofollow" onclick="ga(\'send\', \'event\', \'Phone Call Tracking\', \'Click to Call\', \'' . ll_format_phone_number( $addr['phone'], 'us') . '\', 0);">' . ll_format_phone_number( $addr['phone'], 'beach') . '</a></p>
-				<p class="font-semibold leading-none font-head" property="faxNumber">F: ' . ll_format_phone_number( $addr['fax'], 'beach' ) . '</p>
-			</address>
-		</div>';
-	}
-endif;
+// if ( ! function_exists( 'll_footer_address' ) ) :
+// 	function ll_footer_address( $addr ) {
+// 		echo '<div class=" md:pt-2">
+// 			<address class="space-y-2 not-italic text-shadow shadow-neutral-900 print:text-shadow-none" property="address" typeof="PostalAddress">
+// 				<p class="street-address | font-head leading-none " property="streetAddress">' . $addr['street1'] . '</p>
+// 				<p class="locality | font-head leading-none "><span property="addressLocality">' . $addr['city'] . '</span>, <span class="state" property="addressRegion">' . $addr['state'] . '</span> <span class="zip" property="postalCode">' . $addr['zip'] . '</span></p>
+// 				<p class="font-semibold leading-none font-head " property="telephone">P: <a href="tel:'. ll_format_phone_number( $addr['phone'] ) .'" rel="nofollow" onclick="ga(\'send\', \'event\', \'Phone Call Tracking\', \'Click to Call\', \'' . ll_format_phone_number( $addr['phone'], 'us') . '\', 0);">' . ll_format_phone_number( $addr['phone'], 'beach') . '</a></p>
+// 				<p class="font-semibold leading-none font-head" property="faxNumber">F: ' . ll_format_phone_number( $addr['fax'], 'beach' ) . '</p>
+// 			</address>
+// 		</div>';
+// 	}
+// endif;
 
 
 if ( ! function_exists( 'll_no_link_card' ) ) :

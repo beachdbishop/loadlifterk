@@ -103,7 +103,7 @@ function ll_add_post_source_column( $columns ) {
 
 	return $columns;
 }
-add_filter( 'manage_posts_columns', 'll_add_post_source_column' );
+// add_filter( 'manage_posts_columns', 'll_add_post_source_column' );
 
 function ll_posts_columns_custom_order( $columns ) {
 	$custom_col_order = [
@@ -117,7 +117,7 @@ function ll_posts_columns_custom_order( $columns ) {
 
 	return $custom_col_order;
 }
-add_filter( 'manage_post_posts_columns', 'll_posts_columns_custom_order', 10 );
+// add_filter( 'manage_post_posts_columns', 'll_posts_columns_custom_order', 10 );
 
 function ll_show_post_source( $column, $post_id ) {
 
@@ -138,7 +138,7 @@ function ll_show_post_source( $column, $post_id ) {
 			echo '<span style="background-color: #f3e8ff; color: #7e22ce; border-radius: 4px; padding: 2px 8px; font-weight: bold">Other</span>';
 	}
 }
-add_action( 'manage_posts_custom_column', 'll_show_post_source', 10, 2 );
+// add_action( 'manage_posts_custom_column', 'll_show_post_source', 10, 2 );
 
 
 
@@ -430,3 +430,11 @@ function ll_format_phone_number( $number, $output = null ) {
 			break;
 	}
 }
+
+// via: https://make.wordpress.org/core/2024/02/23/wordpress-6-5-adds-avif-support/
+// Output AVIFs for uploaded JPEGs
+function ll_filter_image_editor_output_format( $formats ) {
+	$formats['image/jpeg'] = 'image/avif';
+	return $formats;
+}
+// add_filter( 'image_editor_output_format', 'll_filter_image_editor_output_format' );

@@ -3,9 +3,24 @@
  */
 
  ol.wp-block-footnotes {
-	@apply max-w-prose text-sm lg:text-base;
+	max-width: 65ch;
+	font-size: 0.875rem;
+  line-height: 1.25rem
 }
 
 sup.fn a {
-	@apply text-atlantis-500 no-underline hover:text-current;
+	color: theme(colors.aqua.500);
+	font-weight: 700;
+	text-decoration-line: none;
+
+	&:hover {
+		color: currentColor;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	ol.wp-block-footnotes {
+		font-size: 1rem;
+    line-height: 1.5rem;
+	}
 }

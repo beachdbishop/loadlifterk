@@ -10,22 +10,21 @@
 
 $menuItemsPrimary = [
 	"services" => [
-		"label" => 'Services',
-		"url" => '/services/',
+		"label" => 'Solutions',
+		"url" => '/solutions/',
 		"hasChildren" => true,
-			"submenuContent" => '[listmenu menu="submenu Services" /]',
+			"submenuContent" => '[listmenu menu="Services menu" /]',
 	],
 	"about" => [
 		"label" => 'About Us',
 		"url" => '/about/',
 		"hasChildren" => true,
-			"submenuContent" => '[listmenu menu="submenu About" /]',
+			"submenuContent" => '[listmenu menu="About menu" /]',
 	],
 	"careers" => [
 		"label" => 'Careers',
 		"url" => '/careers/',
-		"hasChildren" => true,
-			"submenuContent" => '[listmenu menu="submenu Careers" /]',
+		"hasChildren" => false,
 	],
 	"contact" => [
 		"label" => 'Contact Us',
@@ -58,7 +57,7 @@ $menuItemsSecondary = [
 <header id="masthead" class="nav-header | bg-white dark:bg-neutral-900 dark:text-neutral-100 print:bg-white print:shadow-none sticky top-0 z-[39] ">
 	<div role="navigation" class="flex items-center justify-between px-2 py-3 md:container lg:px-[16px]">
 
-		<div class="w-[240px] lg:w-[320px] order-first">
+		<div class="w-40 sm:w-60 lg:w-80 order-first">
 			<a href="<?php bloginfo('url'); ?>" aria-label="<?php echo bloginfo('name'); ?>" title="Go to Kuadra's front page">
 				<?php get_template_part('template-parts/svg/svg', 'logo-color'); ?>
 			</a>
@@ -78,8 +77,8 @@ $menuItemsSecondary = [
 						// $isMega = ( $primary['label'] === 'Services' ) ? ' mega' : '';
 						$isMega = '';
 						echo sprintf( '<li>
-								<a class="main-link md:text-lg lg:text-2xl underline-offset-2" href="%1$s">%2$s</a>
-								<button type="button" aria-expanded="false" aria-controls="id_%3$s_menu" aria-label="%2$s"></button>
+								<a class="main-link text-lg underline-offset-2" href="%1$s">%2$s</a>
+								<button type="button" aria-expanded="false" aria-controls="id_%3$s_menu" aria-label="%2$s menu"></button>
 								<div id="id_%3$s_menu" class="dropmenu %5$s" style="display:none">%4$s</div>
 							</li>',
 							$primary['url'],
@@ -89,13 +88,13 @@ $menuItemsSecondary = [
 							$isMega,
 						);
 					} else {
-						echo '<li><a class="main-link md:text-lg lg:text-2xl underline-offset-2" href="' . $primary['url'] . '">' . $primary['label'] . '</a></li>';
+						echo '<li><a class="main-link text-lg underline-offset-2" href="' . $primary['url'] . '">' . $primary['label'] . '</a></li>';
 					}
 				}
 				?>
 			</ul>
 
-			<ul class="secondary-nav | font-head md:text-lg text-neutral-700 md:order-first md:justify-end flex flex-col md:items-center md:gap-x-1 md:flex-row md:pb-1 lg:text-xl lg:gap-x-4 dark:text-neutral-300 print:hidden">
+			<ul class="secondary-nav | font-head  text-neutral-700 md:order-first md:justify-end flex flex-col md:items-center md:gap-x-1 md:flex-row md:pb-1 lg:gap-x-4 dark:text-neutral-300 print:hidden">
 				<?php
 				// foreach ( $menuItemsSecondary as $secondary ) {
 				// 	echo '<li class="p-2 md:py-0"><a class="underline-offset-2 decoration-dotted decoration-from-font hover:underline hover:text-brand-blue hover:decoration-neutral-400 dark:hover:text-neutral-100" href="' . $secondary['url'] . '">' . $secondary['label'] . '</a></li>';

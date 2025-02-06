@@ -1,0 +1,37 @@
+/* Pagination */
+ul.page-numbers {
+	max-width: 60rem;
+	font-family: theme(fontFamily.head);
+	color: theme(colors.aqua.800);
+	margin-inline: auto;
+	margin-block: 1rem;
+	display: flex;
+	list-style-type: none;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+
+}
+a.page-numbers {
+	color: theme(colors.aqua.700);
+}
+a.page-numbers:hover {
+	color: theme(colors.atlantis.900);
+}
+span.current {
+	opacity: 0.5;
+}
+
+
+@media screen and (min-width: 1024px) {
+	ul.page-numbers {
+		margin-block: 4rem;
+	}
+}
+
+
+@media screen and (min-width: 768px) {
+	ul.page-numbers {
+		margin-block: 2rem;
+	}
+}

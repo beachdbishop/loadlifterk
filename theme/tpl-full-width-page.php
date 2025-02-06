@@ -51,7 +51,7 @@ $hero_cta2_url 									= get_field( 'll_hero_cta2_url' );
 		endif; ?>
 
 		<article id="post-<?php the_ID(); ?>" <?php if ( !is_front_page() ) { post_class( 'pt-4 md:pt-6 lg:pt-8' ); } ?>>
-			<div class="px-2 md:container xl:px-4">
+			<div class="px-2 container xl:px-4">
 
 				<?php if ( get_field( 'll_hide_featured_image' ) === true ) { ?>
 					<?php if ( function_exists( 'bcn_display' ) ) { ?>

@@ -17,167 +17,207 @@
 }
 
 html {
-	@apply scroll-pt-[52px] scroll-smooth md:scroll-pt-[76px] lg:scroll-pt-[100px];
+	--_scroll-padding: 52px;
+	scroll-padding-top: var(--_scroll-padding);
+	scroll-behavior: smooth;
+}
+
+@media screen and (min-width: 768px) {
+	html {
+		--_scroll-padding: 76px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	html {
+		--_scroll-padding: 100px;
+	}
 }
 
 body {
-	@apply font-body text-neutral-800 dark:text-neutral-300 print:bg-transparent print:text-neutral-900;
+	--tw-text-opacity: 1;
+	font-family: theme(fontFamily.sans);
+  color: theme(colors.neutral.800);
+
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+
+.entry-content > * + * {
+	margin-block-start: var(--wp--preset--spacing--50);
+}
+.entry-content:first-child {
+	margin-block-start: 0;
+}
+.entry-content:last-child {
+	margin-block-end: 0;
+}
+
+
+
+.dlig { font-variant-ligatures: discretionary-ligatures; }
+.hlig { font-variant-ligatures: historical-ligatures; }
+.dlig.hlig { font-variant-ligatures: discretionary-ligatures historical-ligatures; } /* Apply both historic and discretionary */
+
+.pnum { font-variant-numeric: proportional-nums; }
+.tnum { font-variant-numeric: tabular-nums;    }
+.lnum { font-variant-numeric: lining-nums; }
+.onum { font-variant-numeric: oldstyle-nums; }
+.zero { font-variant-numeric: slashed-zero;    }
+.pnum.zero { font-variant-numeric: proportional-nums slashed-zero; } /* Apply slashed zeroes to proportional numerals */
+.tnum.zero { font-variant-numeric: tabular-nums slashed-zero; }
+.lnum.zero { font-variant-numeric: lining-nums slashed-zero; }
+.onum.zero { font-variant-numeric: oldstyle-nums slashed-zero; }
+.tnum.lnum.zero { font-variant-numeric: tabular-nums lining-nums slashed-zero; }
+
+.frac { font-variant-numeric: diagonal-fractions; }
+.afrc { font-variant-numeric: stacked-fractions; }
+.ordn { font-variant-numeric: ordinal; }
+.smcp { font-variant-caps: small-caps; }
+.c2sc { font-variant-caps: unicase; }
+.hist { font-variant-alternates: historical-forms; }
+
+
+strong, b, th {
+	font-weight: 600;
+}
+
+h1, h2, h3, h4, h5 {
 	font-family: var(--wp--preset--font-family--serenity);
 	font-weight: 300;
+	font-variant-numeric: lining-nums;
+	line-height: 1.1;
 }
 
-/* @supports (text-wrap: balance) {
-	h1,
-	h2,
-	h3,
-	h4,
-	h5 {
+@supports (text-wrap: balance) {
+	h1, h2, h3,	h4,	h5 {
 		text-wrap: balance;
 	}
-} */
+}
 
 h1 {
 	font-size: 3rem;
-	line-height: 1;
 }
 h2 {
 	font-size: 2.25rem;
-	line-height: 2.5rem;
 }
 h3 {
 	font-size: 1.875rem;
-	line-height: 2.25rem;
 }
 h4 {
 	font-size: 1.5rem;
-	line-height: 2rem;
 }
 h5 {
 	font-size: 1.25rem;
-	line-height: 1.75rem;
 }
-
 h6 {
 	font-size: 1.125rem;
-	line-height: 1.75rem;
 	text-transform: uppercase;
 	letter-spacing: 0.025em;
 }
 
-a:not([class]) {
-	color: currentColor;
+td, math, time[datetime*=":"] {
+	font-variant-numeric: tabular-nums lining-nums slashed-zero;
 }
+
+
 :focus {
 	outline: 2px dashed;
 }
-main:focus {
+/* main:focus {
 	outline: none;
+} */
+
+
+
+
+@supports ( font-variant-position: sub ) {
+	sub, .sub {
+		vertical-align: baseline;
+		font-size: 100%;
+		line-height: inherit;
+		font-variant-position: sub;
+	}
 }
-[href]:hover {
+
+@supports ( font-variant-position: super ) {
+	sup, .sup {
+		vertical-align: baseline;
+		font-size: 100%;
+		line-height: inherit;
+		font-variant-position: super;
+	}
+}
+
+
+.prose {
+	text-wrap: pretty;
+	font-variant-numeric: proportional-nums;
+	line-height: 1.7;
+
+	-webkit-hyphens: auto;
+	-webkit-hyphenate-limit-before: 4;
+	-webkit-hyphenate-limit-after: 3;
+	-webkit-hyphenate-limit-lines: 2;
+
+	hyphens: auto;
+	/* hyphenate-limit-chars: 7 4 3; */
+	hyphenate-limit-chars: 10;
+	hyphenate-limit-lines: 2;
+	hyphenate-limit-zone: 8%;
+	hyphenate-limit-last: always;
+}
+
+.prose pre, .prose code, .prose var, .prose samp, .prose kbd,
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+	-webkit-hyphens: manual;
+	hyphens: manual;
+}
+
+.prose a:not([class]) {
+	text-decoration: underline;
+	text-decoration-color: color-mix(in oklch, currentColor, transparent 70%);
+	text-decoration-skip-ink: auto;
+	text-decoration-thickness: 0.15em;
+	text-underline-offset: 0.2em;
+}
+.prose a:not([class]):hover {
+	text-decoration-color: color-mix(in oklch, currentColor, transparent 30%);
+}
+/* .prose :where(a):not(:where([class~=wp-block-button__link],
+[class~=not-prose],
+[class~=not-prose] *)) {
 	text-decoration: none;
+	border-bottom: 2px solid theme(colors.neutral.400);
+}
+.prose :where([href]):not(:where([class~=wp-block-button__link],
+[class~=not-prose],
+[class~=not-prose] *)):hover {
+	border-bottom: 2px solid theme(colors.orient.600);
+} */
+
+:lang(en) > * { quotes: '“' '”' '‘' '’' ; } /* “Generic English ‘style’” */
+.prose :where(.wp-block-quote, blockquote) {
+	border-color: transparent;
+}
+q::before,
+blockquote p::before { content: open-quote }
+q::after,
+blockquote p::after { content: close-quote }
+q p,
+blockquote p {
+	font-family: theme(fontFamily.serif);
+	font-style: italic;
 }
 
-dl {
-	margin: 0;
-	padding: 0;
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: theme(colors.neutral.200);
+  }
 }
 
-dt {
-	margin-top: 0.5rem;
-	font-weight: 700;
-}
-
-dd {
-	border-bottom-width: 1px;
-	border-color: rgb(245 245 245 / 1);
-	display: list-item;
-	list-style-type: square;
-	margin-left: 2rem;
-	padding-bottom: 0.5rem;
-}
-
-dd::marker {
-	color: theme('colors.atlantis.300');
-}
-
-table caption {
-	caption-side: bottom;
-}
-
-/* Custom Animations */
-@keyframes fade-in {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-.animate-fade-in {
-	animation: fade-in 500ms ease-in-out;
-}
-
-@keyframes fade-in-from-bottom {
-	0% {
-		opacity: 0;
-		transform: translateY(64px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-.animate-fade-in-from-bottom {
-	animation: fade-in-from-bottom 700ms ease-in-out;
-}
-
-@keyframes fade-in-from-top {
-	0% {
-		opacity: 0;
-		transform: translateY(-32px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-.animate-fade-in-from-top {
-	animation: fade-in-from-top 700ms ease-in-out;
-}
-
-@keyframes sway {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-.animate-sway {
-	animation: sway 21s ease infinite;
-}
-
-@keyframes move-bg {
-	from {
-		transform: translateX(0);
-	}
-	to {
-		transform: translateX(-680px);
-	}
-}
-.animate-move-bg {
-	animation-name: move-bg;
-	animation-duration: 8s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
+@media print {
+  body {
+    background-color: transparent;
+    color: black;
+  }
 }

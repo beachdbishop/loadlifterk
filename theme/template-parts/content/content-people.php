@@ -39,7 +39,7 @@ if ( $peepauthor ) {
 ?>
 
 <article <?php post_class( 'py-4 md:py-6 lg:py-8' ); ?>>
-	<div class="px-2 md:container lg:px-[16px]">
+	<div class="px-2 container lg:px-[16px]">
 
 		<?php if ( function_exists( 'bcn_display' ) ) { ?>
 			<div class="breadcrumbs | font-head text-neutral-600 pb-4 md:pb-6 lg:pb-8 dark:text-neutral-400" typeof="BreadcrumbList" vocab="https://schema.org"><?php bcn_display(); ?></div>
@@ -48,7 +48,7 @@ if ( $peepauthor ) {
 		<div class="peepgrid peep-<?php echo $peep_class; ?> peep-<?php echo esc_attr( $peep_level['value'] ); ?> | md:grid md:grid-cols-3 gap-4 lg:grid-cols-4 lg:gap-16">
 
 			<div class="peepgrid-a | pb-8 md:pt-2 md:pb-0 md:order-2">
-				<div class="headshot-wrapper | relative before:content-[''] before:absolute before:top-2 before:left-2 before:w-full before:h-full before:bg-transparent before:bg-repeat before:bg-[bottom_right] before:bg-headshot print:w-[2in] print:h-auto print:before:bg-none">
+				<div class="headshot-wrapper | relative before:content-[''] before:absolute before:top-2 before:left-2 before:w-full before:h-full before:bg-aqua-200 dark:before:bg-aqua-600 print:before:bg-none">
 					<?php ll_people_headshot(); ?>
 				</div>
 			</div>
@@ -58,10 +58,10 @@ if ( $peepauthor ) {
 					<div>
 					<?php
 					if ( $peep_class === 'internal' ) {
-						the_title( '<h1 class="entry-title | mb-0 text-atlantis-700 dark:text-atlantis-400">', '</h1>' );
+						the_title( '<h1 class="entry-title | mb-0">', '</h1>' );
 
 						if( get_field( 'll_people_designations' ) ) {
-							echo sprintf( '<h2 class="leading-normal tracking-tight text-neutral-500">%1$s</h2>', get_field( 'll_people_designations' ) );
+							echo sprintf( '<h2 class="leading-normal tracking-tight text-aqua-700 dark:text-aqua-300">%1$s</h2>', get_field( 'll_people_designations' ) );
 						}
 
 						if( get_field( 'll_people_title' ) ) {
@@ -82,7 +82,7 @@ if ( $peepauthor ) {
 					</div>
 					<div class="pl-2 md:pl-4">
 						<?php if ( get_field('ll_people_soc_linkedin') ) {
-							echo '<a class="text-atlantis-700 hover:text-atlantis-500" href="' . get_field('ll_people_soc_linkedin') . '" aria-label="View LinkedIn profile"><i class="fa-brands fa-linkedin fa-2x"></i></a>';
+							echo '<a class="text-aqua-700 hover:text-aqua-500" href="' . get_field('ll_people_soc_linkedin') . '" aria-label="View LinkedIn profile"><i class="fa-brands fa-linkedin fa-2x"></i></a>';
 						} ?>
 					</div>
 				</header>
@@ -123,7 +123,7 @@ if ( $peepauthor ) {
 
 <?php // if ( $peeppostcount > 0 ) : ?>
 	<!-- <section id="posts-by-<?php // the_ID(); ?>" <?php // post_class( 'bg-neutral-100 md:py-6 lg:py-8 dark:bg-neutral-950' ); ?>>
-		<div class="px-2 md:container lg:px-[16px]">
+		<div class="px-2 container lg:px-[16px]">
 			<h3 id="posts" class="mt-2 mb-4 text-4xl md:mb-8 text-brand-blue head-last-bold dark:text-neutral-300">Recent Insights by <strong><?php // echo $person_archivelink; ?></strong></h3>
 			<?php // echo do_shortcode( '[display-posts wrapper="ul" wrapper_class="dps-grid-4max cards-ic" layout="card-ic" author="'.$peepnicename.'" date_query_after="' .$recent_year_barrier. '-01-01" posts_per_page="3" orderby="modified"	no_posts_message="No recent posts found by this author." /]' ); ?>
 		</div>

@@ -1,0 +1,37 @@
+
+.cards-ic {
+	list-style-type: none;
+	margin-top: 1rem;
+	transition-property: opacity;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 300ms;
+}
+.cards-ic:has(:hover) .card-ic:not(:hover) {
+	opacity: 70%;
+}
+.card-ic:focus-within a:focus {
+	text-decoration-line: none;
+}
+.card-ic .card-meta a {
+	position: relative;
+	padding: 0.5rem 0;
+}
+.card-ic .card-text {
+	max-width: 60ch;
+	padding-inline: 0.5rem;
+}
+
+.card-ic.posttype-locations .card-img {
+	display: none;
+}
+
+.card-ic + .card-ic {
+	margin-top: 1.5rem;
+}
+
+
+@supports (display: grid) {
+	.card-ic + .card-ic {
+		margin-top: 0;
+	}
+}

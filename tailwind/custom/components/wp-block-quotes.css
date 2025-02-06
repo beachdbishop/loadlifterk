@@ -1,0 +1,50 @@
+/* Quotes */
+.wp-block-quote p {
+	margin-block: 1rem;
+	font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.wp-block-quote cite {
+	font-family: theme(fontFamily.head);
+	font-size: 1rem;
+  line-height: 1.5rem;
+	font-style: normal;
+}
+.wp-block-quote cite::before {
+  content: '—';
+}
+.wp-block-quote.is-style-default {
+	color: theme(colors.aqua.800);
+	border-color: theme(colors.aqua.500);
+	position: relative;
+	border-radius: 0.5rem;
+	border-top-width: 4px;
+	border-right-width: 0px;
+	border-bottom-width: 4px;
+	border-left-width: 0px;
+	padding: 1rem;
+}
+
+
+@media (prefers-color-scheme: dark) {
+	.wp-block-quote.is-style-default {
+		color: theme(colors.aqua.200);
+	}
+}
+
+
+@media screen and (min-width: 1024px) {
+	.wp-block-quote p {
+		font-size: 1.5rem;
+    line-height: 2rem;
+	}
+
+	.wp-block-quote cite {
+		font-size: 1.125rem;
+    line-height: 1.75rem;
+	}
+
+	.wp-block-quote.is-style-default {
+		padding-inline: 2rem;
+	}
+}

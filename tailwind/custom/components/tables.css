@@ -1,19 +1,101 @@
-.prose table th {
-	@apply border-b-2 border-solid border-neutral-300;
-}
-.prose table td {
-	@apply border-y border-solid border-neutral-200;
-}
-.prose table:has(> colgroup) {
-	@apply table-fixed;
-}
-.table-oldtab {
-	@apply oldstyle-nums tabular-nums;
-}
-.num {
-	@apply text-right tabular-nums;
+table caption {
+	caption-side: bottom;
+	padding-block: theme(spacing.2);
+	text-align: left;
 }
 
-/* .wp-block-table table {
-	@apply border border-solid border-neutral-600;
-} */
+table caption,
+figcaption {
+	font-family: theme(fontFamily.head);
+	font-weight: 600;
+}
+
+.prose thead,
+.prose tfoot {
+	background-color: theme(colors.neutral.200);
+}
+.prose thead th {
+	--tw-border-opacity: 1;
+	border-bottom-width: 2px;
+  border-color: rgb(212 212 212 / var(--tw-border-opacity)) /* neutral-300 */;
+	border-style: solid;
+}
+.prose tbody tr:nth-child(even) {
+	background: color-mix(in srgb, theme(colors.neutral.200), transparent 60%);
+}
+.prose table td {
+	--tw-border-opacity: 1;
+  border-bottom-width: 1px;
+  border-color: rgb(229 229 229 / var(--tw-border-opacity)) /* neutral-200 */;
+	border-style: solid;
+	border-top-width: 1px;
+}
+.prose table:has(> colgroup) {
+	table-layout: fixed;
+}
+.table-oldtab {
+  font-variant-numeric: oldstyle-nums tabular-nums;
+}
+.num {
+	text-align: right;
+	font-variant-numeric: tabular-nums;
+}
+
+.table-tax-brackets td:not(:first-of-type) {
+	font-variant-numeric: tabular-nums;
+	min-width: 12em;
+	max-width: 50vw;
+	text-align: right;
+}
+.table-tax-calendar tbody th {
+	vertical-align: top;
+}
+
+[role="region"][aria-labelledby][tabindex] {
+  overflow: auto;
+  border: 0.1em solid theme(colors.neutral.300);
+}
+
+[role="region"][aria-labelledby][tabindex]:focus {
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+  outline: 0.1em solid rgba(0, 0, 0, 0.1);
+}
+
+[role="region"][aria-labelledby][tabindex] table {
+  margin: 0;
+  border: none;
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+	.prose thead {
+		background-color: theme(colors.neutral.950);
+		border-color: theme(colors.neutral.600);
+	}
+	.prose tfoot {
+		background-color: theme(colors.neutral.950);
+	}
+
+	.prose table th,
+	.prose table td {
+		border-color: theme(colors.neutral.600);
+	}
+
+	.prose tbody tr:nth-child(even) {
+		background: color-mix(in srgb, theme(colors.neutral.600), transparent 60%);
+	}
+
+	[role="region"][aria-labelledby][tabindex] {
+		border: 0.1em solid theme(colors.neutral.600);
+	}
+}
+
+
+@media screen and (min-width: 1280px) {
+	table caption {
+		text-align: center;
+	}
+}
+
+

@@ -2,6 +2,9 @@
 /node_modules
 /vendor
 
+# Ignore pa11y reports folder
+/_pa11y
+
 # Ignore generated JavaScript files:
 *.min.js
 

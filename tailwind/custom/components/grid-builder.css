@@ -3,3 +3,7 @@
 .wpgb-wrapper {
 	gap: 1em;
 }
+
+.wpgb-facet h4.wpgb-facet-title {
+	margin-bottom: theme(space.2);
+}

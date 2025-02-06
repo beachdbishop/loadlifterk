@@ -1,27 +1,39 @@
 /* Styles for Forms and HubSpot Form Embeds */
 
 .container-contact-form {
-	@apply mb-4 min-h-[590px] border border-neutral-400 bg-neutral-50 p-4 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-400 print:hidden lg:mb-0 lg:p-8;
+	margin-bottom: 1rem;
+	padding: 1rem;
+	min-height: 590px;
+	border-width: 1px;
+	border-color: theme(colors.neutral.400);
+	background-image: linear-gradient(to bottom, theme(colors.neutral.100) 0, rgb(255 255 255 / 1) 30%);
 }
 
 /* TODO: Double-check that all these are needed since I have enabled the Tailwind Forms plugin */
-form {
-	@apply print:hidden;
+
+.gform_body {
+	margin-bottom: 1rem;
 }
+
 .gform_fields {
-	@apply grid grid-flow-row auto-rows-max gap-2 md:gap-4;
+	display: grid;
+	grid-auto-flow: row;
+	grid-auto-rows: max-content;
+	gap: 0.5rem;
 }
 
 fieldset {
-	@apply mb-2;
+	margin-bottom: 0.5rem;
 }
 
-label {
-	@apply font-head;
+label,
+.gfield_label {
+	font-family: serenity, sans-serif;
+	font-size: var(--wp--preset--font-size--lg);
 }
 
 .gfield_description {
-	@apply text-base;
+	font-size: var(--wp--preset--font-size--base);
 }
 
 input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]),
@@ -44,11 +56,65 @@ input[type="radio"] {
 
 input[type="submit"],
 button.ab-button {
-	@apply font-head bg-aqua-800 hover:bg-aqua-500 focus:ring-atlantis-200/80 active:bg-aqua-500 inline-flex items-center justify-center rounded-lg px-5 py-3 font-bold text-white shadow-neutral-800 hover:shadow-xl focus:outline-none focus:ring active:shadow-sm sm:w-auto lg:text-lg;
+	@apply font-head bg-aqua-800 hover:bg-aqua-500 focus:ring-atlantis-200/80 active:bg-aqua-500 inline-flex items-center justify-center rounded-lg px-5 py-3 font-bold text-white shadow-neutral-800 hover:shadow-xl focus:outline-none focus:ring active:shadow-sm sm:w-auto;
+}
+
+.gform_footer.top_label {
+	display: table-cell;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	vertical-align: middle;
 }
 
 .gfield_required {
-	@apply text-sm lg:text-base font-bold text-orange-700 before:content-['_'] dark:text-orange-400;
+	@apply text-sm font-bold text-orange-800 before:content-['_'] dark:text-orange-300;
+}
+
+.gfield_visibility_hidden {
+	left: -9999px;
+	position: absolute;
+	visibility: hidden;
+}
+
+.gform_fileupload_rules {
+	display: block;
+	margin-top: 0.5rem;
+}
+
+.gform_validation_container {
+	display: none !important;
+	left: -9000px;
+	position: absolute !important;
+}
+.gfield_validation_message {
+	font-style: italic;
+	color: #c00;
+}
+.gfield_validation_message ul {
+	margin: 1rem 0;
+	padding-left: 1.5rem;
+}
+.gfield_validation_message ul:empty {
+	display: none;
+}
+.validation_message--hidden-on-empty:empty {
+	display: none;
+}
+.gform_validation_errors {
+	background: #fff9f9;
+	border: 1.5px solid #c02b0a;
+	border-radius: 5px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 4px rgba(18, 25, 97, 0.04);
+	margin-bottom: theme(space.2);
+	margin-top: theme(space.2);
+	padding: 1rem;
+	position: relative;
+	width: 100%;
+}
+.gform_validation_errors h2 {
+	font-size: var(--wp--preset--font-size--base);
+	color: #c02b0a;
 }
 
 /* .hbspt-form {
@@ -65,13 +131,81 @@ button.ab-button {
 	}
 } */
 
-.form-columns-2 {
+/* .form-columns-2 {
 	@apply md:grid md:grid-cols-2 md:gap-2 lg:gap-8;
-}
+} */
 
 /* date fields might be a problem */
 
 
-.gform_footer {
+/* .gform_footer {
 	margin-top: 0.5em;
+} */
+
+@media screen and (min-width: 640px) {
+	input[type="submit"],
+	button.ab-button {
+		width: auto;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.gform_fields {
+		gap: 1rem;
+	}
+	input[type="checkbox"],
+	input[type="radio"] {
+		margin-right: 0.5rem;
+	}
+	.form-columns-2 {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.5rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.container-contact-form {
+		margin-bottom: 0;
+		padding: 2rem;
+	}
+	input[type="submit"],
+	button.ab-button {
+		font-size: 1.125rem;
+    line-height: 1.75rem;
+	}
+	.form-columns-2 {
+		gap: 2rem;
+	}
+}
+@media print {
+	.container-contact-form,
+	form {
+		display: none;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.container-contact-form {
+		border-color: theme(colors.neutral.700);
+		background-image: linear-gradient(to bottom, theme(colors.neutral.800) 0, theme(colors.neutral.900) 30%);
+		color: theme(colors.neutral.400);
+	}
+	input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]),
+	select,
+	textarea {
+		color: theme(colors.neutral.200);
+		border-color: theme(colors.neutral.600);
+		background-color: theme(colors.neutral.700);
+	}
+	input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):focus,
+	select:focus,
+	textarea:focus {
+		background-color: theme(colors.neutral.950);
+	}
+	input[type="checkbox"],
+	input[type="radio"] {
+		border-color: theme(colors.neutral.600);
+		background-color: theme(colors.neutral.700);
+	}
 }

@@ -6,7 +6,12 @@
 	--card-back-bg: #262626;
 	--card-front-text: #e5e5e5;
 	--card-back-text: #f5f5f5;
-	@apply flex flex-wrap place-content-center gap-4 lg:gap-8;
+	display: flex;
+	flex-wrap: wrap;
+	place-content: center;
+	gap: 1rem;
+
+	list-style: none;
 
 	.card:hover .card-content,
 	.card:active .card-content,
@@ -16,8 +21,13 @@
 
 	.card-back p,
 	.card-back li {
-		@apply text-sm;
+		font-size: 0.875rem;
+  	line-height: 1.25rem;
 	}
+}
+
+.ind-card-flips:has(.card-ic-flip) {
+	--_card-size: 180px;
 }
 
 .ind-card-flips.is-style-default {
@@ -41,6 +51,7 @@
 	--card-back-bg: #940418;
 }
 
+
 @media (prefers-color-scheme: dark) {
 	.ind-card-flips.is-style-default {
 		--card-front-bg: #262626;
@@ -61,5 +72,22 @@
 		--card-front-text: #d4d4d4;
 		--card-front-icon: #ce182d;
 		--card-back-bg: #404040;
+	}
+}
+
+
+@media screen and (min-width: 768px) {
+	.ind-card-flips:has(.card-ic-flip) {
+		--_card-size: 190px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.ind-card-flips {
+		gap: 2rem;
+	}
+
+	.ind-card-flips:has(.card-ic-flip) {
+		--_card-size: 200px;
 	}
 }

@@ -18,7 +18,7 @@ var ready = (callback) => {
 const navHeader = document.querySelector('.nav-header');
 const navToggle = document.querySelector('.toggle-mobile-nav');
 const navMenu = document.querySelector('#primary-navigation');
-const cards = document.querySelectorAll('.card-ic');
+const cards = document.querySelectorAll('.card');
 
 navToggle.addEventListener('click', () => {
 	navMenu.hasAttribute('data-visible')

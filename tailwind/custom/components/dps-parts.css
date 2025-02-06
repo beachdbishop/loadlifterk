@@ -1,12 +1,30 @@
+/* Style a parent element based on its number of children using CSS :has()
+via: https://www.bram.us/2022/11/17/style-a-parent-element-based-on-its-number-of-children-using-css-has/ */
+
 [class*="dps-grid-"] {
 	display: grid;
 	gap: 1rem;
 	max-width: 28rem !important;
 	margin-inline: auto;
 }
+
+.dps-inline > *:not(:last-child)::after {
+	content: ", ";
+}
+.dps-inline > *:last-child::before {
+	content: "and ";
+}
+
+.grid-team {
+	display: grid;
+	gap: 1rem;
+}
+
+
 @media (min-width: 768px) {
 	.dps-grid-4max,
-	.dps-grid-3max {
+	.dps-grid-3max,
+	.dps-grid-2max {
 		max-width: none !important;
 	}
 	.dps-grid-4max {
@@ -15,17 +33,19 @@
 	.dps-grid-3max {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
-}
-@media (min-width: 1024px) {
-	.dps-grid-4max {
-		grid-template-columns: repeat(4, minmax(0, 1fr));
+	.dps-grid-2max {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 }
 
 
-.dps-inline > *:not(:last-child)::after {
-	content: ", ";
-}
-.dps-inline > *:last-child::before {
-	content: "and ";
+@media (min-width: 1024px) {
+	.dps-grid-4max {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+
+	.grid-team {
+		gap: 1.5rem;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
 }

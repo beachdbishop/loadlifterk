@@ -1,32 +1,46 @@
 /* Separators */
 [class*="is-style-sep-"] {
-	@apply my-4 h-[3px] w-full border-0 md:my-6 lg:my-8;
+	margin-block: 1rem;
+	height: 3px;
+	width: 100%;
+	border-width: 0;
 	background-image: linear-gradient(
 		to bottom,
-		var(--start) 33%,
+		var(--_start) 33%,
 		transparent 33%,
 		transparent 66%,
-		var(--end) 66%,
-		var(--end) 100%
+		var(--_end) 66%,
+		var(--_end) 100%
 	);
 }
+@media screen and (min-width: 768px) {
+	[class*="is-style-sep-"] {
+		margin-block: 1.5rem;
+	}
+}
+@media screen and (min-width: 1024px) {
+	[class*="is-style-sep-"] {
+		margin-block: 2rem;
+	}
+}
+
 .is-style-sep-aqua {
-	--start: theme('colors.aqua.500');
-	--end: theme('colors.aqua.200');
+	--_start: theme(colors.aqua.500);
+	--_end: theme(colors.aqua.200);
 }
 .is-style-sep-green {
-	--start: theme('colors.atlantis.500');
-	--end: theme('colors.atlantis.200');
+	--_start: theme(colors.atlantis.500);
+	--_end: theme(colors.atlantis.200);
 }
 .is-style-sep-gray {
-	--start: theme('colors.neutral.500');
-	--end: theme('colors.neutral.200');
+	--_start: theme(colors.neutral.500);
+	--_end: theme(colors.neutral.200);
 }
+
 
 /* Spacers */
 .wp-block-spacer {
-	margin-bottom: 0;
-	margin-top: 0;
+	margin-block: 0;
 
 	&.is-style-xs {
 		height: clamp(8px, 2vw, 24px) !important;

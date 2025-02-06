@@ -45,35 +45,35 @@ $hero_cta2_url 									= get_field( 'll_hero_cta2_url' );
 			the_post();
 			?>
 
-			<?php echo ll_page_hero( $page_title, $page_message['label'], $hero_cta1_text, $hero_cta1_url, $hero_cta2_text, $hero_cta2_url ); ?>
+			<?php echo ll_better_page_hero( $page_title, $page_message['label'], $hero_cta1_text, $hero_cta1_url, $hero_cta2_text, $hero_cta2_url ); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<div class="px-2 md:container lg:px-[16px]">
+				<div class="px-2 container lg:px-[16px]">
 					<div class="mt-4 ll-page-grid md:gap-8 md:mt-8 md:grid md:auto-rows-auto lg:mt-16 lg:gap-16">
 
 						<div <?php ll_content_class( 'entry-content ll-page-grid-area-a md:col-span-2' ); ?>>
 							<?php the_content(); ?>
 
-							<div class="testimonials | not-prose border-8 border-solid border-atlantis-500 p-4 lg:p-8">
+							<!-- <div class="testimonials | not-prose border-8 border-solid border-atlantis-500 p-4 lg:p-8">
 								<h3 class="text-center ">What people say about us</h3>
 								<div class="mt-4 md:mt-8 md:flex md:gap-4 lg:gap-8">
 								<?php
-								foreach ( LL_FAKE_TESTOMONIALS as $test ) {
-									if ( $test['service'] == 'book' ) {
-										echo '<div class="testimonial | ">
-											<div class="bg-aqua-100 text-aqua-900 pt-4 px-4 pb-12 text-center">
-												<p class="leading-snug">&quot;' . $test['text'] . '&quot;</p>
-											</div>
-											<div class="mx-auto -mt-8 aspect-square size-16 bg-pink-200 border-2 border-solid border-aqua-700 rounded-full ">
-												<img src="avatar.png" alt="Logo or headshot?" class="size-16 text-pink-600 text-center text-xs">
-											</div>
-											<div class="text-center mt-2 font-head"><span class="font-bold">' . $test['name'] . '</span>, <span>' . $test['company'] . '</span></div>
-										</div>';
-									}
-								}
+								// foreach ( LL_FAKE_TESTOMONIALS as $test ) {
+								// 	if ( $test['service'] == 'book' ) {
+								// 		echo '<div class="testimonial | ">
+								// 			<div class="bg-aqua-100 text-aqua-900 pt-4 px-4 pb-12 text-center">
+								// 				<p class="leading-snug">&quot;' . $test['text'] . '&quot;</p>
+								// 			</div>
+								// 			<div class="mx-auto -mt-8 aspect-square size-16 bg-pink-200 border-2 border-solid border-aqua-700 rounded-full ">
+								// 				<img src="avatar.png" alt="Logo or headshot?" class="size-16 text-pink-600 text-center text-xs">
+								// 			</div>
+								// 			<div class="text-center mt-2 font-head"><span class="font-bold">' . $test['name'] . '</span>, <span>' . $test['company'] . '</span></div>
+								// 		</div>';
+								// 	}
+								// }
 								?>
 								</div>
-							</div>
+							</div> -->
 						</div>
 
 						<div class="my-16 ll-page-grid-area-b md:my-0 md:col-span-3">
@@ -82,9 +82,9 @@ $hero_cta2_url 									= get_field( 'll_hero_cta2_url' );
 							* TODO: Should this get maybe turned into a template part?
 							*/
 							if ( $page_cta_standard ) :
-								echo '<section class="full-bleed ll-equal-vert-padding not-prose bg-atlantis-500 break-inside-avoid print:animate-none print:bg-transparent">
+								echo '<section class="full-bleed ll-equal-vert-padding not-prose bg-atlantis-400 text-atlantis-950 break-inside-avoid print:animate-none print:bg-transparent">
 
-									<div class="px-2 md:container lg:px-[16px]">
+									<div class="px-2 container lg:px-[16px]">
 										<div class="flex flex-col items-start gap-4 sm:flex-row sm:items-center md:justify-between lg:gap-8">
 											<div class="prose lg:prose-xl ">
 												<h2 class="mb-2">' . $page_cta_heading . '</h2>
@@ -106,7 +106,7 @@ $hero_cta2_url 									= get_field( 'll_hero_cta2_url' );
 							<?php // SERVICE PROFESSIONALS AND INVOLVEMENT   ?>
 							<?php if ( ( $page_people_display != 'hide' ) || ( !empty( $page_groups_html ) ) ) : ?>
 							<section class="full-bleed not-prose ll-equal-vert-padding">
-								<div class="px-2 md:container lg:px-[16px]">
+								<div class="px-2 container lg:px-[16px]">
 									<?php if ( ( $page_people ) && ( $page_people_display != 'hide' ) ) : ?>
 
 										<h2>Our Team</h2>

@@ -11,19 +11,26 @@
  * @since 0.1.1
  */
 ?>
-<!-- wp:html -->
-<section class="full-bleed ll-equal-vert-padding not-prose bg-atlantis-500 break-inside-avoid print:animate-none print:bg-transparent">
-	<div class="px-2 lg:px-[16px]">
-		<div class="flex flex-col items-start gap-4 sm:flex-row sm:items-center md:justify-between lg:gap-8">
-			<div class="prose lg:prose-xl text-atlantis-950">
-				<h2 class="mb-2">Let's get started</h2>
-				<p class="max-w-main">Interested in learning more about our bookkeeping and accounting solutions? Complete the form on this page and a team member will reach out to you shortly.</p>
-				<p class="hidden print:mt-8 print:block">Email info@kuadrasupport.com</p>
-			</div>
-			<div class="w-full md:max-w-fit print:hidden">
-				<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#contact">Contact Us</a></div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- /wp:html -->
+<!-- wp:group {"metadata":{"name":"Page CTA"},"style":{"elements":{"link":{"color":{"text":"var:preset|color|atlantis-900"}}}},"backgroundColor":"atlantis-400","textColor":"atlantis-900","className":"full-bleed ll-equal-vert-padding not-prose break-inside-avoid","layout":{"type":"default"}} -->
+<div class="wp-block-group full-bleed ll-equal-vert-padding not-prose break-inside-avoid has-atlantis-900-color has-atlantis-400-background-color has-text-color has-background has-link-color"><!-- wp:group {"layout":{"type":"default"}} -->
+<div class="wp-block-group"><!-- wp:columns {"verticalAlignment":null,"className":"mb-0"} -->
+<div class="wp-block-columns mb-0"><!-- wp:column {"width":"82%"} -->
+<div class="wp-block-column" style="flex-basis:82%"><!-- wp:heading -->
+<h2 class="wp-block-heading"><?php esc_html_e( 'Expand your talent pool!', 'loadlifter' ); ?></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><?php esc_html_e( 'If you are interested in learning how Kuadra Support\'s staffing and employee leasing solutions can help you gain a competitive advantage, let\'s talk.', 'loadlifter' ); ?></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center","width":"18%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:18%"><!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#contact"><?php esc_html_e( 'Contact Us', 'loadlifter' ); ?></a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->

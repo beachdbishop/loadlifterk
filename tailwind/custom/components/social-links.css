@@ -1,0 +1,24 @@
+.social-links a {
+	background-color: transparent;
+	color: inherit;
+}
+.social-links a:hover {
+	color: theme(colors.aqua.500);
+}
+
+.footer-social .social-links a {
+	background-color: transparent;
+	color: inherit;
+}
+.footer-social .social-links a:hover {
+	background-color: transparent;
+	color: theme(colors.atlantis.500);
+}
+.on-darkbg .social-links a {
+	background-color: transparent;
+	color: theme(colors.neutral.300);
+}
+.on-darkbg .social-links a:hover {
+	color: theme(colors.atlantis.400);
+	background-color: theme(colors.neutral.700);
+}

@@ -47,7 +47,27 @@
             "label": "Brand Message",
             "name": "ll_brand_message",
             "aria-label": "",
-            "type": "select",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Nearshore Accounting & Bookkeeping",
+            "maxlength": 100,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65e788ba8978b",
+            "label": "Show 'standard' CTA?",
+            "name": "ll_show_standard_cta",
+            "aria-label": "",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -56,19 +76,151 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "nope": "",
-                "gen1": "Nearshore Accounting & Bookkeeping",
-                "gen2": "Easy for you. Right for your business.",
-                "gen3": "Some other phrase"
-            },
-            "default_value": false,
-            "return_format": "array",
-            "multiple": 0,
-            "allow_null": 0,
+            "message": "True will result in showing the standard heading, body, and button linking to the contact form. False will result in showing whatever is in the custom CTA HTML field.",
+            "default_value": 1,
             "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_65e7878624118",
+            "label": "CTA Heading",
+            "name": "ll_page_cta_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65e788ba8978b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Let's get started",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65e787a024119",
+            "label": "CTA Body",
+            "name": "ll_page_cta_body",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65e788ba8978b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Interested in learning about our bookkeeping and accounting solutions? Complete the form on this page and a team member will reach out to you shortly.",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65e787de2411a",
+            "label": "CTA Button Text",
+            "name": "ll_page_cta_button_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65e788ba8978b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Contact Us",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65e788042411b",
+            "label": "CTA Button Target",
+            "name": "ll_page_cta_button_target",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65e788ba8978b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#contact",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65e788e98978c",
+            "label": "Custom CTA HTML",
+            "name": "ll_custom_cta_html",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65e788ba8978b",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<section class=\"page-cta | full region\">\r\n\t<div class=\"container\">\r\n\t\t<div class=\"flow prose\">\r\n\t\t\t<h2>Let's get started<\/h2>\r\n\t\t\t<p>Interested in learning about our bookkeeping and accounting solutions? Complete the form on this page and a team member will reach out to you shortly.<\/p>\r\n\t\t\t<p class=\"print-fallback\">Email info@kuadrasupport.com<\/p>\r\n\t\t<\/div>\r\n\t\t<div class=\"button-wrap\">\r\n\t\t\t<div class=\"wp-block-button\"><a class=\"wp-block-button__link wp-element-button\" href=\"#contact\">Contact Us<\/a><\/div>\r\n\t\t<\/div>\r\n\t<\/div>\r\n<\/section>",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
         },
         {
             "key": "field_5a7b6a05d1061",
@@ -109,5 +261,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1706201602
+    "modified": 1718900252
 }

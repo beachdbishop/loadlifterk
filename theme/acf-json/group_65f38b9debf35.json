@@ -1,0 +1,65 @@
+{
+    "key": "group_65f38b9debf35",
+    "title": "Block: Lite Vimeo Embed",
+    "fields": [
+        {
+            "key": "field_65f38b9eac1e0",
+            "label": "Video ID",
+            "name": "ll_litevimeo_id",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Provide the Vimeo video ID.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": 32,
+            "placeholder": 684681654,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65f38c0bac1e1",
+            "label": "Inline Styles",
+            "name": "ll_litevimeo_styles",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Provide inline CSS properties for the <lite-vimeo> element. Do not include line breaks.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 2,
+            "placeholder": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "loadlifter\/litevimeoembed"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1710460744
+}

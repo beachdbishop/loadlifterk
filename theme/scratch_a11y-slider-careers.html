@@ -1,0 +1,43 @@
+<div class="testimonials | not-prose border-2 border-solid border-aqua-100 p-4 mt-8 | lg:p-8 dark:border-aqua-700">
+	<ul class="slider | my-4 list-none lg:flex lg:gap-4" aria-labelledby="staff_testimonials" aria-roledescription="carousel">
+		<?php
+		$counter = 0;
+		foreach ( LL_STAFF_TESTOMONIALS as $stafftest ) {
+			// get_template_part( 'template-parts/content/content', 'slide' );
+
+			// , $stafftest['name'],
+			echo '
+			<li
+				class="testimonial staff-testimonial slide | "
+				tabindex="0"
+				aria-roledescription="slide"
+			>
+				<div class="bg-aqua-100 text-aqua-900 pt-4 px-4 pb-12 | lg:p-12 dark:bg-aqua-900 dark:text-aqua-100">
+					<p class="quote | md:text-lg dark:text-neutral-300">' . $stafftest['text'] . '</p>
+				</div>
+				<div class="mx-auto -mt-8 size-16">
+					<img src="' . get_template_directory_uri() . '/img/logomark_avatar-crop.png" alt="Logo or headshot?" class="size-16 bg-pink-200 border-2 border-solid border-aqua-700 rounded-full text-pink-600 text-center text-xs | dark:border-aqua-300">
+				</div>
+				<div class="cite">
+					<p class="text-lg text-center leading-snug mt-2 font-head | "><span class="font-semibold">' . $stafftest['name'] . '</span><br />' . $stafftest['title'] . '</p>
+				</div>
+			</li>
+			';
+
+		}
+		?>
+	</ul>
+	<script>
+		const slider = new A11YSlider(document.querySelector(".slider"), {
+			slidesToShow: 1,
+			arrows: true,
+			autoplay: true,
+			autoplaySpeed: 8000,
+			responsive: {
+				1280: {
+					slidesToShow: 2,
+				}
+			}
+		});
+	</script>
+</div>

@@ -1,8 +1,16 @@
 /* Details */
 
+/* this is a fix post WP 6.6 that introduced a weird gap above almost everything. */
+.is-layout-flow > details,
+.is-layout-flow > .details-inner {
+	margin-block-start: 0;
+}
+
 summary {
 	list-style: none;
 	cursor: pointer;
+	position: relative;
+	z-index: 10;
 
 	> * {
 		display: inline;
@@ -19,67 +27,103 @@ details[open] summary::-webkit-details-marker {
 }
 
 .accordions {
-	@apply mb-8 lg:my-12;
+	margin-bottom: 2rem;
+}
 
-	details {
-		@apply mb-[2px];
+.accordions	details {
+	margin-bottom: 2px;
+}
+
+.accordions details[open] summary::before {
+	content: '-';
+}
+
+.accordions summary {
+	font-family: theme(fontFamily.head);
+	font-size: 1.875rem/* 30px */;
+	line-height: 2.25rem;
+	padding-inline: 1rem;
+	padding-bottom: 0.5rem;
+	padding-top: 0.25rem;
+
+}
+.accordions summary::before {
+	content: '+';
+	font-family: theme(fontFamily.mono);
+	margin-right: 0.25rem;
+}
+.accordions summary:hover::before {
+	@apply motion-safe:animate-pulse;
+}
+
+.accordions .details-inner {
+	background-color: theme(colors.neutral.50);
+	padding-inline: 0.5rem;
+	padding-block: 1rem;
+	position: relative;
+	/* will-change: transform; */
+	z-index: 5;
+}
+
+.accordions .details-inner > ul {
+	margin-block: 0 !important;
+}
+
+.accordions.is-style-default details[open] summary {
+	color: theme(colors.neutral.900);
+}
+.accordions.is-style-default summary {
+	background-color: theme(colors.neutral.200);
+	color: theme(colors.neutral.700);
+}
+.accordions.is-style-default summary::before {
+	color: theme(colors.neutral.400);
+}
+
+.accordions.is-style-aqua details[open] summary {
+	color: white;
+}
+.accordions.is-style-aqua summary {
+	background-color: theme(colors.aqua.800);
+	color: theme(colors.aqua.50);
+}
+
+.accordions.is-style-aqua summary::before {
+	color: theme(colors.aqua.100);
+}
+
+.accordions.is-style-green details[] summary {
+	color: white;
+}
+
+.accordions.is-style-green summary {
+	background-color: theme(colors.atlantis.800);
+	color: theme(colors.atlantis.50);
+}
+.accordions.is-style-green summary::before {
+	color: theme(colors.atlantis.100);
+}
+
+
+/* @media (prefers-reduced-motion: no-preference) {
+	details[open] summary ~ * {
+		animation: slide-in-from-top 300ms;
 	}
+} */
 
-	details[open] summary {
-		@apply before:content-['-'];
-	}
 
-	summary {
-		@apply font-head px-4 pb-2 pt-1 text-3xl before:mr-1 before:font-mono before:content-['+'] hover:before:animate-pulse;
-	}
-
-	.details-inner {
-		@apply bg-neutral-50 px-2 pb-4 will-change-transform dark:bg-neutral-800 dark:text-neutral-300 lg:px-4 lg:pb-6 lg:pt-4;
+@media (prefers-color-scheme: dark) {
+	.accordions .details-inner {
+		background-color: theme(colors.neutral.800);
+		color: theme(colors.neutral.300);
 	}
 }
 
-.accordions.is-style-default {
-	details[open] summary {
-		@apply text-neutral-900;
+
+@media screen and (min-width: 1024px) {
+	.accordions .details-inner {
+		padding-inline: 1rem;
+		padding-bottom: 1.5rem;
+		padding-top: 1rem;
 	}
-
-	summary {
-		@apply bg-neutral-200 text-neutral-700;
-
-		&::before {
-			color: #a3a3a3;
-		}
-	}
-}
-
-.accordions.is-style-aqua {
-	details[] summary {
-		@apply text-white;
-	}
-
-	summary {
-		@apply bg-aqua-700 text-aqua-50;
-
-		&::before {
-			@apply text-aqua-100;
-		}
-	}
-}
-
-.accordions.is-style-green {
-	details[] summary {
-		@apply text-white;
-	}
-
-	summary {
-		@apply bg-atlantis-700 text-atlantis-50;
-
-		&::before {
-			@apply text-atlantis-100;
-		}
-	}
-}
-
-details[open] summary ~ * {
-	@apply animate-[fade-in-from-top_300ms];
 }

@@ -12,7 +12,7 @@ get_header();
 
 	<main id="primary" class="py-4 bg-amber-50 md:py-6 lg:py-8 dark:bg-neutral-700">
 
-		<section class="px-2 md:container lg:px-[16px]">
+		<section class="px-2 container lg:px-[16px]">
 			<header>
 				<h1 class="entry-title | text-amber-800 dark:text-amber-300"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'loadlifter' ); ?></h1>
 			</header>

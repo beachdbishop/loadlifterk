@@ -6,6 +6,7 @@
             "key": "field_57c7581e3b78f",
             "label": "Opening Status",
             "name": "opening_status",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -28,9 +29,36 @@
             "placeholder": ""
         },
         {
+            "key": "field_65e748ad621ad",
+            "label": "Department",
+            "name": "opening_dept",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "audit": "Audit",
+                "tax": "Tax"
+            },
+            "default_value": [],
+            "return_format": "value",
+            "allow_custom": 0,
+            "layout": "vertical",
+            "toggle": 0,
+            "save_custom": 0,
+            "custom_choice_button_text": "Add new choice"
+        },
+        {
             "key": "field_60ee1da1d3146",
             "label": "Location",
             "name": "location",
+            "aria-label": "",
             "type": "checkbox",
             "instructions": "",
             "required": 1,
@@ -41,21 +69,24 @@
                 "id": ""
             },
             "choices": {
-                "tucson": "Tucson",
-                "phoenix": "Phoenix",
-                "usa": "USA"
+                "hermosillo": "Hermosillo",
+                "remote": "Remote"
             },
+            "default_value": [
+                "hermosillo"
+            ],
+            "return_format": "value",
             "allow_custom": 0,
-            "default_value": [],
             "layout": "horizontal",
             "toggle": 0,
-            "return_format": "value",
-            "save_custom": 0
+            "save_custom": 0,
+            "custom_choice_button_text": "Add new choice"
         },
         {
             "key": "field_57ec096d7f50b",
             "label": "Time\/Status",
             "name": "time_status",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 1,
@@ -81,6 +112,7 @@
             "key": "field_630914e7f4679",
             "label": "Apply Link",
             "name": "apply_link",
+            "aria-label": "",
             "type": "url",
             "instructions": "Paste isolvedhire link to specific opening",
             "required": 1,
@@ -112,5 +144,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664994564
+    "modified": 1709656328
 }

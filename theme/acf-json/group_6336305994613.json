@@ -24,11 +24,11 @@
         },
         {
             "key": "field_65aa9282f23aa",
-            "label": "HubSpot Form HTML",
+            "label": "Unique Form HTML",
             "name": "ls_hs_form_html",
             "aria-label": "",
             "type": "textarea",
-            "instructions": "",
+            "instructions": "Provide an HTML snippet or shortcode for a non-default form.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -213,5 +213,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1705677492
+    "modified": 1709656964
 }

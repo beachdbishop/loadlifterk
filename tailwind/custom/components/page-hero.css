@@ -1,0 +1,133 @@
+/*   P A G E   H E R O   */
+.page-hero {
+	align-items: center;
+	background-position: 50%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	/* min-height: 430px; */
+	min-height: unset !important;
+	overflow: hidden;
+	padding: unset;
+	position: relative;
+}
+/* .page-hero > video {
+	border: none;
+	bottom: 0;
+	box-shadow: none;
+	height: 100%;
+	left: 0;
+	margin: 0;
+	max-height: none;
+	max-width: none;
+	object-fit: cover;
+	outline: none;
+	padding: 0;
+	position: fixed;
+	right: 0;
+	top: var(--_scroll-padding);
+	width: 100%;
+} */
+.page-hero-overlay {
+	background-color: rgb(255 255 255 / 0.7);
+	background-image: none;
+}
+
+
+.page-hero .brand-message {
+	background-image: linear-gradient(to right, theme(colors.atlantis.500) 0%, theme(colors.atlantis.500) 10%, transparent 0)
+}
+
+@media (min-width: 1024px) {
+	.page-hero-overlay {
+		background-color: unset;
+		background-image: linear-gradient(to right, rgb(255 255 255 / 1) 0%, rgb(255 255 255 / 0.9) 40%, rgb(255 255 255 / 0.2) 60%, rgb(255 255 255 / 0) 100%);
+	}
+}
+
+@media (min-width: 1280px) {
+	/* .page-hero {
+		min-height: 480px !important;
+	} */
+	.page-hero .brand-message {
+		background-image: linear-gradient(to right, theme(colors.atlantis.500) 0%, theme(colors.atlantis.500) 30%, transparent 0)
+	}
+}
+
+/*
+<div class="brand-message-# | mt-5">
+	<h2 class="has-text-color text-2xl leading-none"><?php echo $h2; ?></h2>
+</div>
+*/
+
+/*
+.brand-message-2 {
+	max-width: fit-content;
+}
+.brand-message-2 h2 {
+	max-width: fit-content;
+	font-weight: 600;
+	font-size: var(--wp--preset--font-size--2-xl);
+	font-style: italic;
+	line-height: 1;
+	color: rgb(69 194 204 / 1);
+}
+*/
+.brand-message-3 {
+	max-width: fit-content;
+}
+.brand-message-3 h2 {
+	max-width: fit-content;
+	font-weight: 300;
+	font-size: var(--wp--preset--font-size--2-xl);
+	line-height: 1;
+	color: rgb(65 64 66 / 1);
+}
+/*
+.brand-message-4 {
+	max-width: fit-content;
+}
+.brand-message-4 h2 {
+	--tw-shadow-color: #C2DB5C;
+  --tw-shadow: var(--tw-shadow-colored);
+	max-width: fit-content;
+	color: rgb(35 42 9 / 1);
+	font-weight: 300;
+	font-size: var(--wp--preset--font-size--2-xl);
+	line-height: 1;
+	text-shadow: 1px 2px 0 var(--tw-shadow-color);
+}
+.brand-message-5 {
+	max-width: fit-content;
+	border-width: 2px;
+	border-top-left-radius: 1.5rem;
+	border-bottom-right-radius: 1.5rem;
+	border-color: rgb(178 210 53 / 1);
+	color: rgb(245 245 245 / 1);
+	padding-block: 0.75rem;
+	padding-inline: 1.25rem;
+}
+.brand-message-5 h2 {
+	color: rgb(64 64 64 / 1);
+	max-width: fit-content;
+	font-weight: 300;
+	font-size: var(--wp--preset--font-size--2-xl);
+	line-height: 1;
+}
+.brand-message-6 {
+	max-width: fit-content;
+	background-color: rgb(65 64 66 / 1);
+	border-top-left-radius: 1.5rem;
+	border-bottom-right-radius: 1.5rem;
+	color: rgb(245 245 245 / 1);
+	padding-block: 0.75rem;
+	padding-inline: 1.25rem;
+}
+.brand-message-6 h2 {
+	color: rgb(178 210 53 / 1);
+	max-width: fit-content;
+	font-weight: 600;
+	font-size: var(--wp--preset--font-size--2-xl);
+	line-height: 1;
+}
+*/

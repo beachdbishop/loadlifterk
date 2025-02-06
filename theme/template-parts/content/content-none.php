@@ -68,7 +68,7 @@
 			</p>
 
 			<?php
-			get_search_form();
+			// get_search_form();
 		endif;
 		?>
 	</div><!-- .page-content -->
