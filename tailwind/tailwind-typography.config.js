@@ -60,7 +60,7 @@ module.exports = {
 				 * scale. If you are adapting an existing design and you need
 				 * to set specific colors throughout, you can do so here. In
 				 * your `./theme/functions.php file, you will need to replace
-				 * `prose-neutral` with `prose-loadlifter`.
+				 * `-neutral` with `-_tw`.
 				 */
 				_tw: {
 					css: {

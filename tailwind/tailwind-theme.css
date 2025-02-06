@@ -1,0 +1,108 @@
+/**
+ * Add your design tokens as Tailwind theme variables.
+ *
+ * https://tailwindcss.com/docs/theme
+ */
+
+/**
+ * Import Tailwind’s default theme.
+ */
+@import "tailwindcss/theme";
+
+/**
+ * Your theme variables are merged with Tailwind’s defaults, either extending
+ * the default theme with new variables or overriding the values of existing
+ * variables.
+ */
+@theme {
+	/**
+	 * These theme variables use CSS variables set by WordPress using values
+	 * from your `theme.json` file.
+	 *
+	 * If you are using the classic editor, you may need to use hardcoded
+	 * color values instead of the `var()` functions below.
+	 */
+	--color-mahogany-50: #fef2f3;
+	--color-mahogany-100: #ffe1e4;
+	--color-mahogany-200: #ffc8ce;
+	--color-mahogany-300: #ffa2ad;
+	--color-mahogany-400: #fd6c7d;
+	--color-mahogany-500: #f53e53;
+	--color-mahogany-600: #e31f36;
+	--color-mahogany-700: #ce182d;
+	--color-mahogany-800: #940418;
+	--color-mahogany-900: #831925;
+	--color-mahogany-950: #650b15;
+	--color-orient-50: #effaff;
+	--color-orient-100: #def4ff;
+	--color-orient-200: #b6ecff;
+	--color-orient-300: #76deff;
+	--color-orient-400: #2dcfff;
+	--color-orient-500: #02baf5;
+	--color-orient-600: #0095d2;
+	--color-orient-700: #0077aa;
+	--color-orient-800: #00668e;
+	--color-orient-900: #075273;
+	--color-orient-950: #092f42;
+	--color-gold-50: oklch(98.49% 0.02 91.54);
+	--color-gold-100: oklch(97% 0.042 92.18);
+	--color-gold-200: oklch(93.69% 0.086 91.55);
+	--color-gold-300: oklch(91.08% 0.12 91.28);
+	--color-gold-400: oklch(88.66% 0.148 90.44);
+	--color-gold-500: oklch(86.03% 0.167 87.74);
+	--color-gold-600: oklch(84.03% 0.172 84.07);
+	--color-gold-700: oklch(68.5% 0.141 84.38);
+	--color-gold-800: oklch(50.79% 0.104 85.75);
+	--color-gold-900: oklch(32.6% 0.067 89.06);
+	--color-gold-950: oklch(20.85% 0.043 91.85);
+
+	--color-brand-gray-faint: #fafafa;
+	--color-brand-gray-pale: #d4d4d4;
+	--color-brand-gray: #525252;
+	--color-brand-gray-dark: #262626;
+	--color-brand-red-faint: #fef2f2;
+	--color-brand-red-pale: #f87171;
+	--color-brand-red: #ce182d;
+	--color-brand-red-dark: #940418;
+	--color-brand-blue-faint: #b6ecff;
+	--color-brand-blue-pale: #2dcfff;
+	--color-brand-blue: #00668e;
+	--color-brand-blue-dark: #092f42;
+
+	--font-head: serenity, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: 'Fira Code', Consolas, monospace;
+	--container-content: var(--wp--style--global--content-size);
+	--container-wide: var(--wp--style--global--wide-size);
+	--height-hero: 360px;
+
+	--aspect-headshot: 95 / 127;
+	--aspect-featured-image: 384 / 125;
+	--aspect-feat-375: 3.75 / 1;
+	--aspect-feat-43: 4.3 / 1;
+	--aspect-card: 2 / 1;
+
+	--animate-fade-in-from-top: fade-in-from-top 600ms ease-out;
+	--animate-move-bg: move-bg 16s ease infinite;
+
+	@keyframes move-bg {
+		0%,
+		100% {
+			transform: translateX(0);
+		}
+		50% {
+			transform: translateX(-40vw);
+		}
+	}
+	@keyframes fade-in-from-top {
+		0% {
+			opacity: 0;
+			transform: translateY(-2rem);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+}
