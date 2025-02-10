@@ -69,7 +69,7 @@ $hero_cta2_url 									= get_field( 'll_hero_cta2_url' );
 
 					</div>
 
-
+					If you are interested in learning how Kuadra Support’s back-office accounting solution can streamline operations and drive growth, let’s talk.
 
 					<!-- <section class="full-bleed ll-equal-vert-padding not-prose bg-atlantis-500 text-black break-inside-avoid print:animate-none print:bg-transparent">
 						<div class="px-2 lg:px-[16px]">

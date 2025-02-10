@@ -14,7 +14,7 @@
 	max-width: 150px;
 }
 
-@media screen and (min-width: 768px) {
+@media (width >= theme(--breakpoint-md)) {
 	.ll-img-float-right,
 	.ll-img-float-left {
 		max-width: unset;

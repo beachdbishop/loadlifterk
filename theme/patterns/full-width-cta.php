@@ -12,8 +12,8 @@
  */
 ?>
 <!-- wp:group {"metadata":{"name":"Page CTA"},"style":{"elements":{"link":{"color":{"text":"var:preset|color|atlantis-900"}}}},"backgroundColor":"atlantis-400","textColor":"atlantis-900","className":"full-bleed ll-equal-vert-padding not-prose break-inside-avoid","layout":{"type":"default"}} -->
-<div class="wp-block-group full-bleed ll-equal-vert-padding not-prose break-inside-avoid has-atlantis-900-color has-atlantis-400-background-color has-text-color has-background has-link-color"><!-- wp:group {"layout":{"type":"default"}} -->
-<div class="wp-block-group"><!-- wp:columns {"verticalAlignment":null,"className":"mb-0"} -->
+<div class="wp-block-group full-bleed ll-equal-vert-padding not-prose break-inside-avoid has-atlantis-900-color has-atlantis-400-background-color has-text-color has-background has-link-color"><!-- wp:group {"className":"px-2  |  lg:px-[16px]","layout":{"type":"default"}} -->
+<div class="wp-block-group px-2  | lg:px-[16px]"><!-- wp:columns {"verticalAlignment":null,"className":"mb-0"} -->
 <div class="wp-block-columns mb-0"><!-- wp:column {"width":"82%"} -->
 <div class="wp-block-column" style="flex-basis:82%"><!-- wp:heading -->
 <h2 class="wp-block-heading"><?php esc_html_e( 'Expand your talent pool!', 'loadlifter' ); ?></h2>

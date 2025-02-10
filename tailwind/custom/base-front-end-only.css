@@ -1,0 +1,56 @@
+/**
+ * Custom styles to immediately follow Tailwind’s `base` layer
+ * ... but only for the front end.
+*/
+
+@view-transition {
+	navigation: auto;
+}
+
+:root {
+	--nav-height: 124px;
+	overscroll-behavior-x: contain;
+}
+
+html {
+	--_scroll-padding: 52px;
+	scroll-padding-top: var(--_scroll-padding);
+	scroll-behavior: smooth;
+}
+
+.entry-content > * + * {
+	margin-block-start: var(--wp--preset--spacing--50);
+}
+.entry-content:first-child {
+	margin-block-start: 0;
+}
+.entry-content:last-child {
+	margin-block-end: 0;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: var(--color-neutral-200);
+  }
+}
+
+
+@media print {
+  body {
+    background-color: transparent;
+    color: black;
+  }
+}
+
+
+@media (width >= theme(--breakpoint-md)) {
+	html {
+		--_scroll-padding: 76px;
+	}
+}
+@media (width >= theme(--breakpoint-lg)) {
+	html {
+		--_scroll-padding: 100px;
+	}
+}

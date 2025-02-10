@@ -7,13 +7,22 @@
  * https://tailwindcss.com/docs/adding-custom-styles#adding-custom-utilities
  */
 
+ @utility container {
+	margin-inline: auto;
+}
+
+
 /* via: https://piccalil.li/tutorial/creating-a-full-bleed-css-utility/ */
-div:not(.block-editor-block-list__layout) .full-bleed {
+/* div:not(.block-editor-block-list__layout) .full-bleed {
 	width: 100vw;
 	max-width: unset;
 	margin-left: 50%;
 	transform: translateX(-50%);
 	overflow-x: clip;
+} */
+div:not(.block-editor-block-list__layout) .full-bleed {
+	width: 100vw;
+	margin-left: calc(50% - 50vw);
 }
 div:not(.block-editor-block-list__layout) .full-bleed > div {
 	@apply container;
@@ -26,16 +35,10 @@ div:not(.block-editor-block-list__layout) .full-bleed > div {
 	transform: none;
 }
 
-
-.flow > * + * {
-  margin-top: var(--flow-space, 1em);
-}
-
-
 @media screen {
 	body {
-		--_spacing: 2rem;
-		--_padding: 3rem;
+		--_spacing: clamp(2rem, 1.111rem + 4.44vw, 5rem);
+		--_padding: clamp(2rem, 1.111rem + 4.44vw, 5rem);
 	}
 
 	.ll-equal-vert-padding {
@@ -47,58 +50,8 @@ div:not(.block-editor-block-list__layout) .full-bleed > div {
 	}
 }
 
-@media screen and (min-width: 768px) {
-	body {
-		--_spacing: 3rem;
-	}
-}
-@media screen and (min-width: 1024px) {
-	body {
-		--_spacing: 4rem;
-		--_padding: 4rem;
-	}
-}
-@media screen and (min-width: 1400px) {
-	body {
-		--_spacing: 5rem;
-		--_padding: 5rem;
-	}
-}
-
-
-.bg-gradient-70 {
-	background-image: linear-gradient(70deg, var(--tw-gradient-stops));
-}
 
 .icon {
 	height: 1em;
 	width: 1em;
-}
-
-
-
-.inline-comma-sep span:not(:last-of-type)::after {
-	content: ", ";
-}
-.inline-pipe-sep span:not(:last-of-type)::after {
-	content: " | ";
-}
-
-.context-alert {
-	animation: bounce 1s infinite;
-	background-color: rgb(254 249 195 / 1);
-	color: rgb(38 38 38 / 1);
-	font-weight: 700;
-	inset: auto 0 calc(100% + 0.5em) 0;
-	padding: 0.25rem;
-	position: absolute;
-	text-align: center;
-	transition-duration: 200ms;
-	transition-property: opacity;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.context-alert[data-state="empty"] {
-	opacity: 0;
-	transform: translateY(0.25em);
-	transition-property: none;
 }

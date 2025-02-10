@@ -5,7 +5,7 @@
   line-height: 1.75rem;
 }
 .wp-block-quote cite {
-	font-family: theme(fontFamily.head);
+	font-family: var(--font-head);
 	font-size: 1rem;
   line-height: 1.5rem;
 	font-style: normal;
@@ -14,8 +14,8 @@
   content: '—';
 }
 .wp-block-quote.is-style-default {
-	color: theme(colors.aqua.800);
-	border-color: theme(colors.aqua.500);
+	color: var(--color-aqua-800);
+	border-color: var(--color-aqua-500);
 	position: relative;
 	border-radius: 0.5rem;
 	border-top-width: 4px;
@@ -28,12 +28,12 @@
 
 @media (prefers-color-scheme: dark) {
 	.wp-block-quote.is-style-default {
-		color: theme(colors.aqua.200);
+		color: var(--color-aqua-200);
 	}
 }
 
 
-@media screen and (min-width: 1024px) {
+@media (width >= theme(--breakpoint-lg)) {
 	.wp-block-quote p {
 		font-size: 1.5rem;
     line-height: 2rem;

@@ -5,5 +5,5 @@
 }
 
 .wpgb-facet h4.wpgb-facet-title {
-	margin-bottom: theme(space.2);
+	margin-bottom: --spacing(2);
 }

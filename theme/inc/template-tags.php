@@ -170,7 +170,7 @@ if ( ! function_exists( 'll_posted_by_cards' ) ) :
 										<p class="text-lg leading-tight text-neutral-600 font-head dark:text-neutral-500">' . $title . '</p>
 									</div>
 
-									<div class="card-img | flex-shrink-0 object-cover object-center rounded-full bg-neutral-100 group-hover:border-aqua-500" style="background-image: url(' . $avatar['url'] . '); background-size: 64px 86px; background-position: center top;">
+									<div class="card-img | shrink-0 object-cover object-center rounded-full bg-neutral-100 group-hover:border-aqua-500" style="background-image: url(' . $avatar['url'] . '); background-size: 64px 86px; background-position: center top;">
 										<a href="/author/' . $coauthor->user_nicename . '/" rel="bookmark" aria-label="View ' . $coauthor->display_name . '&apos;s bio">
 											<div class="w-16 h-16 aspect-square">&nbsp;</div>
 										</a>
@@ -191,7 +191,7 @@ if ( ! function_exists( 'll_posted_by_cards' ) ) :
 										<p class="text-lg leading-tight text-neutral-600 font-head dark:text-neutral-500">' . $title . '</p>
 									</div>
 
-									<div class="card-img | flex-shrink-0 object-cover object-center rounded-full bg-neutral-200 group-hover:border-aqua-500 dark:bg-neutral-600">
+									<div class="card-img | shrink-0 object-cover object-center rounded-full bg-neutral-200 group-hover:border-aqua-500 dark:bg-neutral-600">
 										<a href="/author/' . $coauthor->user_nicename . '/" rel="bookmark" aria-label="View ' . $coauthor->display_name . '&apos;s bio">
 											<div class="w-16 h-16 aspect-square">&nbsp;</div>
 										</a>
@@ -347,19 +347,17 @@ if ( ! function_exists( 'll_better_page_hero' ) ) :
 	function ll_better_page_hero( $h1, $h2, $cta1_text = null, $cta1_url = null, $cta2_text = null, $cta2_url = null ) {
 		?>
 
-		<div class="page-hero | wp-block-cover bg-white print:py-8">
-			<span aria-hidden="true" class="page-hero-overlay | z-[1] absolute top-0 right-0 bottom-0 left-0"></span>
-			<?php echo the_post_thumbnail( 'full', ['class' => 'wp-block-cover__image-background not-transparent wp-post-image'] ); ?>
+		<div class="page-hero  |  wp-block-cover bg-white !px-0 min-h-min  |  print:py-8 print:bg-white print:text-black">
+			<span aria-hidden="true" class="page-hero-overlay | z-[1] absolute top-0 right-0 bottom-0 left-0  | print:hidden"></span>
+			<?php echo the_post_thumbnail( 'full', ['class' => 'wp-block-cover__image-background not-transparent wp-post-image print:hidden'] ); ?>
 
-			<div class="wp-block-cover__inner-container p-2 container flex flex-col gap-0 | lg:p-4">
-				<div class="flex flex-col justify-center min-h-her min-h-52 md:min-h-72 lg:min-h-[400px]">
-					<h1 class="text-neutral-800 has-text-color max-w-[20ch] leading-none tracking-light text-balance text-shadow shadow-white | dark:text-neutral-800"><?php echo $h1; ?></h1>
-					<div class="brand-message-3 | mt-5">
-						<h2 class="has-text-color "><?php echo $h2; ?></h2>
-					</div>
+			<div class="wp-block-cover__inner-container  |  px-2   |  lg:px-4 print:!px-0">
+				<div class="text-neutral-900 flex flex-col justify-center space-y-6  |  md:min-h-(--height-hero) print:min-h-min">
+					<h1 class="text-neutral-900 leading-none tracking-light text-pretty shadow-neutral-50 drop-shadow-lg  |  lg:text-6xl lg:print:!text-xl print:text-black"><?php echo $h1; ?></h1>
+					<?php if ( !empty( $h2 ) ) { ?><h2 class="text-2xl leading-none text-pretty !text-neutral-800 shadow-neutral-50 drop-shadow-lg  |  md:max-w-5xl lg:text-4xl lg:print:!text-base print:!text-black"><?php echo $h2; ?></h2><?php } ?>
 				</div>
 				<?php if ( !is_front_page() ) { ?>
-					<nav class="breadcrumbs | grow-0 font-head text-neutral-800 | print:mt-8" aria-label="Breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org"><?php echo bcn_display( true ); ?></nav>
+					<nav class="breadcrumbs  |  mt-4 grow-0 font-head text-neutral-800  |  md:mt-0 print:mt-8" aria-label="Breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org"><?php echo bcn_display( true ); ?></nav>
 				<?php } ?>
 			</div>
 		</div>
@@ -639,10 +637,10 @@ endif;
 if ( ! function_exists( 'll_no_link_card' ) ) :
 	function ll_no_link_card( $card ) {
 		echo '<div>
-			<div class="card | relative inline-block float-left w-[--card-size] h-[--card-size] [perspective:600px]" style="--card-back-bg: #092f42">
+			<div class="card | relative inline-block float-left w-(--card-size) h-(--card-size) [perspective:600px]" style="--card-back-bg: #092f42">
 				<div class="card-content | absolute w-full h-full rounded-lg shadow-lg shadow-neutral-300 transition-transform ease-out duration-700 [transform-style:preserve-3d] dark:shadow-none">
-					<div class="card-front | text-center bg-[--card-front-bg] text-[--card-front-text] absolute w-full h-full flex flex-col items-center justify-center rounded-lg px-4 [backface-visibility:hidden]">
-						<div class="card-icon | text-[--card-front-icon]">
+					<div class="card-front | text-center bg-(--card-front-bg) text-(--card-front-text) absolute w-full h-full flex flex-col items-center justify-center rounded-lg px-4 [backface-visibility:hidden]">
+						<div class="card-icon | text-(--card-front-icon)">
 							<span class="fa-stack fa-2x">
 								<i class="text-white fa-solid fa-circle fa-stack-2x dark:text-neutral-700"></i>
 								<i class="fa-duotone ' . $card['icon'] . ' fa-stack-1x "></i>
@@ -650,7 +648,7 @@ if ( ! function_exists( 'll_no_link_card' ) ) :
 						</div>
 						<h3 class="mt-2 font-light leading-none text-current">' . $card['label'] . '</h3>
 					</div>
-					<div class="card-back | absolute w-full h-full flex flex-col items-center justify-center rounded-lg px-4 bg-[--card-back-bg] text-[--card-back-text] bg-no-repeat bg-cover bg-blend-multiply shadow-neutral-900/50 [backface-visibility:hidden]  [transform:rotateY(180deg)]">
+					<div class="card-back | absolute w-full h-full flex flex-col items-center justify-center rounded-lg px-4 bg-(--card-back-bg) text-(--card-back-text) bg-no-repeat bg-cover bg-blend-multiply shadow-neutral-900/50 [backface-visibility:hidden]  [transform:rotateY(180deg)]">
 							<h6 class="my-2 leading-none tracking-wide text-center text-current text-shadow">' . $card['label'] . '</h6>
 							<p class="text-center text-shadow">' . $card['backContent'] . '</p>
 					</div>

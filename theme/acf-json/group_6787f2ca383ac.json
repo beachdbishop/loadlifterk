@@ -84,6 +84,27 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_67a65164dbd73",
+            "label": "FA Icon",
+            "name": "ll_testim_icon",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "fa-book",
+            "maxlength": 255,
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_6787f53529c8e",
             "label": "Rating",
             "name": "ll_testim_rating",
@@ -166,5 +187,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1736980516
+    "modified": 1738953156
 }

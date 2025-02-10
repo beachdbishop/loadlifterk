@@ -12,18 +12,18 @@
 	gap: 1rem;
 
 	list-style: none;
+}
 
-	.card:hover .card-content,
-	.card:active .card-content,
-	.card:focus .card-content {
-		transform: rotateY(180deg);
-	}
+.ind-card-flips	.card:hover .card-content,
+.ind-card-flips	.card:active .card-content,
+.ind-card-flips	.card:focus .card-content {
+	transform: rotateY(180deg);
+}
 
-	.card-back p,
-	.card-back li {
-		font-size: 0.875rem;
-  	line-height: 1.25rem;
-	}
+.ind-card-flips	.card-back p,
+.ind-card-flips	.card-back li {
+	font-size: 0.875rem;
+	line-height: 1.25rem;
 }
 
 .ind-card-flips:has(.card-ic-flip) {
@@ -50,7 +50,39 @@
 	--card-front-icon: #940418;
 	--card-back-bg: #940418;
 }
+.ind-card-flips.is-style-white {
+	--_card-front-bg: var(--color-white);
+	--_card-front-text: var(--color-atlantis-950);
+	--_card-front-icon: var(--color-white);
+	--_card-back-bg: var(--color-white);
+	--_card-back-text: var(--color-atlantis-950);
+}
 
+.card-ic-flip {
+	width: var(--_card-size);
+	height: var(--_card-size);
+	perspective: 600px;
+}
+
+.card-ic-flip .card-content {
+	transform-style: preserve-3d;
+}
+
+.card-ic-flip .card-front {
+	background-color: var(--_card-front-bg);
+	color: var(--_card-front-text);
+}
+
+.card-ic-flip .card-icon {
+	color: var(--_card-front-icon);
+}
+
+.card-ic-flip .card-back {
+	background-color: var(--_card-back-bg);
+	color: var(--_card-back-text);
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+}
 
 @media (prefers-color-scheme: dark) {
 	.ind-card-flips.is-style-default {
@@ -73,16 +105,23 @@
 		--card-front-icon: #ce182d;
 		--card-back-bg: #404040;
 	}
+	.ind-card-flips.is-style-white {
+		--_card-front-bg: var(--color-neutral-800);
+		--_card-front-text: var(--color-atlantis-600);
+		--_card-front-icon: var(--color-white);
+		--_card-back-bg: var(--color-neutral-800);
+		--_card-back-text: var(--color-neutral-300);
+	}
 }
 
 
-@media screen and (min-width: 768px) {
+@media (width >= theme(--breakpoint-md)) {
 	.ind-card-flips:has(.card-ic-flip) {
 		--_card-size: 190px;
 	}
 }
 
-@media screen and (min-width: 1024px) {
+@media (width >= theme(--breakpoint-lg)) {
 	.ind-card-flips {
 		gap: 2rem;
 	}

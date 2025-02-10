@@ -1,27 +1,32 @@
 table caption {
 	caption-side: bottom;
-	padding-block: theme(spacing.2);
+	padding-block: var(--spacing-2);
 	text-align: left;
 }
 
 table caption,
 figcaption {
-	font-family: theme(fontFamily.head);
+	font-family: var(--font-head);
 	font-weight: 600;
 }
 
 .prose thead,
 .prose tfoot {
-	background-color: theme(colors.neutral.200);
+	background-color: var(--color-neutral-200);
 }
-.prose thead th {
-	--tw-border-opacity: 1;
-	border-bottom-width: 2px;
-  border-color: rgb(212 212 212 / var(--tw-border-opacity)) /* neutral-300 */;
+.prose th {
+  border-color: var(--color-neutral-300);
 	border-style: solid;
 }
+.prose thead th {
+	border-bottom-width: 2px;
+}
+.prose tbody th {
+	border-bottom-width: 1px;
+	vertical-align: top;
+}
 .prose tbody tr:nth-child(even) {
-	background: color-mix(in srgb, theme(colors.neutral.200), transparent 60%);
+	background: color-mix(in srgb, var(--color-neutral-200), transparent 60%);
 }
 .prose table td {
 	--tw-border-opacity: 1;
@@ -47,13 +52,10 @@ figcaption {
 	max-width: 50vw;
 	text-align: right;
 }
-.table-tax-calendar tbody th {
-	vertical-align: top;
-}
 
 [role="region"][aria-labelledby][tabindex] {
   overflow: auto;
-  border: 0.1em solid theme(colors.neutral.300);
+  border: 0.1em solid var(--color-neutral-300);
 }
 
 [role="region"][aria-labelledby][tabindex]:focus {
@@ -70,29 +72,29 @@ figcaption {
 @media (prefers-color-scheme: dark) {
 
 	.prose thead {
-		background-color: theme(colors.neutral.950);
-		border-color: theme(colors.neutral.600);
+		background-color: var(--color-neutral-950);
+		border-color: var(--color-neutral-600);
 	}
 	.prose tfoot {
-		background-color: theme(colors.neutral.950);
+		background-color: var(--color-neutral-950);
 	}
 
 	.prose table th,
 	.prose table td {
-		border-color: theme(colors.neutral.600);
+		border-color: var(--color-neutral-600);
 	}
 
 	.prose tbody tr:nth-child(even) {
-		background: color-mix(in srgb, theme(colors.neutral.600), transparent 60%);
+		background: color-mix(in srgb, var(--color-neutral-600), transparent 60%);
 	}
 
 	[role="region"][aria-labelledby][tabindex] {
-		border: 0.1em solid theme(colors.neutral.600);
+		border: 0.1em solid var(--color-neutral-600);
 	}
 }
 
 
-@media screen and (min-width: 1280px) {
+@media (width >= theme(--breakpoint-lg)) {
 	table caption {
 		text-align: center;
 	}

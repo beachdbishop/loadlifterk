@@ -22,52 +22,46 @@
 	 * If you are using the classic editor, you may need to use hardcoded
 	 * color values instead of the `var()` functions below.
 	 */
-	--color-mahogany-50: #fef2f3;
-	--color-mahogany-100: #ffe1e4;
-	--color-mahogany-200: #ffc8ce;
-	--color-mahogany-300: #ffa2ad;
-	--color-mahogany-400: #fd6c7d;
-	--color-mahogany-500: #f53e53;
-	--color-mahogany-600: #e31f36;
-	--color-mahogany-700: #ce182d;
-	--color-mahogany-800: #940418;
-	--color-mahogany-900: #831925;
-	--color-mahogany-950: #650b15;
-	--color-orient-50: #effaff;
-	--color-orient-100: #def4ff;
-	--color-orient-200: #b6ecff;
-	--color-orient-300: #76deff;
-	--color-orient-400: #2dcfff;
-	--color-orient-500: #02baf5;
-	--color-orient-600: #0095d2;
-	--color-orient-700: #0077aa;
-	--color-orient-800: #00668e;
-	--color-orient-900: #075273;
-	--color-orient-950: #092f42;
-	--color-gold-50: oklch(98.49% 0.02 91.54);
-	--color-gold-100: oklch(97% 0.042 92.18);
-	--color-gold-200: oklch(93.69% 0.086 91.55);
-	--color-gold-300: oklch(91.08% 0.12 91.28);
-	--color-gold-400: oklch(88.66% 0.148 90.44);
-	--color-gold-500: oklch(86.03% 0.167 87.74);
-	--color-gold-600: oklch(84.03% 0.172 84.07);
-	--color-gold-700: oklch(68.5% 0.141 84.38);
-	--color-gold-800: oklch(50.79% 0.104 85.75);
-	--color-gold-900: oklch(32.6% 0.067 89.06);
-	--color-gold-950: oklch(20.85% 0.043 91.85);
+	--color-atlantis-50: oklch(97.85% 0.021 115.41);
+  --color-atlantis-100: oklch(95.93% 0.044 116.96);
+  --color-atlantis-200: oklch(92.23% 0.08 117.04);
+  --color-atlantis-300: oklch(88.39% 0.121 118.29);
+  --color-atlantis-400: oklch(84.78% 0.155 119.18);
+  --color-atlantis-500: oklch(81.29% 0.177 120.79);
+  --color-atlantis-600: oklch(69.69% 0.154 120.91);
+  --color-atlantis-700: oklch(56.81% 0.124 120.59);
+  --color-atlantis-800: oklch(43.39% 0.093 120.53);
+  --color-atlantis-900: oklch(26.98% 0.053 120.25);
+  --color-atlantis-950: oklch(18.73% 0.031 117.77);
+	--color-aqua-50: oklch(97.2% 0.015 202.06);
+  --color-aqua-100: oklch(94.72% 0.025 202.81);
+  --color-aqua-200: oklch(89.09% 0.053 202.23);
+  --color-aqua-300: oklch(84.38% 0.075 201.12);
+  --color-aqua-400: oklch(79.69% 0.094 201.47);
+  --color-aqua-500: oklch(75% 0.109 202.72);
+  --color-aqua-600: oklch(65.95% 0.1 201.82);
+  --color-aqua-700: oklch(53.23% 0.08 201.81);
+  --color-aqua-800: oklch(39.7% 0.058 201.81);
+  --color-aqua-900: oklch(26.37% 0.035 201.3);
+  --color-aqua-950: oklch(17.41% 0.021 201.18);
+	--color-gold-50: oklch(98.15% 0.027 93.1);
+  --color-gold-100: oklch(96.18% 0.051 91.37);
+  --color-gold-200: oklch(92.84% 0.1 92.14);
+  --color-gold-300: oklch(89.59% 0.139 91.07);
+  --color-gold-400: oklch(86.66% 0.165 88.68);
+  --color-gold-500: oklch(84.03% 0.172 84.08);
+  --color-gold-600: oklch(71.19% 0.146 84.61);
+  --color-gold-700: oklch(57.75% 0.118 85.47);
+  --color-gold-800: oklch(43.46% 0.089 87.06);
+  --color-gold-900: oklch(27.61% 0.056 89.07);
+  --color-gold-950: oklch(18.87% 0.039 94.74);
+	/* see: https://www.tints.dev/gold/FFBF00 */
 
 	--color-brand-gray-faint: #fafafa;
 	--color-brand-gray-pale: #d4d4d4;
 	--color-brand-gray: #525252;
 	--color-brand-gray-dark: #262626;
-	--color-brand-red-faint: #fef2f2;
-	--color-brand-red-pale: #f87171;
-	--color-brand-red: #ce182d;
-	--color-brand-red-dark: #940418;
-	--color-brand-blue-faint: #b6ecff;
-	--color-brand-blue-pale: #2dcfff;
-	--color-brand-blue: #00668e;
-	--color-brand-blue-dark: #092f42;
+
 
 	--font-head: serenity, sans-serif;
   --font-serif: Georgia, serif;

@@ -23,7 +23,7 @@ get_header();
 				<header>
 					<h1 class="entry-title | has-large-font-size dark:text-neutral-200">
 						<?php
-						printf( esc_html__( 'Search results for: %s', 'loadlifter' ), '<span class="relative inline-block before:block before:absolute before:-inset-1 before:bg-aqua-200 before:rounded dark:before:bg-aqua-600"><span class="relative px-2 font-bold text-neutral-950 dark:text-white">' . get_search_query() . '</span></span>' );
+						printf( esc_html__( 'Search results for: %s', 'loadlifter' ), '<span class="relative inline-block before:block before:absolute before:-inset-1 before:bg-aqua-200 before:rounded-sm dark:before:bg-aqua-600"><span class="relative px-2 font-bold text-neutral-950 dark:text-white">' . get_search_query() . '</span></span>' );
 						?>
 					</h1>
 				</header>

@@ -36,7 +36,7 @@ $peep_level 										= get_field( 'll_people_level' );
 			?>
 		</div>
 
-		<div class="card-img | flex-shrink-0 object-cover object-center rounded-full bg-neutral-100 bg-no-repeat group-hover:border-brand-red" style="background-image: url('<?php echo $headshot; ?>'); background-size: 64px 86px; background-position: center top;">
+		<div class="card-img | shrink-0 object-cover object-center rounded-full bg-neutral-100 bg-no-repeat group-hover:border-brand-red" style="background-image: url('<?php echo $headshot; ?>'); background-size: 64px 86px; background-position: center top;">
 			<?php if ($peep_level['value'] !== '900') { ?>
 				<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark" aria-label="View <?php echo esc_attr( get_the_title() ); ?>'s bio">
 					<div class="w-16 h-16 aspect-square">&nbsp;</div>

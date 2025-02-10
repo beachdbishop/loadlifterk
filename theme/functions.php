@@ -15,7 +15,7 @@ if ( ! defined( 'LL_VERSION' ) ) {
 	 * to create your production build, the value below will be replaced in the
 	 * generated zip file with a timestamp, converted to base 36.
 	 */
-	define( 'LL_VERSION', '0.6.0' );
+	define( 'LL_VERSION', '1.0.0' );
 }
 
 if ( ! defined( 'LL_COMPANY_LEGAL_NAME' ) ) {
@@ -45,8 +45,8 @@ if ( ! defined( 'LL_TYPOGRAPHY_CLASSES' ) ) {
 	 */
 	define(
 		'LL_TYPOGRAPHY_CLASSES',
-		'prose'
-		// 'prose prose-neutral prose-headings:font-light prose-h4:font-light max-w-none prose-blockquote:font-serif prose-a:text-primary lg:prose-xl dark:prose-invert'
+		// 'prose'
+		'prose prose-neutral prose-headings:font-light max-w-none prose-blockquote:font-serif lg:prose-xl dark:prose-invert'
 	);
 }
 
@@ -55,6 +55,90 @@ if ( ! defined( 'LL_LP_TEMPLATES' ) ) {
 		'LL_LP_TEMPLATES',
 		[
 			'tpl-landing-page.php'
+		]
+	);
+}
+
+if ( ! defined( 'LL_NAV_PRIMARY' ) && ( wp_get_environment_type() == 'local' ) ) {
+	define(
+		'LL_NAV_PRIMARY',
+		[
+			"devsample" => [
+				"label" => 'Dev only: Sample',
+				"url" => '/sample-page/',
+				"hasChildren" => false,
+			],
+			"services" => [
+				"label" => 'Solutions',
+				"url" => '/solutions/',
+				"hasChildren" => true,
+					"submenuContent" => '[listmenu menu="Services menu" /]',
+			],
+			"about" => [
+				"label" => 'About Us',
+				"url" => '/about/',
+				"hasChildren" => true,
+					"submenuContent" => '[listmenu menu="About menu" /]',
+			],
+			"careers" => [
+				"label" => 'Careers',
+				"url" => '/careers/',
+				"hasChildren" => false,
+			],
+			"contact" => [
+				"label" => 'Contact Us',
+				"url" => '/contact/',
+				"hasChildren" => false,
+			],
+
+		]
+	);
+} else {
+	define(
+		'LL_NAV_PRIMARY',
+		[
+			"services" => [
+				"label" => 'Solutions',
+				"url" => '/solutions/',
+				"hasChildren" => true,
+					"submenuContent" => '[listmenu menu="Services menu" /]',
+			],
+			"about" => [
+				"label" => 'About Us',
+				"url" => '/about/',
+				"hasChildren" => true,
+					"submenuContent" => '[listmenu menu="About menu" /]',
+			],
+			"careers" => [
+				"label" => 'Careers',
+				"url" => '/careers/',
+				"hasChildren" => false,
+			],
+			"contact" => [
+				"label" => 'Contact Us',
+				"url" => '/contact/',
+				"hasChildren" => false,
+			],
+		]
+	);
+}
+
+if ( ! defined( 'LL_NAV_SECONDARY' ) ) {
+	define(
+		'LL_NAV_SECONDARY',
+		[
+			"clients" => [
+				"label" => 'Client Center',
+				"url" => '/client-center/',
+			],
+			"insights" => [
+				"label" => 'Insights',
+				"url" => '/blog/',
+			],
+			"events" => [
+				"label" => 'Events',
+				"url" => '/category/events/',
+			],
 		]
 	);
 }
@@ -91,93 +175,6 @@ if ( ! defined( 'LL_KUADRA_SERVICES' ) ) {
 	);
 }
 
-if ( ! defined( 'LL_CLIENT_TESTOMONIALS' ) ) {
-	define(
-		'LL_CLIENT_TESTOMONIALS',
-		[
-			"test00" => [
-				"service" => "book",
-				"name" => null,
-				"company" => "Enilso, Inc.",
-				"text" => "Kuadra has provided integral support with our bookkeeping needs from the start. They go above and beyond to meet their clients' needs. Their personnel are professional, reliable, and flexible. Without a doubt, Kuadra continues to play an essential role in helping our business run efficiently, and we are thankful for it."
-			],
-			"test01" => [
-				"service" => "book",
-				"name" => null,
-				"company" => "Latitudes Furniture",
-				"text" => "As small business owners, we must focus on running our business while ensuring our financial records are accurate and up-to-date. Kuadra has made that possible. Their bookkeeping services are consistently reliable, timely, and accurate, allowing us to execute financial and fiscal planning while keeping our day-to-day operations running smoothly."
-			],
-			"test03" => [
-				"service" => "book",
-				"name" => null,
-				"company" => "Arencor Properties",
-				"text" => "Luis Garayzar with Kuadra is top-notch and a pleasure to work with! He is very professional, courteous, and patient and gets things done right away. Kuadra has saved me so much time, and I no longer worry about our accounting process. Kuadra is the best! Keep up the great work!"
-			],
-			"test04" => [
-				"service" => "book",
-				"name" => "Omar",
-				"company" => "Mining Valbest",
-				"text" => "With Kuadra's help over the past three years, we've been able to make progress. Their technical support and accounting guidance have given us better control over our finances."
-			],
-		]
-	);
-}
-
-// if ( ! defined( 'LL_FAKE_STAFF_TESTOMONIALS' ) ) {
-// 	define(
-// 		'LL_FAKE_STAFF_TESTOMONIALS',
-// 		[
-// 			[
-// 				"name" => "Jane Doe",
-// 				"title" => "Accountant",
-// 				"text" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non pulvinar neque laoreet suspendisse interdum consectetur libero id."
-// 			],
-// 			[
-// 				"name" => "Rick Springfield",
-// 				"title" => "Accountant",
-// 				"text" => "Viverra justo nec ultrices dui sapien eget mi proin sed. Cursus euismod quis viverra nibh cras pulvinar mattis. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Proin nibh nisl condimentum id. Suspendisse interdum consectetur libero id faucibus."
-// 			],
-// 			[
-// 				"name" => "Lisa Simpson",
-// 				"title" => "Tax Associate",
-// 				"text" => "Justo laoreet sit amet cursus sit amet dictum sit. Amet commodo nulla facilisi nullam vehicula ipsum a. Etiam non quam lacus suspendisse. Tortor at risus viverra adipiscing at in tellus integer. Et sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque. Sagittis aliquam malesuada bibendum arcu vitae elementum."
-// 			],
-// 			[
-// 				"name" => "Bart Simpson",
-// 				"title" => "Audit Associate",
-// 				"text" => "Ultrices mi tempus imperdiet nulla. Id diam vel quam elementum pulvinar etiam non."
-// 			],
-// 		]
-// 	);
-// }
-
-if ( ! defined( 'LL_STAFF_TESTOMONIALS' ) ) {
-	define(
-		'LL_STAFF_TESTOMONIALS',
-		[
-			[
-				"name" => "Marian Michel",
-				"title" => "Tax Project Manager",
-				"text" => "The continuous opportunities for learning and development are what I value most about working for Kuadra."
-			],
-			[
-				"name" => "Abraham Monroy",
-				"title" => "Audit Associate",
-				"text" => "I appreciate the focus on professional and personal development that Kuadra offers to help team members reach their full potential."
-			],
-			[
-				"name" => "Alba Flores",
-				"title" => "Jr. Administrative Assistant",
-				"text" => "Kuadra offers a rewarding work environment where I can continue developing my skills, grow professionally, and advance in my career."
-			],
-			[
-				"name" => "Hiram Padilla",
-				"title" => "Tax Associate",
-				"text" => "I enjoy Kuadra's supportive work environment where collaboration and continuous learning are encouraged."
-			],
-		]
-	);
-}
 
 if ( ! function_exists( 'll_setup' ) ) :
 	/**

@@ -21,7 +21,7 @@ $brand_message                  = get_field( 'll_brand_message' );
 // $page_excerpt                   = get_the_excerpt();
 // $trending                       = get_field( 'll_front_trending_items' );
 $video_heading                  = 'Nearshore Outsourced Accounting and Staffing';
-$video_subheading               = 'Enhance operational efficiency with our talent';
+$video_subheading               = 'Enhance operational efficiency with our talent.';
 $hero_cta1_text									= get_field( 'll_hero_cta1_text' );
 $hero_cta1_url									= get_field( 'll_hero_cta1_url' );
 $hero_cta2_text									= get_field( 'll_hero_cta2_text' );
@@ -37,8 +37,8 @@ $hero_cta2_url									= get_field( 'll_hero_cta2_url' );
 			?>
 
 			<?php if ( $featvideo ) { ?>
-				<div class="page-hero | wp-block-cover bg-white print:py-8">
-					<span aria-hidden="true" class="page-hero-overlay | z-[1] absolute top-0 right-0 bottom-0 left-0"></span>
+				<div class="page-hero | wp-block-cover bg-white min-h-min  |  print:py-8">
+					<span aria-hidden="true" class="page-hero-overlay  |  z-[1] absolute top-0 right-0 bottom-0 left-0"></span>
 
 					<video playsinline autoplay muted loop poster="<?php echo $featimg[0]; ?>" class="wp-block-cover__video-background print:hidden" data-object-fit="cover">
 						<source src="<?php echo $featvideo; ?>">
@@ -48,16 +48,14 @@ $hero_cta2_url									= get_field( 'll_hero_cta2_url' );
 					<!-- <div class="overlay | absolute top-0 left-0 w-full h-[1080px] bg-neutral-800/70 lg:bg-transparent lg:bg-hero-gradient"></div> -->
 
 					<!-- <div class="relative flex flex-col justify-center px-2 min-h-[240px] md:container lg:px-[16px] md:min-h-hero text-left"> -->
-					<div class="wp-block-cover__inner-container p-2 container flex flex-col gap-0 | lg:p-4">
+					<div class="wp-block-cover__inner-container p-2 container flex flex-col gap-0  |  lg:p-4">
 
-						<div class="flex flex-col justify-center min-h-her min-h-52 md:min-h-72 lg:min-h-[400px]">
-							<h1 class="text-neutral-800 has-text-color max-w-[20ch] leading-none tracking-light text-balance text-shadow shadow-white | dark:text-neutral-800">
+						<div class="text-neutral-900 flex flex-col justify-center space-y-6  |  md:min-h-(--height-hero) print:min-h-min">
+							<h1 class="text-neutral-900 max-w-[20ch] leading-none tracking-light text-pretty shadow-neutral-50 drop-shadow-lg  |  lg:text-6xl lg:print:!text-xl print:text-black">
 								<?php echo $video_heading; ?>
 							</h1>
 
-							<div class="brand-message-3 | mt-5">
-								<h2 class="has-text-color "><?php echo $video_subheading; ?></h2>
-							</div>
+							<h2 class="text-2xl leading-none text-pretty !text-neutral-800 shadow-neutral-50 drop-shadow-lg  |  md:max-w-5xl lg:text-4xl lg:print:!text-base print:!text-black"><?php echo $video_subheading; ?></h2>
 
 							<?php if ( ( !empty( $hero_cta1_text ) ) && ( !empty( $hero_cta1_url ) ) ) : ?>
 							<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
@@ -132,7 +130,7 @@ $hero_cta2_url									= get_field( 'll_hero_cta2_url' );
 					<div class="flex flex-col items-start gap-4 sm:flex-row sm:items-center md:justify-between lg:gap-8">
 						<div class="">
 							<h2 class="mb-2">Let's get started</h2>
-							<p class="">Interested in learning more about our bookkeeping and accounting solutions? Contact us and a team member will reach out to you shortly.</p>
+							<p class="">Interested in learning more about our solutions? Connect with us today.</p>
 							<p class="hidden print:mt-8 print:block">Email info@kuadrasupport.com</p>
 						</div>
 						<div class="w-full md:max-w-fit print:hidden">

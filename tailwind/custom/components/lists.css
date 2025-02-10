@@ -6,14 +6,14 @@ dl {
 }
 
 dt {
-	font-family: theme(fontFamily.head);
+	font-family: var(--font-head);
 	font-size: theme(fontSize.xl);
 	font-weight: 600;
 }
 
 dd {
 	border-bottom-width: 1px;
-	border-color: theme(colors.neutral.200);
+	border-color: var(--color-neutral-200);
 	display: list-item;
 	list-style-type: square;
 	margin-left: 2rem;
@@ -21,96 +21,68 @@ dd {
 	padding-bottom: var(--wp--preset--spacing--20, 0.5rem);
 }
 
-dd::marker {
-	color: var(--wp--preset--color--brand-red-pale);
-}
+dd::marker { color: var(--wp--preset--color--brand-red-pale); }
 
-ol.is-style-default,
-ol:not([class]),
-ol.wp-block-list {
-	list-style: decimal;
-	padding-inline-start: 1.5rem;
 
-	li::marker {
-		color: theme(colors.neutral.500);
-	}
-}
-ul.is-style-default,
-ul:not([class]),
-ul.wp-block-list {
-	list-style: disc;
-	padding-inline-start: 1.5rem;
+ol:where(.is-style-default, :not([class]), .wp-block-list) { list-style: decimal; }
+ol:where(.is-style-default, :not([class]), .wp-block-list) li::marker { color: var(--color-neutral-500); }
 
-	li::marker {
-		color: theme(colors.neutral.300);
-	}
-}
+ol:where(.is-style-default, :not([class]), .wp-block-list),
+ul:where(.is-style-default, :not([class]), .wp-block-list) { padding-inline-start: 1.5rem; }
+
+ul:where(.is-style-default, :not([class]), .wp-block-list) { list-style: disc; }
+ul:where(.is-style-default, :not([class]), .wp-block-list) li::marker { color: var(--color-neutral-300); }
+
 
 .prose:not(.grid) li:not(:last-child),
-.prose *:not(.grid) > li:not(:last-child) {
-	margin-bottom: var(--wp--preset--spacing--20, 0.5rem);
-}
+.prose *:not(.grid) > li:not(:last-child) { margin-bottom: var(--wp--preset--spacing--20, 0.5rem); }
 
-.list-square {
-	list-style-type: square;
-}
+.list-square { list-style-type: square; }
 
-.list-checked li::before {
-	content: "\f058";
-}
+.list-checked li::before { content: "\f058"; }
 
 .is-style-list-none,
 .prose .is-style-list-none {
 	list-style-type: none;
 	padding-left: 0;
-
-	li {
-		padding-left: 0;
-	}
 }
+.is-style-list-none li,
+.prose .is-style-list-none li { padding-left: 0; }
 
 .is-style-list-square,
-.prose .is-style-list-square {
-	list-style-type: square;
-}
+.prose .is-style-list-square { list-style-type: square; }
 
-.is-style-list-columns-2 {
-	columns: 1;
-}
-.is-style-list-columns-2 li {
-	break-inside: avoid-column;
-}
-.is-style-list-columns-2 li:first-of-type {
-	margin-top: 0;
-}
+.is-style-list-columns-2 { columns: 1; }
+.is-style-list-columns-2 li { break-inside: avoid-column; }
+.is-style-list-columns-2 li:first-of-type { margin-top: 0; }
 
 /* inspiration: https://codepen.io/joshwcomeau/pen/VwxwYbG */
 [class*="is-style-list-divide-"],
 .prose [class*="is-style-list-divide-"] {
 	list-style-type: none;
 	padding: 0;
-
-	li {
-		padding-left: 0;
-
-		&:not(:last-of-type) {
-			border-bottom-width: 2px;
-			border-style: dotted;
-		}
-	}
+}
+[class*="is-style-list-divide-"] li,
+.prose [class*="is-style-list-divide-"] li {
+	padding-left: 0;
+}
+[class*="is-style-list-divide-"] li:not(:last-of-type),
+.prose [class*="is-style-list-divide-"] li:not(:last-of-type) {
+	border-bottom-width: 2px;
+	border-style: dotted;
 }
 
 .is-style-list-divide-light li:not(:last-of-type) {
-	border-color: theme(colors.neutral.400);
+	border-color: var(--color-neutral-400);
 }
 .is-style-list-divide-gray li:not(:last-of-type) {
-	border-color: theme(colors.brand-gray);
+	border-color: var(--color-brand-gray);
 }
 .is-style-list-divide-green li:not(:last-of-type) {
-	border-color: theme(colors.atlantis.200);
+	border-color: var(--color-atlantis-200);
 }
 .is-style-list-divide-aqua li:not(:last-of-type) {
-	border-color: theme(colors.aqua.200);
+	border-color: var(--color-aqua-200);
 }
 
 .is-style-list-checked {
@@ -165,22 +137,22 @@ ul.wp-block-list {
 }
 
 .is-style-circle li {
-	background-color: theme(colors.neutral.600);
+	background-color: var(--color-neutral-600);
 }
 .is-style-circle h5 {
-	color: theme(colors.neutral.600);
+	color: var(--color-neutral-600);
 }
 .is-style-circle-atlantis li {
-	background-color: theme(colors.atlantis.500);
+	background-color: var(--color-atlantis-500);
 }
 .is-style-circle-atlantis h5 {
-	color: theme(colors.atlantis.500);
+	color: var(--color-atlantis-500);
 }
 .is-style-circle-aqua li {
-	background-color: theme(colors.aqua.500);
+	background-color: var(--color-aqua-500);
 }
 .is-style-circle-aqua h5 {
-	color: theme(colors.aqua.500);
+	color: var(--color-aqua-500);
 }
 
 /* Split Ball Lists */
@@ -204,7 +176,7 @@ ul.wp-block-list {
 	font-size: 1.25rem/* 20px */;
 	line-height: 1.375;
 	text-align: center;
-	color: theme(colors.neutral.200);
+	color: var(--color-neutral-200);
 	display: flex;
 	width: 200px;
 	align-items: center;
@@ -215,7 +187,7 @@ ul.wp-block-list {
 .is-style-split-circle a,
 .is-style-split-circle-green a,
 .is-style-split-circle-aqua a {
-	color: theme(colors.neutral.200);
+	color: var(--color-neutral-200);
 	text-decoration-line: underline;
 	text-decoration-color: rgb(245 245 245 / 0.6);
 	text-decoration-style: dotted;
@@ -259,7 +231,11 @@ ul.wp-block-list {
 }
 
 
-@media screen and (min-width: 768px) {
+.inline-comma-sep span:not(:last-of-type)::after { content: ", "; }
+.inline-pipe-sep span:not(:last-of-type)::after {	content: " | ";	}
+
+
+@media (width >= theme(--breakpoint-md)) {
 	.is-style-circle,
 	.is-style-circle-atlantis,
 	.is-style-circle-aqua {
@@ -274,7 +250,7 @@ ul.wp-block-list {
 }
 
 
-@media screen and (min-width: 1024px) {
+@media (width >= theme(--breakpoint-lg)) {
 	.is-style-list-columns-2 {
 		columns: 2;
 	}

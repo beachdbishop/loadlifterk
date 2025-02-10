@@ -13,28 +13,28 @@
 		var(--_end) 100%
 	);
 }
-@media screen and (min-width: 768px) {
+@media (width >= theme(--breakpoint-md)) {
 	[class*="is-style-sep-"] {
 		margin-block: 1.5rem;
 	}
 }
-@media screen and (min-width: 1024px) {
+@media (width >= theme(--breakpoint-lg)) {
 	[class*="is-style-sep-"] {
 		margin-block: 2rem;
 	}
 }
 
 .is-style-sep-aqua {
-	--_start: theme(colors.aqua.500);
-	--_end: theme(colors.aqua.200);
+	--_start: var(--color-aqua-500);
+	--_end: var(--color-aqua-200);
 }
 .is-style-sep-green {
-	--_start: theme(colors.atlantis.500);
-	--_end: theme(colors.atlantis.200);
+	--_start: var(--color-atlantis-500);
+	--_end: var(--color-atlantis-200);
 }
 .is-style-sep-gray {
-	--_start: theme(colors.neutral.500);
-	--_end: theme(colors.neutral.200);
+	--_start: var(--color-neutral-500);
+	--_end: var(--color-neutral-200);
 }
 
 

@@ -2,27 +2,11 @@
 
 :not(img).todo {
 	font-style: italic;
-	color: theme(colors.pink.700);
+	color: var(--color-pink-500);
 }
 img.todo {
-	background-color: theme(colors.pink.700);
+	background-color: var(--color-pink-500);
 }
 div.todo {
-	background-color: theme(colors.pink.100);
-}
-
-/* .env-dev .ll__widget-area {
-	@apply border-2 border-dashed border-pink-500;
-} */
-
-@media (prefers-color-scheme: dark) {
-	:not(img).todo {
-		color: theme(colors.pink.400);
-	}
-	img.todo {
-		background-color: theme(colors.pink.400);
-	}
-	div.todo {
-		background-color: theme(colors.pink.800);
-	}
+	background-color: var(--color-pink-100);
 }

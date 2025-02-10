@@ -4,11 +4,11 @@
 	background-color: transparent;
 }
 .llad.is-style-atlantis {
-	background-color: theme(colors.atlantis.700);
+	background-color: var(--color-atlantis-700);
 }
 .llad.is-style-aqua {
-	background-color: theme(colors.aqua.700);
+	background-color: var(--color-aqua-700);
 }
 .llad.is-style-brand-gray {
-	background-color: theme(colors.neutral.700);
+	background-color: var(--color-neutral-700);
 }

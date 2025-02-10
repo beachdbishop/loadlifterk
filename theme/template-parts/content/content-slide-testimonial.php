@@ -14,8 +14,9 @@ $title = get_field( 'll_testim_title' ); // Staff
 $photo = get_field( 'll_testim_photo' ); // Staff
 $rating = get_field( 'll_testim_rating' ); // Client
 
+
 if ( ( $type === 'client' ) && ( get_field( 'll_testim_solution' ) === 'https://kuadradev.local/solutions/bookkeeping/' ) ) {
-	$icon = 'fa-book';
+	$icon = get_field( 'll_testim_icon' ); // Client
 	$solution = 'Bookkeeping and Back-Office Support';
 	$solution_url = '/solutions/bookkeeping/';
 } elseif ( ( $type === 'client' ) && ( get_field( 'll_testim_solution' ) === 'https://kuadradev.local/solutions/employee-leasing-staffing/' ) ) {
@@ -29,23 +30,17 @@ if ( ( $type === 'client' ) && ( get_field( 'll_testim_solution' ) === 'https://
 
 ?>
 
-<div class="<?php echo $posttype_class; ?> testimonial-<?php echo $type; ?> | keen-slider__slide flex flex-col opacity-40 transition-opacity duration-500">
-	<div class="flex-grow rounded-lg bg-neutral-50 p-6 shadow-sm sm:p-8">
+<div class="<?php echo $posttype_class; ?> testimonial-<?php echo $type; ?>  |  keen-slider__slide flex flex-col opacity-40 transition-opacity duration-500">
+	<div class="grow rounded-lg bg-neutral-50 p-6 shadow-xs  |  sm:p-8">
 		<div class="flex items-center gap-4">
 			<div class="fa-4x">
-				<?php if ( $type === 'client' ) : ?>
-					<a class="" href="<?php echo $solution_url; ?>" aria-label="<?php echo $solution; ?>" title="Go to <?php echo $solution; ?>">
-				<?php endif; ?>
 				<span class="fa-layers fa-fw">
 					<i class="fa-solid fa-circle text-aqua-300"></i>
-					<i class="fa-inverse fa-sharp fa-solid <?php echo $icon; ?>" data-fa-transform="shrink-8"></i>
+					<i class="fa-inverse fa-sharp fa-regular <?php echo $icon; ?>" data-fa-transform="shrink-8"></i>
 				</span>
-				<?php if ( $type === 'client' ) : ?>
-					</a>
-				<?php endif; ?>
 			</div>
 
-			<div class="prose prose-neutral lg:prose-xl dark:prose-invert">
+			<div class="prose prose-neutral  |  dark:prose-invert lg:prose-xl">
 				<?php if ( $type === 'client' ) : ?>
 					<div class="slide-rating flex justify-start gap-0.5 text-atlantis-500">
 						<i class="fa-solid fa-star"></i>

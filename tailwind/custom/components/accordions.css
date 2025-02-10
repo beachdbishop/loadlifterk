@@ -11,10 +11,10 @@ summary {
 	cursor: pointer;
 	position: relative;
 	z-index: 10;
+}
 
-	> * {
-		display: inline;
-	}
+summary > * {
+	display: inline;
 }
 
 summary::marker,
@@ -39,7 +39,7 @@ details[open] summary::-webkit-details-marker {
 }
 
 .accordions summary {
-	font-family: theme(fontFamily.head);
+	font-family: var(--font-head);
 	font-size: 1.875rem/* 30px */;
 	line-height: 2.25rem;
 	padding-inline: 1rem;
@@ -49,7 +49,7 @@ details[open] summary::-webkit-details-marker {
 }
 .accordions summary::before {
 	content: '+';
-	font-family: theme(fontFamily.mono);
+	font-family: var(--font-mono);
 	margin-right: 0.25rem;
 }
 .accordions summary:hover::before {
@@ -57,7 +57,7 @@ details[open] summary::-webkit-details-marker {
 }
 
 .accordions .details-inner {
-	background-color: theme(colors.neutral.50);
+	background-color: var(--color-neutral-50);
 	padding-inline: 0.5rem;
 	padding-block: 1rem;
 	position: relative;
@@ -70,26 +70,26 @@ details[open] summary::-webkit-details-marker {
 }
 
 .accordions.is-style-default details[open] summary {
-	color: theme(colors.neutral.900);
+	color: var(--color-neutral-900);
 }
 .accordions.is-style-default summary {
-	background-color: theme(colors.neutral.200);
-	color: theme(colors.neutral.700);
+	background-color: var(--color-neutral-200);
+	color: var(--color-neutral-700);
 }
 .accordions.is-style-default summary::before {
-	color: theme(colors.neutral.400);
+	color: var(--color-neutral-400);
 }
 
 .accordions.is-style-aqua details[open] summary {
 	color: white;
 }
 .accordions.is-style-aqua summary {
-	background-color: theme(colors.aqua.800);
-	color: theme(colors.aqua.50);
+	background-color: var(--color-aqua-800);
+	color: var(--color-aqua-50);
 }
 
 .accordions.is-style-aqua summary::before {
-	color: theme(colors.aqua.100);
+	color: var(--color-aqua-100);
 }
 
 .accordions.is-style-green details[] summary {
@@ -97,11 +97,11 @@ details[open] summary::-webkit-details-marker {
 }
 
 .accordions.is-style-green summary {
-	background-color: theme(colors.atlantis.800);
-	color: theme(colors.atlantis.50);
+	background-color: var(--color-atlantis-800);
+	color: var(--color-atlantis-50);
 }
 .accordions.is-style-green summary::before {
-	color: theme(colors.atlantis.100);
+	color: var(--color-atlantis-100);
 }
 
 
@@ -114,13 +114,13 @@ details[open] summary::-webkit-details-marker {
 
 @media (prefers-color-scheme: dark) {
 	.accordions .details-inner {
-		background-color: theme(colors.neutral.800);
-		color: theme(colors.neutral.300);
+		background-color: var(--color-neutral-800);
+		color: var(--color-neutral-300);
 	}
 }
 
 
-@media screen and (min-width: 1024px) {
+@media (width >= theme(--breakpoint-lg)) {
 	.accordions .details-inner {
 		padding-inline: 1rem;
 		padding-bottom: 1.5rem;

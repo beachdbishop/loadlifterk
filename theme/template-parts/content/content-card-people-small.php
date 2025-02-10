@@ -36,7 +36,7 @@ $peep_level                     = get_field( 'll_people_level' );
 			?>
 		</div>
 
-		<div class="card-img | flex-shrink-0 object-cover object-center mr-4 rounded-full bg-neutral-100 bg-no-repeat group-hover:border-brand-red" style="background-image: url('<?php echo $headshot; ?>'); background-size: 64px 86px; background-position: center top;" aria-label="">
+		<div class="card-img | shrink-0 object-cover object-center mr-4 rounded-full bg-neutral-100 bg-no-repeat group-hover:border-brand-red" style="background-image: url('<?php echo $headshot; ?>'); background-size: 64px 86px; background-position: center top;" aria-label="">
 			<div class="size-16 aspect-square">&nbsp;</div>
 		</div>
 
