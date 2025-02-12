@@ -231,19 +231,19 @@
 			"fontSizes": [
 				{
 					"name": "Extra Small",
-					"size": "0.75rem",
+					"size": "0.6944rem",
 					"fluid": {
-						"min": "0.75rem",
-						"max": "0.875rem"
+						"min": "0.6944rem",
+						"max": "0.76rem"
 					},
 					"slug": "xs"
 				},
 				{
 					"name": "Small",
-					"size": "0.875rem",
+					"size": "0.8333rem",
 					"fluid": {
-						"min": "0.875rem",
-						"max": "1rem"
+						"min": "0.8333rem",
+						"max": "0.95rem"
 					},
 					"slug": "sm"
 				},
@@ -252,52 +252,52 @@
 					"size": "1rem",
 					"fluid": {
 						"min": "1rem",
-						"max": "1.125rem"
+						"max": "1.1875rem"
 					},
 					"slug": "base"
 				},
 				{
 					"name": "Large",
-					"size": "1.125rem",
+					"size": "1.2rem",
 					"fluid": {
-						"min": "1.125rem",
-						"max": "1.25rem"
+						"min": "1.2rem",
+						"max": "1.4844rem"
 					},
 					"slug": "lg"
 				},
 				{
 					"name": "Extra Large",
-					"size": "1.25rem",
+					"size": "1.44rem",
 					"fluid": {
-						"min": "1.25rem",
-						"max": "1.5rem"
+						"min": "1.44rem",
+						"max": "1.8555rem"
 					},
 					"slug": "xl"
 				},
 				{
 					"name": "2 XL",
-					"size": "1.5rem",
+					"size": "1.728rem",
 					"fluid": {
-						"min": "1.5rem",
-						"max": "1.875rem"
+						"min": "1.728rem",
+						"max": "2.3193rem"
 					},
 					"slug": "2xl"
 				},
 				{
 					"name": "3 XL",
-					"size": "1.875rem",
+					"size": "2.0736rem",
 					"fluid": {
-						"min": "1.875rem",
-						"max": "2.25rem"
+						"min": "2.0736rem",
+						"max": "2.8992rem"
 					},
 					"slug": "3xl"
 				},
 				{
 					"name": "4 XL",
-					"size": "2.25rem",
+					"size": "2.4883rem",
 					"fluid": {
-						"min": "2.25rem",
-						"max": "2.875rem"
+						"min": "2.4883rem",
+						"max": "3.624rem"
 					},
 					"slug": "4xl"
 				}
@@ -316,11 +316,25 @@
 			"core/button": {
 				"border": {
 					"radius": "8px",
-					"color": "transparent"
+					"color": "transparent",
+					"width": "2px"
 				},
 				"color": {
 					"background": "var(--wp--preset--color--aqua-800)",
 					"text": "var(--wp--preset--color--aqua-50)"
+				},
+				"variations": {
+					"outline": {
+						"border": {
+							"color": "var(--wp--preset--color--aqua-800)",
+							"style": "solid",
+							"width": "2px"
+						},
+						"color": {
+							"background": "transparent",
+							"text": "var(--wp--preset--color--aqua-800)"
+						}
+					}
 				}
 			},
 			"core/post-title": {
@@ -400,40 +414,9 @@
 				}
 			},
 			"button": {
-				":active": {
-					"color": {
-						"background": "var(--wp--preset--color--contrast)",
-						"text": "var(--wp--preset--color--base)"
-					}
-				},
-				":focus": {
-					"color": {
-						"background": "var(--wp--preset--color--contrast-2)",
-						"text": "var(--wp--preset--color--base)"
-					},
-					"outline": {
-						"color": "var(--wp--preset--color--contrast)",
-						"offset": "2px",
-						"style": "dotted",
-						"width": "1px"
-					},
-					"border": {
-						"color": "var(--wp--preset--color--contrast-2)"
-					}
-				},
-				":hover": {
-					"color": {
-						"background": "var(--wp--preset--color--aqua-600)",
-						"text": "var(--wp--preset--color--base)"
-					},
-					"border": {
-						"color": "var(--wp--preset--color--aqua-600)"
-					}
-				},
 				"border": {
 					"radius": ".5rem",
-					"color": "var(--wp--preset--color--transparent)",
-					"width": "2px"
+					"color": "transparent"
 				},
 				"color": {
 					"background": "var(--wp--preset--color--aqua-700)",
@@ -453,11 +436,38 @@
 					"fontStyle": "normal",
 					"fontWeight": "600",
 					"textDecoration": "none"
+				},
+				":hover": {
+					"color": {
+						"background": "var(--wp--preset--color--aqua-600)",
+						"text": "var(--wp--preset--color--white)"
+					}
+				},
+				":focus": {
+					"color": {
+						"background": "var(--wp--preset--color--contrast-2)",
+						"text": "var(--wp--preset--color--white)"
+					},
+					"outline": {
+						"color": "var(--wp--preset--color--contrast)",
+						"offset": "2px",
+						"style": "dotted",
+						"width": "1px"
+					},
+					"border": {
+						"color": "var(--wp--preset--color--contrast-2)"
+					}
+				},
+				":active": {
+					"color": {
+						"background": "var(--wp--preset--color--contrast)",
+						"text": "var(--wp--preset--color--white)"
+					}
 				}
 			}
 		},
 		"spacing": {
-			"blockGap": "1.5rem"
+			"blockGap": "clamp(1.5rem, 1.368rem + 0.66vw, 2rem)"
 		},
 		"typography": {
 			"fontSize": "var(--wp--preset--font-size--base)"

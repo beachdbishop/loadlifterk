@@ -23,38 +23,38 @@
 	 * color values instead of the `var()` functions below.
 	 */
 	--color-atlantis-50: oklch(97.85% 0.021 115.41);
-  --color-atlantis-100: oklch(95.93% 0.044 116.96);
-  --color-atlantis-200: oklch(92.23% 0.08 117.04);
-  --color-atlantis-300: oklch(88.39% 0.121 118.29);
-  --color-atlantis-400: oklch(84.78% 0.155 119.18);
-  --color-atlantis-500: oklch(81.29% 0.177 120.79);
-  --color-atlantis-600: oklch(69.69% 0.154 120.91);
-  --color-atlantis-700: oklch(56.81% 0.124 120.59);
-  --color-atlantis-800: oklch(43.39% 0.093 120.53);
-  --color-atlantis-900: oklch(26.98% 0.053 120.25);
-  --color-atlantis-950: oklch(18.73% 0.031 117.77);
+	--color-atlantis-100: oklch(95.93% 0.044 116.96);
+	--color-atlantis-200: oklch(92.23% 0.08 117.04);
+	--color-atlantis-300: oklch(88.39% 0.121 118.29);
+	--color-atlantis-400: oklch(84.78% 0.155 119.18);
+	--color-atlantis-500: oklch(81.29% 0.177 120.79);
+	--color-atlantis-600: oklch(69.69% 0.154 120.91);
+	--color-atlantis-700: oklch(56.81% 0.124 120.59);
+	--color-atlantis-800: oklch(43.39% 0.093 120.53);
+	--color-atlantis-900: oklch(26.98% 0.053 120.25);
+	--color-atlantis-950: oklch(18.73% 0.031 117.77);
 	--color-aqua-50: oklch(97.2% 0.015 202.06);
-  --color-aqua-100: oklch(94.72% 0.025 202.81);
-  --color-aqua-200: oklch(89.09% 0.053 202.23);
-  --color-aqua-300: oklch(84.38% 0.075 201.12);
-  --color-aqua-400: oklch(79.69% 0.094 201.47);
-  --color-aqua-500: oklch(75% 0.109 202.72);
-  --color-aqua-600: oklch(65.95% 0.1 201.82);
-  --color-aqua-700: oklch(53.23% 0.08 201.81);
-  --color-aqua-800: oklch(39.7% 0.058 201.81);
-  --color-aqua-900: oklch(26.37% 0.035 201.3);
-  --color-aqua-950: oklch(17.41% 0.021 201.18);
+	--color-aqua-100: oklch(94.72% 0.025 202.81);
+	--color-aqua-200: oklch(89.09% 0.053 202.23);
+	--color-aqua-300: oklch(84.38% 0.075 201.12);
+	--color-aqua-400: oklch(79.69% 0.094 201.47);
+	--color-aqua-500: oklch(75% 0.109 202.72);
+	--color-aqua-600: oklch(65.95% 0.1 201.82);
+	--color-aqua-700: oklch(53.23% 0.08 201.81);
+	--color-aqua-800: oklch(39.7% 0.058 201.81);
+	--color-aqua-900: oklch(26.37% 0.035 201.3);
+	--color-aqua-950: oklch(17.41% 0.021 201.18);
 	--color-gold-50: oklch(98.15% 0.027 93.1);
-  --color-gold-100: oklch(96.18% 0.051 91.37);
-  --color-gold-200: oklch(92.84% 0.1 92.14);
-  --color-gold-300: oklch(89.59% 0.139 91.07);
-  --color-gold-400: oklch(86.66% 0.165 88.68);
-  --color-gold-500: oklch(84.03% 0.172 84.08);
-  --color-gold-600: oklch(71.19% 0.146 84.61);
-  --color-gold-700: oklch(57.75% 0.118 85.47);
-  --color-gold-800: oklch(43.46% 0.089 87.06);
-  --color-gold-900: oklch(27.61% 0.056 89.07);
-  --color-gold-950: oklch(18.87% 0.039 94.74);
+	--color-gold-100: oklch(96.18% 0.051 91.37);
+	--color-gold-200: oklch(92.84% 0.1 92.14);
+	--color-gold-300: oklch(89.59% 0.139 91.07);
+	--color-gold-400: oklch(86.66% 0.165 88.68);
+	--color-gold-500: oklch(84.03% 0.172 84.08);
+	--color-gold-600: oklch(71.19% 0.146 84.61);
+	--color-gold-700: oklch(57.75% 0.118 85.47);
+	--color-gold-800: oklch(43.46% 0.089 87.06);
+	--color-gold-900: oklch(27.61% 0.056 89.07);
+	--color-gold-950: oklch(18.87% 0.039 94.74);
 	/* see: https://www.tints.dev/gold/FFBF00 */
 
 	--color-brand-gray-faint: #fafafa;
@@ -64,8 +64,20 @@
 
 
 	--font-head: serenity, sans-serif;
-  --font-serif: Georgia, serif;
-  --font-mono: 'Fira Code', Consolas, monospace;
+	--font-serif: Georgia, serif;
+	--font-mono: 'Fira Code', Consolas, monospace;
+
+
+	--text-xs: clamp(0.6944rem, 0.6772rem + 0.0863vw, 0.76rem);
+	--text-sm: clamp(0.8333rem, 0.8026rem + 0.1535vw, 0.95rem);
+	--text-base: clamp(1rem, 0.9507rem + 0.2467vw, 1.1875rem);
+	--text-lg: clamp(1.2rem, 1.1252rem + 0.3742vw, 1.4844rem);
+	--text-xl: clamp(1.44rem, 1.3307rem + 0.5467vw, 1.8555rem);
+	--text-2xl: clamp(1.728rem, 1.5724rem + 0.7781vw, 2.3193rem);
+	--text-3xl: clamp(2.0736rem, 1.8563rem + 1.0863vw, 2.8992rem);
+	--text-4xl: clamp(2.4883rem, 2.1895rem + 1.4943vw, 3.624rem);
+	/* type scale via: https://utopia.fyi/type/calculator/?c=320,16,1.2,1536,19,1.25,5,2,&s=0.75%7C0.5%7C0.25,1.5%7C2%7C3%7C4%7C6,s-l&g=s,l,xl,12 */
+
 	--container-content: var(--wp--style--global--content-size);
 	--container-wide: var(--wp--style--global--wide-size);
 	--height-hero: 360px;
