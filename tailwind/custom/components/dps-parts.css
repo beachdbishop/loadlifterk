@@ -20,8 +20,12 @@ via: https://www.bram.us/2022/11/17/style-a-parent-element-based-on-its-number-o
 	gap: 1rem;
 }
 
+:root :where(.grid-team.is-layout-flow) > * {
+	margin-block-start: 0;
+}
 
-@media (min-width: 768px) {
+
+@media (width >= theme(--breakpoint-md)) {
 	.dps-grid-4max,
 	.dps-grid-3max,
 	.dps-grid-2max {
@@ -39,7 +43,7 @@ via: https://www.bram.us/2022/11/17/style-a-parent-element-based-on-its-number-o
 }
 
 
-@media (min-width: 1024px) {
+@media (width >= theme(--breakpoint-lg)) {
 	.dps-grid-4max {
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 	}

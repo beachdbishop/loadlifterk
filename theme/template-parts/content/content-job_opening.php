@@ -22,14 +22,14 @@ $job_openings_form = 2;
 	<div class="px-2 container xl:px-4">
 
 		<?php if ( function_exists( 'bcn_display' ) ) { ?>
-			<div class="breadcrumbs | font-head text-neutral-600 pb-4 md:pb-6 lg:pb-8" typeof="BreadcrumbList" vocab="https://schema.org"><?php bcn_display(); ?></div>
+			<div class="breadcrumbs  |  font-head text-neutral-600 pb-4  |  md:pb-6 lg:pb-8" typeof="BreadcrumbList" vocab="https://schema.org"><?php bcn_display(); ?></div>
 		<?php } ?>
 
 		<div class="mt-4 ll-page-grid md:gap-8 md:grid md:auto-rows-auto lg:gap-16">
 
-			<div class="ll-page-grid-area-a md:col-span-2">
-				<header class="mb-8 pb-4 border-b-4 border-atlantis-400 dark:border-atlantis-600">
-					<?php the_title( '<h1 class="entry-title | mb-0 text-brand-blue font-bold">', '</h1>' ); ?>
+			<div class="ll-page-grid-area-a  |  md:col-span-2">
+				<header class="mb-8 pb-4 border-b-4 border-atlantis-400  |  dark:border-atlantis-600">
+					<?php the_title( '<h1 class="entry-title  |  mb-0 font-semibold">', '</h1>' ); ?>
 				</header>
 
 				<div <?php ll_content_class( 'entry-content' ); ?>>
@@ -40,7 +40,7 @@ $job_openings_form = 2;
 
 			</div>
 
-			<div class="my-16 ll-page-grid-area-b md:my-0 md:col-span-3">
+			<div class="my-16 ll-page-grid-area-b  |  md:my-0 md:col-span-3">
 
 				<?php
 					if ( ( $f_openclosed == '1' ) && ( $f_applylink ) ) {
@@ -77,10 +77,7 @@ $job_openings_form = 2;
 
 					<p class="my-32 text-center todo"> ... or ... </p>
 
-					<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex not-prose">
-						<div class="wp-block-button is-style-default"><a href="<?php echo $f_applylink; ?>"  rel="noreferrer" target="_blank" class="wp-block-button__link has-aqua-800-background-color wp-element-button"><i class="mr-1 fa-solid fa-edit"></i> Apply at LinkedIn</a></div>
-						<div class="wp-block-button is-style-outline"><a href="/careers/" class="wp-block-button__link has-aqua-800-color has-text-color wp-element-button"><i class="mr-1 fa-regular fa-angle-left"></i> Back</a></div>
-					</div>
+					<p class="text-xl"><a href="<?php echo $f_applylink; ?>"  rel="noreferrer" target="_blank"><i class="mr-1 fa-solid fa-edit"></i> Apply at LinkedIn</a> <span class="text-neutral-300 dark:text-neutral-700"> | </span> <a href="/careers/"><i class="mr-1 fa-regular fa-angle-left"></i> Back</a></p>
 
 				<?php } else { ?>
 

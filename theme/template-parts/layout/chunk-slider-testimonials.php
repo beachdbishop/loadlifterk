@@ -74,17 +74,17 @@ $args = wp_parse_args(
 		</div>
 
 		<div class="mt-6 flex items-center justify-center gap-4">
-			<button aria-label="Previous slide" id="keen-slider-previous" class="text-neutral-600 transition-colors hover:text-neutral-900">
+			<button aria-label="Previous slide" id="keen-slider-previous" class="">
 				<i class="fa-regular fa-angle-left"></i>
 			</button>
 
-			<p class="w-16 text-center text-sm text-neutral-700">
+			<p class="w-16 text-center text-sm">
 				<span id="keen-slider-active"></span>
 				/
 				<span id="keen-slider-count"></span>
 			</p>
 
-			<button aria-label="Next slide" id="keen-slider-next" class="text-neutral-600 transition-colors hover:text-neutral-900">
+			<button aria-label="Next slide" id="keen-slider-next" class="">
 				<i class="fa-regular fa-angle-right"></i>
 			</button>
 		</div>

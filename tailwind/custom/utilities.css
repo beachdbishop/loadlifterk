@@ -35,19 +35,20 @@ div:not(.block-editor-block-list__layout) .full-bleed > div {
 	transform: none;
 }
 
-@media screen {
-	body {
-		--_spacing: clamp(2rem, 1.111rem + 4.44vw, 5rem);
-		--_padding: clamp(2rem, 1.111rem + 4.44vw, 5rem);
-	}
 
-	.ll-equal-vert-padding {
-		padding-block: var(--_padding);
-	}
+body {
+	/* --_spacing: clamp(2rem, 1.111rem + 4.44vw, 5rem);
+	--_padding: clamp(2rem, 1.111rem + 4.44vw, 5rem); */
+	--_spacing: clamp(2rem, 1.333rem + 3.33vw, 4rem);
+	--_padding: clamp(2rem, 1.333rem + 3.33vw, 4rem);
+}
 
-	.ll-equal-vert-spacing {
-		margin-block: var(--_spacing);
-	}
+.ll-equal-vert-padding {
+	padding-block: var(--_padding);
+}
+
+.ll-equal-vert-spacing {
+	margin-block: var(--_spacing);
 }
 
 

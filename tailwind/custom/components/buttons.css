@@ -1,7 +1,7 @@
 /*   B u t t o n s   */
 
 .wp-block-button__link {
-	--tw-shadow-color: var(--color-neutral-800);
+	--tw-shadow-color: var(--color-neutral-700);
 	--tw-shadow: var(--tw-shadow-colored);
 	font-family: var(--font-head);
 	font-weight: 600;

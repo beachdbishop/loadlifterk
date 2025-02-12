@@ -15,7 +15,7 @@ if ( ! defined( 'LL_VERSION' ) ) {
 	 * to create your production build, the value below will be replaced in the
 	 * generated zip file with a timestamp, converted to base 36.
 	 */
-	define( 'LL_VERSION', '1.0.0' );
+	define( 'LL_VERSION', '1.1.0' );
 }
 
 if ( ! defined( 'LL_COMPANY_LEGAL_NAME' ) ) {
@@ -46,7 +46,7 @@ if ( ! defined( 'LL_TYPOGRAPHY_CLASSES' ) ) {
 	define(
 		'LL_TYPOGRAPHY_CLASSES',
 		// 'prose'
-		'prose prose-neutral prose-headings:font-light max-w-none prose-blockquote:font-serif lg:prose-xl dark:prose-invert'
+		'prose prose-neutral prose-headings:font-light max-w-none prose-blockquote:font-serif dark:prose-invert'
 	);
 }
 
@@ -59,49 +59,20 @@ if ( ! defined( 'LL_LP_TEMPLATES' ) ) {
 	);
 }
 
-if ( ! defined( 'LL_NAV_PRIMARY' ) && ( wp_get_environment_type() == 'local' ) ) {
+if ( ! defined( 'LL_NAV_PRIMARY' ) ) {
 	define(
 		'LL_NAV_PRIMARY',
 		[
-			"devsample" => [
-				"label" => 'Dev only: Sample',
-				"url" => '/sample-page/',
+			// "services" => [
+			// 	"label" => 'Solutions',
+			// 	"url" => '/solutions/',
+			// 	"hasChildren" => true,
+			// 		"submenuContent" => '[listmenu menu="Services menu" /]',
+			// ],
+			"emplease" => [
+				"label" => 'Employee Leasing &amp; Staffing',
+				"url" => '/employee-leasing-staffing/',
 				"hasChildren" => false,
-			],
-			"services" => [
-				"label" => 'Solutions',
-				"url" => '/solutions/',
-				"hasChildren" => true,
-					"submenuContent" => '[listmenu menu="Services menu" /]',
-			],
-			"about" => [
-				"label" => 'About Us',
-				"url" => '/about/',
-				"hasChildren" => true,
-					"submenuContent" => '[listmenu menu="About menu" /]',
-			],
-			"careers" => [
-				"label" => 'Careers',
-				"url" => '/careers/',
-				"hasChildren" => false,
-			],
-			"contact" => [
-				"label" => 'Contact Us',
-				"url" => '/contact/',
-				"hasChildren" => false,
-			],
-
-		]
-	);
-} else {
-	define(
-		'LL_NAV_PRIMARY',
-		[
-			"services" => [
-				"label" => 'Solutions',
-				"url" => '/solutions/',
-				"hasChildren" => true,
-					"submenuContent" => '[listmenu menu="Services menu" /]',
 			],
 			"about" => [
 				"label" => 'About Us',
@@ -123,25 +94,25 @@ if ( ! defined( 'LL_NAV_PRIMARY' ) && ( wp_get_environment_type() == 'local' ) )
 	);
 }
 
-if ( ! defined( 'LL_NAV_SECONDARY' ) ) {
-	define(
-		'LL_NAV_SECONDARY',
-		[
-			"clients" => [
-				"label" => 'Client Center',
-				"url" => '/client-center/',
-			],
-			"insights" => [
-				"label" => 'Insights',
-				"url" => '/blog/',
-			],
-			"events" => [
-				"label" => 'Events',
-				"url" => '/category/events/',
-			],
-		]
-	);
-}
+// if ( ! defined( 'LL_NAV_SECONDARY' ) ) {
+// 	define(
+// 		'LL_NAV_SECONDARY',
+// 		[
+// 			"clients" => [
+// 				"label" => 'Client Center',
+// 				"url" => '/client-center/',
+// 			],
+// 			"insights" => [
+// 				"label" => 'Insights',
+// 				"url" => '/blog/',
+// 			],
+// 			"events" => [
+// 				"label" => 'Events',
+// 				"url" => '/category/events/',
+// 			],
+// 		]
+// 	);
+// }
 
 if ( ! defined( 'LL_KUADRA_SERVICES' ) ) {
 	define(
@@ -430,4 +401,4 @@ require get_template_directory() . '/inc/gravity-forms-tweaks.php';
 /**
  * Include ACF field content in search results
  */
-require get_template_directory() . '/inc/search-mods.php';
+// require get_template_directory() . '/inc/search-mods.php';

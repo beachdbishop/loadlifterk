@@ -29,7 +29,7 @@ fieldset {
 label,
 .gfield_label {
 	font-family: serenity, sans-serif;
-	font-size: var(--wp--preset--font-size--lg);
+	font-size: var(--wp--preset--font-size--xl);
 }
 .gform-field-label--type-sub {
 	font-size: var(--wp--preset--font-size--base);
@@ -37,6 +37,9 @@ label,
 
 .gfield_description {
 	font-size: var(--wp--preset--font-size--base);
+}
+.ginput_counter.gfield_description {
+	font-size: var(--wp--preset--font-size--sm);
 }
 
 [multiple], [type=date], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=time], [type=url], [type=week], input:where(:not([type])), select, textarea {

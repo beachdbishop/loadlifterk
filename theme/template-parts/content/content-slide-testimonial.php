@@ -15,14 +15,8 @@ $photo = get_field( 'll_testim_photo' ); // Staff
 $rating = get_field( 'll_testim_rating' ); // Client
 
 
-if ( ( $type === 'client' ) && ( get_field( 'll_testim_solution' ) === 'https://kuadradev.local/solutions/bookkeeping/' ) ) {
+if ( $type === 'client' ) {
 	$icon = get_field( 'll_testim_icon' ); // Client
-	$solution = 'Bookkeeping and Back-Office Support';
-	$solution_url = '/solutions/bookkeeping/';
-} elseif ( ( $type === 'client' ) && ( get_field( 'll_testim_solution' ) === 'https://kuadradev.local/solutions/employee-leasing-staffing/' ) ) {
-	$icon = 'fa-users';
-	$solution = 'Employee Leasing and Staffing';
-	$solution_url = '/solutions/employee-leasing-staffing/';
 } else {
 	$icon = 'fa-user';
 }
@@ -31,11 +25,11 @@ if ( ( $type === 'client' ) && ( get_field( 'll_testim_solution' ) === 'https://
 ?>
 
 <div class="<?php echo $posttype_class; ?> testimonial-<?php echo $type; ?>  |  keen-slider__slide flex flex-col opacity-40 transition-opacity duration-500">
-	<div class="grow rounded-lg bg-neutral-50 p-6 shadow-xs  |  sm:p-8">
+	<div class="grow rounded-lg bg-neutral-50 p-6 shadow-xs  |  dark:bg-neutral-800 dark:text-neutral-200 sm:p-8">
 		<div class="flex items-center gap-4">
 			<div class="fa-4x">
 				<span class="fa-layers fa-fw">
-					<i class="fa-solid fa-circle text-aqua-300"></i>
+					<i class="fa-solid fa-circle text-aqua-300  |  dark:text-aqua-700"></i>
 					<i class="fa-inverse fa-sharp fa-regular <?php echo $icon; ?>" data-fa-transform="shrink-8"></i>
 				</span>
 			</div>

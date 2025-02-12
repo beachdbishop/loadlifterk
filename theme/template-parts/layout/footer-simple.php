@@ -24,7 +24,7 @@ if ( ( !is_page_template( LL_LP_TEMPLATES ) ) && ( $show_expanded_menus ) ) {
 get_template_part( 'template-parts/siteblocks/pre', 'footer' );
 ?>
 
-<footer id="colophon" class="site-footer  |  wp-block-cover alignfull ll-equal-vert-padding !px-0 bg-atlantis-900  |  print:bg-white">
+<footer id="colophon" class="site-footer  |  wp-block-cover alignfull ll-equal-vert-padding !px-0 bg-neutral-900  |  dark:bg-black print:bg-white">
 
 	<div class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow px-2  |  lg:px-[16px]">
 		<div class="footer-grid  |  grid grid-cols-1 gap-x-8 gap-y-12 text-neutral-100 text-shadow shadow-neutral-900 z-10  |  md:grid-cols-2 md:items-center lg:grid-cols-5 print:hidden print:text-neutral-700">
@@ -53,14 +53,14 @@ get_template_part( 'template-parts/siteblocks/pre', 'footer' );
 
 		</div>
 
-		<p class="mt-8 text-xs">
+		<p class="mt-8 text-sm  |  md:mt-12 print:break-inside-avoid-page print:mt-2">
 			<?php
 			if ( ( is_page() ) && ( get_field( 'll_seo_footer' ) ) ) {
 				// if this is a page and special footer text is set...
 				$footer_markup = sprintf( '%1$s &copy;%3$s %2$s. All rights reserved.', get_field( 'll_seo_footer', get_queried_object_id(), false ), LL_COMPANY_LEGAL_NAME, date('Y') );
 			} else {
 				// this isn't a page or special footer text isn't set...
-				$footer_markup = sprintf( 'Mexico Nearshoring | Outsourcing | Accounting | Back office support :: %1$s &copy;%3$s %2$s. All rights reserved.', get_field( 'seo_footer_text', 'option' ), LL_COMPANY_LEGAL_NAME, date('Y') );
+				$footer_markup = sprintf( 'Mexico Nearshoring | Outsourcing | Employee Leasing | Staffing :: %1$s &copy;%3$s %2$s. All rights reserved.', get_field( 'seo_footer_text', 'option' ), LL_COMPANY_LEGAL_NAME, date('Y') );
 			}
 			echo $footer_markup;
 			?>

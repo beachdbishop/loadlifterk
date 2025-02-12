@@ -15,7 +15,7 @@
 <header id="masthead" class="nav-header  |  bg-white sticky top-0 z-[39]  |  dark:bg-neutral-900 dark:text-neutral-100 md:shadow-neutral-400/50 md:shadow-md print:bg-white print:shadow-none">
 	<div role="navigation" class="flex items-center justify-between px-2 py-3  |  md:container lg:px-[16px]">
 
-		<div class="w-40 order-1  |  sm:w-60 lg:w-80">
+		<div class="w-40 order-1  |  sm:w-50 lg:w-80">
 			<a href="<?php bloginfo('url'); ?>" aria-label="<?php echo bloginfo('name'); ?>" title="Go to Kuadra's front page">
 				<?php get_template_part('template-parts/svg/svg', 'logo-color'); ?>
 			</a>
@@ -35,7 +35,7 @@
 						// $isMega = ( $primary['label'] === 'Services' ) ? ' mega' : '';
 						$isMega = '';
 						echo sprintf( '<li>
-								<a class="main-link  |  underline-offset-2  |  md:text-lg lg:text-2xl" href="%1$s">%2$s</a>
+								<a class="main-link  |  text-lg underline-offset-2  |  " href="%1$s">%2$s</a>
 								<button type="button" aria-expanded="false" aria-controls="id_%3$s_menu" aria-label="%2$s menu"></button>
 								<div id="id_%3$s_menu" class="dropmenu %5$s" style="display:none">%4$s</div>
 							</li>',
@@ -46,7 +46,7 @@
 							$isMega,
 						);
 					} else {
-						echo '<li><a class="main-link  |  underline-offset-2  |  md:text-lg lg:text-2xl" href="' . $primary['url'] . '">' . $primary['label'] . '</a></li>';
+						echo '<li><a class="main-link  |  text-lg underline-offset-2  |  " href="' . $primary['url'] . '">' . $primary['label'] . '</a></li>';
 					}
 				}
 				?>

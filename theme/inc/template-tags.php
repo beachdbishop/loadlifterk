@@ -12,7 +12,7 @@ add_action( 'wp_head', function() {
 	echo '<link rel="icon" href="/favicon.ico" sizes="32x32" />' . "\r\n";
 	echo '<link rel="icon" href="/icon.svg" type="image/svg+xml" />' . "\r\n";
 	echo '<link rel="apple-touch-icon" href="/apple-touch-icon.png" />' . "\r\n";
-	echo '<link rel="manifest" href="/manifest.webmanifest" />' . "\r\n";
+	// echo '<link rel="manifest" href="/manifest.webmanifest" />' . "\r\n";
 });
 
 
@@ -25,34 +25,17 @@ if ( ! function_exists( 'll_show_social_links' ) ) :
 		$social_html = '<div class="social-links | fill-current inline-flex items-center justify-start gap-4">';
 
 			$social_html .= '<a href="https://www.linkedin.com/company/kuadra-support/" class="duration-200 ease-in-out hover:scale-125" aria-labelledby="soclink-linkedin">
-					<i class="w-8 h-8 fa-brands fa-linkedin-in"></i>
-					<span id="soclink-linkedin" class="screen-reader-text">LinkedIn</span>
+				<i class="w-8 h-8 fa-brands fa-linkedin-in"></i>
+				<span id="soclink-linkedin" class="sr-only">LinkedIn</span>
 			</a>
 			<a href="https://www.facebook.com/kuadrasupport" class="duration-200 ease-in-out hover:scale-125" aria-labelledby="soclink-facebook">
-					<i class="w-8 h-8 fa-brands fa-facebook"></i>
-					<span id="soclink-facebook" class="screen-reader-text">Facebook</span>
+				<i class="w-8 h-8 fa-brands fa-facebook"></i>
+				<span id="soclink-facebook" class="sr-only">Facebook</span>
 			</a>
-			<a href="https://instagram.com/kuadrasupport?igshid=YmMyMTA2M2Y=" class="duration-200 ease-in-out hover:scale-125" aria-labelledby="soclink-instagram">
-					<i class="w-8 h-8 fa-brands fa-instagram"></i>
-					<span id="soclink-instagram" class="screen-reader-text">Instagram</span>
+			<a href="https://instagram.com/kuadrasupport" class="duration-200 ease-in-out hover:scale-125" aria-labelledby="soclink-instagram">
+				<i class="w-8 h-8 fa-brands fa-instagram"></i>
+				<span id="soclink-instagram" class="sr-only">Instagram</span>
 			</a>';
-
-			// $social_html .= '<a href="" class="duration-200 ease-in-out hover:scale-125" aria-labelledby="soclink-youtube">
-			//         <i class="w-8 h-8 fa-brands fa-youtube"></i>
-			//         <span id="soclink-youtube" class="screen-reader-text">Youtube</span>
-			//     </a>
-			//     <a href="" class="duration-200 ease-in-out hover:scale-125" aria-labelledby="soclink-vimeo">
-			//         <i class="w-8 h-8 fa-brands fa-vimeo-v"></i>
-			//         <span id="soclink-vimeo" class="screen-reader-text">Vimeo</span>
-			//     </a>
-			//     <a href="" class="duration-200 ease-in-out hover:scale-125" aria-labelledby="soclink-tiktok">
-			//         <i class="w-8 h-8 fa-brands fa-tiktok"></i>
-			//         <span id="soclink-tiktok" class="screen-reader-text">TikTok</span>
-			//     </a>
-			//     <a href="" class="duration-200 ease-in-out hover:scale-125" aria-labelledby="soclink-mastodon">
-			//         <i class="w-8 h-8 fa-brands fa-mastodon"></i>
-			//         <span id="soclink-mastodon" class="screen-reader-text">Mastodon</span>
-			//     </a>';
 
 			$social_html .= '</div>';
 
@@ -293,8 +276,8 @@ endif;
 if ( ! function_exists( 'll_page_title' ) ) :
 	function ll_page_title( $h1, $h2 ) {
 		echo '<div class="px-2 container xl:px-4">
-			<h1 class="leading-none tracking-light lg:text-6xl">'.$h1.'</h1>
-			<h2 class="mt-4 text-2xl leading-normal max-w-[42ch] text-atlantis-200 lg:text-4xl">'.$h2.'</h2>
+			<h1 class="leading-none tracking-light">'.$h1.'</h1>
+			<h2 class="mt-4 leading-normal max-w-[42ch] text-atlantis-200">'.$h2.'</h2>
 		</div>';
 
 		if ( function_exists( 'bcn_display' ) && !is_front_page() ) {
@@ -305,56 +288,18 @@ if ( ! function_exists( 'll_page_title' ) ) :
 endif;
 
 
-/* Used on Pages */
-// if ( ! function_exists( 'll_page_hero' ) ) :
-// 	function ll_page_hero( $h1, $h2, $cta1_text = null, $cta1_url = null, $cta2_text = null, $cta2_url = null ) {
-// 		// $easedGradient = 'linear-gradient(to right, hsla(0, 0%, 16%, 0.9) 0%, hsla(0, 0%, 16%, 0.891) 8.1%, hsla(0, 0%, 16%, 0.866) 15.5%, hsla(0, 0%, 16%, 0.827) 22.5%, hsla(0, 0%, 16%, 0.777) 29%, hsla(0, 0%, 16%, 0.719) 35.3%, hsla(0, 0%, 16%, 0.654) 41.2%, hsla(0, 0%, 16%, 0.585) 47.1%, hsla(0, 0%, 16%, 0.515) 52.9%, hsla(0, 0%, 16%, 0.446) 58.8%, hsla(0, 0%, 16%, 0.381) 64.7%, hsla(0, 0%, 16%, 0.323) 71%, hsla(0, 0%, 16%, 0.273) 77.5%, hsla(0, 0%, 16%, 0.234) 84.5%, hsla(0, 0%, 16%, 0.209) 91.9%, hsla(0, 0%, 16%, 0.2) 100%)';
-// 		// $moreA11yGradient = 'linear-gradient(to right, hsl(0 0% 16% / 0.95) 0%, hsl(0 0% 16% / 0.8) 40%, hsl(0 0% 16% / 0.6) 50%, hsl(0 0% 16% / 0.2) 80%, hsl(0 0% 16% / 0) 100% )';
-// 		$whiteA11yGradient = 'linear-gradient(to right, rgb(255 255 255 / 0.95) 0%, rgb(255 255 255 / 0.8) 40%, rgb(255 255 255 / 0.2) 60%, rgb(255 255 255 / 0) 100%)';
-
-// 		$hero_html = '<style>.page-hero { background-color: #F7FAEA; background-image: linear-gradient(to right, rgb(255 255 255 / 0.8) 0%, rgb(255 255 255 / 0.8) 100%), var(--ll--page-feat-img); } @media (min-width: 768px) { .page-hero { background-image: ' . $whiteA11yGradient . ', var(--ll--page-feat-img); } } @media print { .page-hero { background-color: transparent; background-image: none; } }</style>';
-
-// 		$hero_html .= '<div class="page-hero | ll-equal-vert-padding bg-no-repeat bg-[right_33%_center] bg-cover lg:bg-center print:py-8">';
-// 		$hero_html .= '<div class="flex flex-col justify-center px-2 min-h-[240px] md:container md:min-h-hero lg:px-4 print:min-h-fit"><div class="">';
-// 		$hero_html .= '<h1 class="leading-none tracking-light max-w-[28ch] text-shadow-sm shadow-neutral-50 lg:text-6xl dark:text-neutral-800">' . $h1 . '</h1>';
-// 		$hero_html .= '<div class="brand-message | full-bleed my-6"><div>';
-// 		$hero_html .= '<h2 class="max-w-fit p-4 lg:pr-8 text-2xl font-bold leading-normal bg-atlantis-500 lg:text-4xl dark:text-neutral-800">' . $h2 . '</h2>';
-// 		$hero_html .= '</div></div>';
-
-// 		if ( ( !empty( $cta1_text ) ) && ( !empty( $cta1_url ) ) ) {
-// 			$hero_html .= '<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex ">
-// 				<div class="inline-block m-0">
-// 					<a class="border-2 inline-flex items-center justify-center px-5 py-3 font-head font-semibold no-underline rounded-lg text-neutral-100 !bg-aqua-700 border-aqua-700 shadow-md shadow-neutral-950 hover:border-white hover:text-white" href="' . $cta1_url . '">' . $cta1_text . '</a>
-// 				</div>';
-// 				if ( ( !empty( $cta2_text ) ) && ( !empty( $cta2_url ) ) ) {
-// 					$hero_html .= '<div class="inline-block m-0">
-// 						<a class="border-2 inline-flex items-center justify-center px-5 py-3 font-head font-semibold no-underline rounded-lg bg-transparent border-neutral-200 text-neutral-200 shadow-md shadow-neutral-950 hover:bg-transparent hover:border-atlantis-200 hover:text-atlantis-200" href="' . $cta2_url . '">' . $cta2_text . '</a>
-// 					</div>';
-// 				}
-// 			$hero_html .= '</div>';
-// 		}
-
-// 		$hero_html .= '</div></div>';
-// 		$hero_html .= '<nav class="breadcrumbs | md:container px-2 lg:px-4 font-head text-neutral-800 print:mt-8" aria-label="Breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org">' . bcn_display( true ) . '</nav>';
-// 		$hero_html .= '</div>';
-
-// 		return $hero_html;
-// 	}
-// endif;
-
-
 if ( ! function_exists( 'll_better_page_hero' ) ) :
 	function ll_better_page_hero( $h1, $h2, $cta1_text = null, $cta1_url = null, $cta2_text = null, $cta2_url = null ) {
 		?>
 
-		<div class="page-hero  |  wp-block-cover bg-white !px-0 min-h-min  |  print:py-8 print:bg-white print:text-black">
+		<div class="page-hero  |  wp-block-cover bg-white !px-0 min-h-[unset]  |  print:py-8 print:bg-white print:text-black">
 			<span aria-hidden="true" class="page-hero-overlay | z-[1] absolute top-0 right-0 bottom-0 left-0  | print:hidden"></span>
 			<?php echo the_post_thumbnail( 'full', ['class' => 'wp-block-cover__image-background not-transparent wp-post-image print:hidden'] ); ?>
 
-			<div class="wp-block-cover__inner-container  |  px-2   |  lg:px-4 print:!px-0">
-				<div class="text-neutral-900 flex flex-col justify-center space-y-6  |  md:min-h-(--height-hero) print:min-h-min">
-					<h1 class="text-neutral-900 leading-none tracking-light text-pretty shadow-neutral-50 drop-shadow-lg  |  lg:text-6xl lg:print:!text-xl print:text-black"><?php echo $h1; ?></h1>
-					<?php if ( !empty( $h2 ) ) { ?><h2 class="text-2xl leading-none text-pretty !text-neutral-800 shadow-neutral-50 drop-shadow-lg  |  md:max-w-5xl lg:text-4xl lg:print:!text-base print:!text-black"><?php echo $h2; ?></h2><?php } ?>
+			<div class="wp-block-cover__inner-container  |  px-2  |  lg:px-4 print:!px-0">
+				<div class="text-neutral-900 flex flex-col justify-center space-y-6 min-h-[200px]  |  md:min-h-(--height-hero) print:min-h-min">
+					<h1 class="text-neutral-900 leading-none tracking-light text-pretty shadow-neutral-50 drop-shadow-lg  |  lg:print:!text-xl print:text-black"><?php echo $h1; ?></h1>
+					<?php if ( !empty( $h2 ) ) { ?><h2 class="leading-none text-pretty !text-neutral-700 shadow-neutral-50 drop-shadow-lg  |  md:max-w-5xl lg:print:!text-base print:!text-black"><?php echo $h2; ?></h2><?php } ?>
 				</div>
 				<?php if ( !is_front_page() ) { ?>
 					<nav class="breadcrumbs  |  mt-4 grow-0 font-head text-neutral-800  |  md:mt-0 print:mt-8" aria-label="Breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org"><?php echo bcn_display( true ); ?></nav>
@@ -556,14 +501,14 @@ if ( ! function_exists( 'll_paging_nav' ) ) :
 			'prev_text' => __( '&lt; Previous', 'loadlifter' ),
 			'next_text' => __( 'Next &gt;', 'loadlifter' ),
 			'type'      => 'list',
-			'before_page_number' => '<span class="screen-reader-text">' . __( 'Page ', 'loadlifter' ) . '</span>',
+			'before_page_number' => '<span class="sr-only">' . __( 'Page ', 'loadlifter' ) . '</span>',
 		) );
 
 		if ( $links ) :
 
 		?>
 		<nav class="navigation paging-navigation" role="navigation">
-			<h3 class="screen-reader-text"><?php _e( 'Posts navigation', 'loadlifter' ); ?></h3>
+			<h3 class="sr-only"><?php _e( 'Posts navigation', 'loadlifter' ); ?></h3>
 				<?php echo $links; ?>
 		</nav><!-- .navigation -->
 		<?php
@@ -614,24 +559,10 @@ if ( ! function_exists( 'll_a11y_icon_link' ) ) :
 	function ll_a11y_icon_link( $link ) {
 		echo '<a href="'. $link['url'] .'" class="duration-200 ease-in-out hover:scale-125" aria-labelledby="soclink-%2$s">
 			<i class="'. $link['icon'] .'"></i>
-			<span class="screen-reader-text">'. $link['label'] .'</span>
+			<span class="sr-only">'. $link['label'] .'</span>
 		</a>';
 	}
 endif;
-
-
-// if ( ! function_exists( 'll_footer_address' ) ) :
-// 	function ll_footer_address( $addr ) {
-// 		echo '<div class=" md:pt-2">
-// 			<address class="space-y-2 not-italic text-shadow shadow-neutral-900 print:text-shadow-none" property="address" typeof="PostalAddress">
-// 				<p class="street-address | font-head leading-none " property="streetAddress">' . $addr['street1'] . '</p>
-// 				<p class="locality | font-head leading-none "><span property="addressLocality">' . $addr['city'] . '</span>, <span class="state" property="addressRegion">' . $addr['state'] . '</span> <span class="zip" property="postalCode">' . $addr['zip'] . '</span></p>
-// 				<p class="font-semibold leading-none font-head " property="telephone">P: <a href="tel:'. ll_format_phone_number( $addr['phone'] ) .'" rel="nofollow" onclick="ga(\'send\', \'event\', \'Phone Call Tracking\', \'Click to Call\', \'' . ll_format_phone_number( $addr['phone'], 'us') . '\', 0);">' . ll_format_phone_number( $addr['phone'], 'beach') . '</a></p>
-// 				<p class="font-semibold leading-none font-head" property="faxNumber">F: ' . ll_format_phone_number( $addr['fax'], 'beach' ) . '</p>
-// 			</address>
-// 		</div>';
-// 	}
-// endif;
 
 
 if ( ! function_exists( 'll_no_link_card' ) ) :

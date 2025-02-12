@@ -58,7 +58,7 @@ if ( $peepauthor ) {
 					<div>
 					<?php
 					if ( $peep_class === 'internal' ) {
-						the_title( '<h1 class="entry-title | mb-0">', '</h1>' );
+						the_title( '<h1 class="entry-title | mb-0 ">', '</h1>' );
 
 						if( get_field( 'll_people_designations' ) ) {
 							echo sprintf( '<h2 class="leading-normal tracking-tight text-aqua-700 dark:text-aqua-300">%1$s</h2>', get_field( 'll_people_designations' ) );
@@ -68,7 +68,7 @@ if ( $peepauthor ) {
 							echo sprintf( '<h2 class="text-neutral-700 dark:text-neutral-400">%1$s</h2>', get_field( 'll_people_title' ) );
 						}
 					} else {
-						the_title( '<h1 class="entry-title | mb-0 text-brand-blue font-bold">', '</h1>' );
+						the_title( '<h1 class="entry-title | mb-0 ">', '</h1>' );
 
 						if( get_field( 'll_people_title' ) ) {
 							echo sprintf( '<h2 class="text-neutral-900">%1$s</h2>', get_field( 'll_people_title' ) );

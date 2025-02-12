@@ -257,6 +257,14 @@ body.admin-bar .nav-header { top: var(--wp-admin--admin-bar--height, 0px); }
 }
 
 
+@media ((prefers-color-scheme: dark) and (width < theme(--breakpoint-md))) {
+	.menus-container[data-visible] {
+		background-color: var(--color-neutral-900);
+		color: var(--color-neutral-100);
+	}
+}
+
+
 @media (width >= theme(--breakpoint-md)) {
 	.disclosure-nav .dropmenu:not(.mega) {
 		left: -32px;
@@ -316,7 +324,7 @@ body.admin-bar .nav-header { top: var(--wp-admin--admin-bar--height, 0px); }
 
 	.footermenu ul {
 		display: flex;
-		gap: 1rem;
+		gap: 1.5rem;
 	}
 	.footermenu .menu > * {
 		margin-top: unset;
