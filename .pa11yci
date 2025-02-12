@@ -8,14 +8,14 @@
 				"pa11y-ci-reporter-html",
 				{ "destination": "./_pa11y/" }
 			]
-		],
-		"hideElements": "form[id*='hsForm_'] > iframe"
+		]
 	},
 	"urls": [
 		"https://kuadradev.local/",
 		"https://kuadradev.local/contact/",
 		"https://kuadradev.local/solutions/bookkeeping/",
 		"https://kuadradev.local/about/",
+		"https://kuadradev.local/team/luis-f-garayzar/",
 		"https://kuadradev.local/careers/",
 		"https://kuadradev.local/careers/bilingual-accountant/"
 	]
