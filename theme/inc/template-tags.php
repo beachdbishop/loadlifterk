@@ -281,7 +281,7 @@ if ( ! function_exists( 'll_page_title' ) ) :
 		</div>';
 
 		if ( function_exists( 'bcn_display' ) && !is_front_page() ) {
-			echo '<div class="breadcrumbs | px-2 container xl:px-4 font-head text-neutral-600" typeof="BreadcrumbList" vocab="https://schema.org">' . bcn_display( true ) . '</div>
+			echo '<ol class="breadcrumbs | px-2 container xl:px-4 font-head text-neutral-600">' . bcn_display( true ) . '</ol>
 			</div>';
 		}
 	}
@@ -302,7 +302,7 @@ if ( ! function_exists( 'll_better_page_hero' ) ) :
 					<?php if ( !empty( $h2 ) ) { ?><h2 class="leading-none text-pretty !text-neutral-700 shadow-neutral-50 drop-shadow-lg  |  md:max-w-5xl lg:print:!text-base print:!text-black"><?php echo $h2; ?></h2><?php } ?>
 				</div>
 				<?php if ( !is_front_page() ) { ?>
-					<nav class="breadcrumbs  |  mt-4 grow-0 font-head text-neutral-800  |  md:mt-0 print:mt-8" aria-label="Breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org"><?php echo bcn_display( true ); ?></nav>
+					<ol class="breadcrumbs  |  list-none mt-4 grow-0 font-head text-neutral-800  |  *:inline md:mt-0 print:mt-8"><?php echo bcn_display( true ); ?></ol>
 				<?php } ?>
 			</div>
 		</div>

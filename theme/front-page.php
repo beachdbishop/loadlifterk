@@ -74,7 +74,7 @@ $hero_cta2_url									= get_field( 'll_hero_cta2_url' );
 							</div>
 							<?php endif; ?>
 						</div>
-						<nav class="breadcrumbs | grow-0 font-head text-neutral-800 | print:hidden">&nbsp;</nav>
+						<ol class="breadcrumbs | grow-0 font-head text-neutral-800 | print:hidden">&nbsp;</ol>
 					</div>
 				</div><?php
 			} else {

@@ -21,9 +21,7 @@ $job_openings_form = 2;
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'py-4 md:py-6 lg:py-8' ); ?>>
 	<div class="px-2 container xl:px-4">
 
-		<?php if ( function_exists( 'bcn_display' ) ) { ?>
-			<div class="breadcrumbs  |  font-head text-neutral-600 pb-4  |  md:pb-6 lg:pb-8" typeof="BreadcrumbList" vocab="https://schema.org"><?php bcn_display(); ?></div>
-		<?php } ?>
+		<?php get_template_part( 'template-parts/layout/chunk', 'breadcrumbs' ); ?>
 
 		<div class="mt-4 ll-page-grid md:gap-8 md:grid md:auto-rows-auto lg:gap-16">
 
