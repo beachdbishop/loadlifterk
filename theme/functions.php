@@ -15,7 +15,7 @@ if ( ! defined( 'LL_VERSION' ) ) {
 	 * to create your production build, the value below will be replaced in the
 	 * generated zip file with a timestamp, converted to base 36.
 	 */
-	define( 'LL_VERSION', '1.1.2' );
+	define( 'LL_VERSION', '2.0.0' );
 }
 
 if ( ! defined( 'LL_COMPANY_LEGAL_NAME' ) ) {
@@ -69,15 +69,15 @@ if ( ! defined( 'LL_NAV_PRIMARY' ) ) {
 			// 	"hasChildren" => true,
 			// 		"submenuContent" => '[listmenu menu="Services menu" /]',
 			// ],
-			"emplease" => [
-				"label" => 'Nearshoring Solutions',
-				"url" => '/employee-leasing/',
-				"hasChildren" => false,
-			],
+			// "emplease" => [
+			// 	"label" => 'Nearshoring Solutions',
+			// 	"url" => '/employee-leasing/',
+			// 	"hasChildren" => false,
+			// ],
 			"about" => [
 				"label" => 'About Us',
 				"url" => '/about/',
-				"hasChildren" => true,
+				"hasChildren" => false,
 					"submenuContent" => '[listmenu menu="About menu" /]',
 			],
 			"careers" => [
@@ -182,12 +182,13 @@ if ( ! function_exists( 'll_setup' ) ) :
 		);
 
 		register_nav_menus(
-			array(
+			[
+				'll_menu_simple' => __( 'Simple', 'loadlifter' ),
 				'll_menu_services' => __( 'Services menu', 'loadlifter' ),
 				'll_menu_about' => __( 'About menu', 'loadlifter' ),
 				'll_menu_col_1' => __( 'Footer Left', 'loadlifter' ),
 				'll_menu_below_disclaimers' => __( 'Footer Below Disclaimers', 'loadlifter' ),
-			)
+			]
 		);
 
 		add_theme_support( 'responsive-embeds' );

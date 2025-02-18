@@ -33,8 +33,8 @@ get_template_part( 'template-parts/siteblocks/pre', 'footer' );
 				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'll_menu_col_1',
-					'container_class' => 'footermenu mt-4 text-base  |  md:text-lg',
-					'walker' => new LL_Menu_Walker()
+					'container_class' => 'footermenu mt-4 text-base font-head font-semibold  |  md:text-lg',
+					'walker' => new WPDocs_Walker_Nav_Menu()
 				) );
 				?>
 			</nav>
@@ -66,16 +66,18 @@ get_template_part( 'template-parts/siteblocks/pre', 'footer' );
 			?>
 		</p>
 
-		<nav aria-label="Legal submenu" class="menu-legal  |  <!-- TEMP TEMP TEMP --> hidden"><? // Legal ?>
-			<p class="todo">legal</p>
-			<?php
-			// wp_nav_menu( array(
-			// 	'theme_location' => 'll_menu_below_disclaimers',
-			// 	'container_class' => 'footermenu text-sm',
-			// 	'walker' => new LL_Menu_Walker()
-			// ) );
-			?>
-		</nav>
+		<?php if ( is_local_environment() ) { ?>
+			<nav aria-label="Legal submenu" class="menu-legal  |  ">
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'll_menu_below_disclaimers',
+					'container' => "",
+					'menu_class' => 'list-none text-xs  |  md:text-sm md:flex md:gap-x-2 lg:gap-x-6',
+					'walker' => new WPDocs_Walker_Nav_Menu()
+				) );
+				?>
+			</nav>
+		<?php } ?>
 
 		<p class="pt-4 pb-0 text-sm text-center uppercase  |  print:hidden">
 			<a class="hover:text-atlantis-300" href="#page" aria-label="Back to top"><i class="fa-regular fa-arrow-up-to-dotted-line"></i></a>
