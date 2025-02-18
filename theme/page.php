@@ -40,9 +40,7 @@ $page_excerpt                   = get_the_excerpt();
 			<div class="px-2 container lg:px-[16px]">
 
 				<?php if ( get_field( 'll_hide_featured_image' ) === true ) { ?>
-					<?php if ( function_exists( 'bcn_display' ) ) { ?>
-						<div class="breadcrumbs | font-head text-neutral-600 pb-4 md:pb-6 lg:pb-8 dark:text-neutral-400" typeof="BreadcrumbList" vocab="https://schema.org"><?php bcn_display(); ?></div>
-					<?php } ?>
+					<?php get_template_part( 'template-parts/layout/chunk', 'breadcrumbs' ); ?>
 
 					<header class="mb-4">
 						<?php the_title( '<h1 class="entry-title | text-aqua-700">', '</h1>' ); ?>

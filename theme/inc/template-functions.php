@@ -6,6 +6,11 @@
  */
 
 
+ function is_local_environment() {
+	$env = wp_get_environment_type();
+	return ( defined('WP_ENVIRONMENT_TYPE') && $env === 'local' );
+}
+
 function r( $var ) {
 	echo '<pre>';
 	print_r( $var );
