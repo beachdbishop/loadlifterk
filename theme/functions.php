@@ -70,8 +70,8 @@ if ( ! defined( 'LL_NAV_PRIMARY' ) ) {
 			// 		"submenuContent" => '[listmenu menu="Services menu" /]',
 			// ],
 			"emplease" => [
-				"label" => 'Employee Leasing &amp; Staffing',
-				"url" => '/employee-leasing-staffing/',
+				"label" => 'Nearshoring Solutions',
+				"url" => '/employee-leasing/',
 				"hasChildren" => false,
 			],
 			"about" => [
