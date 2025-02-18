@@ -69,17 +69,17 @@ if ( $page_featimg == true ) {
 							?>
 
 							<?php
-							if ( $testimonialQuery->have_posts() ) :
-								get_template_part(
-									'template-parts/layout/chunk-slider', 'testimonials',
-									$args = [
-										'class' => 'slider-part',
-										'part_data' => [
-											'heading' => 'Why clients choose us',
-										]
-									]
-								);
-							endif;
+							// if ( $testimonialQuery->have_posts() ) :
+							// 	get_template_part(
+							// 		'template-parts/layout/chunk-slider', 'testimonials',
+							// 		$args = [
+							// 			'class' => 'slider-part',
+							// 			'part_data' => [
+							// 				'heading' => 'Why clients choose us',
+							// 			]
+							// 		]
+							// 	);
+							// endif;
 							?>
 
 						</div>
