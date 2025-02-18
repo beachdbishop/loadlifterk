@@ -7,6 +7,13 @@
  *
  */
 
+wp_enqueue_style(
+	'keen-slider',
+	'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css',
+	[],
+	LL_VERSION
+);
+
 global $testimonialQuery;
 
 // Set defaults.
@@ -35,42 +42,6 @@ $args = wp_parse_args(
 			endwhile;
 			?>
 
-			<?php
-			// $counter = 0;
-			// foreach ( LL_CLIENT_TESTOMONIALS as $clienttest ) {
-			?>
-				<!-- div class="service-<?php // echo $clienttest['service']; ?> | keen-slider__slide flex flex-col opacity-40 transition-opacity duration-500">
-					<div class="flex-grow rounded-lg bg-neutral-50 p-6 shadow-xs sm:p-8">
-						<div class="flex items-center gap-4">
-							<div class="fa-4x">
-								<span class="fa-layers fa-fw">
-									<i class="fa-solid fa-circle text-aqua-300"></i>
-									<i class="fa-inverse fa-sharp fa-solid fa-book" data-fa-transform="shrink-8"></i>
-								</span>
-							</div>
-
-							<div class="prose prose-neutral lg:prose-xl dark:prose-invert">
-								<div class="flex justify-start gap-0.5 text-atlantis-500">
-									<i class="fa-solid fa-star"></i>
-									<i class="fa-solid fa-star"></i>
-									<i class="fa-solid fa-star"></i>
-									<i class="fa-solid fa-star"></i>
-									<i class="fa-solid fa-star"></i>
-								</div>
-
-								<p class="mt-0.5 font-bold"><?php // echo $clienttest['company']; ?></p>
-							</div>
-						</div>
-
-						<div class="">
-							<p class="mt-4 text-neutral-700">
-								<?php // echo $clienttest['text']; ?>
-							</p>
-						</div>
-					</div>
-				</div --><?php
-			// }
-			?>
 		</div>
 
 		<div class="mt-6 flex items-center justify-center gap-4">
@@ -91,7 +62,6 @@ $args = wp_parse_args(
 	</div>
 </div>
 
-<link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
 <script type="module">
 	import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'
 

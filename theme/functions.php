@@ -241,6 +241,15 @@ function ll_scripts() {
 add_action( 'wp_enqueue_scripts', 'll_scripts' );
 
 
+/**
+ * Enqueue keen slider css
+ */
+// function ll_chunk_slider_testimonials_hook( $slug, $name, $args ) {
+// 	wp_enqueue_style( 'keen-slider', 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css', [], LL_VERSION );
+// }
+// add_action( 'get_template_part_template-parts/layout/chunk-slider-testimonials', 'll_chunk_slider_testimonials_hook', 10, 3 );
+
+
 // function ll_preload_assets() {
 // 	global $wp_scripts;
 // 	echo "\n";
