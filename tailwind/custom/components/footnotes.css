@@ -4,8 +4,8 @@
 
  ol.wp-block-footnotes {
 	max-width: 65ch;
-	font-size: 0.875rem;
-  line-height: 1.25rem
+	font-size: var(--text-sm);
+	line-height: var(--text-lg--line-height);
 }
 
 sup.fn a {
@@ -20,7 +20,7 @@ sup.fn a {
 
 @media (width >= theme(--breakpoint-lg)) {
 	ol.wp-block-footnotes {
-		font-size: 1rem;
-    line-height: 1.5rem;
+		font-size: var(--text-base);
+		line-height: var(--text-xl--line-height);
 	}
 }

@@ -11,36 +11,25 @@ figcaption {
 }
 
 .prose thead,
-.prose tfoot {
-	background-color: var(--color-neutral-200);
-}
+.prose tfoot { background-color: var(--color-neutral-200); }
 .prose th {
   border-color: var(--color-neutral-300);
 	border-style: solid;
 }
-.prose thead th {
-	border-bottom-width: 2px;
-}
+.prose thead th { border-bottom-width: 2px; }
 .prose tbody th {
 	border-bottom-width: 1px;
 	vertical-align: top;
 }
-.prose tbody tr:nth-child(even) {
-	background: color-mix(in srgb, var(--color-neutral-200), transparent 60%);
-}
+.prose tbody tr:nth-child(even) { background: color-mix(in srgb, var(--color-neutral-200), transparent 60%); }
 .prose table td {
-	--tw-border-opacity: 1;
   border-bottom-width: 1px;
-  border-color: rgb(229 229 229 / var(--tw-border-opacity)) /* neutral-200 */;
+  border-color: var(--color-neutral-200);
 	border-style: solid;
 	border-top-width: 1px;
 }
-.prose table:has(> colgroup) {
-	table-layout: fixed;
-}
-.table-oldtab {
-  font-variant-numeric: oldstyle-nums tabular-nums;
-}
+.prose table:has(> colgroup) { table-layout: fixed; }
+.table-oldtab { font-variant-numeric: oldstyle-nums tabular-nums; }
 .num {
 	text-align: right;
 	font-variant-numeric: tabular-nums;
@@ -75,29 +64,19 @@ figcaption {
 		background-color: var(--color-neutral-950);
 		border-color: var(--color-neutral-600);
 	}
-	.prose tfoot {
-		background-color: var(--color-neutral-950);
-	}
+	.prose tfoot { background-color: var(--color-neutral-950); }
 
 	.prose table th,
 	.prose table td {
 		border-color: var(--color-neutral-600);
 	}
 
-	.prose tbody tr:nth-child(even) {
-		background: color-mix(in srgb, var(--color-neutral-600), transparent 60%);
-	}
+	.prose tbody tr:nth-child(even) { background: color-mix(in srgb, var(--color-neutral-600), transparent 60%); }
 
-	[role="region"][aria-labelledby][tabindex] {
-		border: 0.1em solid var(--color-neutral-600);
-	}
+	[role="region"][aria-labelledby][tabindex] { border: 0.1em solid var(--color-neutral-600); }
 }
 
 
 @media (width >= theme(--breakpoint-lg)) {
-	table caption {
-		text-align: center;
-	}
+	table caption { text-align: center; }
 }
-
-

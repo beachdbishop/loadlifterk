@@ -12,8 +12,8 @@
 <?php //   P R E H E A D E R   A R E A   ?>
 <?php get_template_part( 'template-parts/siteblocks/pre', 'header' ); ?>
 
-<header id="masthead" class="nav-header  |  bg-white sticky top-0 z-[39]  |  dark:bg-neutral-900 dark:text-neutral-100 md:shadow-neutral-400/50 md:shadow-md print:bg-white print:shadow-none">
-	<div role="navigation" class="flex items-center justify-between px-2 py-3  |  md:container lg:px-[16px]">
+<header id="masthead" class="nav-header  |  bg-white sticky top-0 z-[39]  |  dark:bg-neutral-900 dark:text-neutral-100 dark:shadow-none md:shadow-neutral-400/50 md:shadow-md print:bg-white print:shadow-none">
+	<div class="flex items-center justify-between px-2 py-3  |  md:container lg:px-[16px]">
 
 		<div class="w-40 order-1  |  sm:w-50 lg:w-80">
 			<a href="<?php bloginfo('url'); ?>" aria-label="<?php echo bloginfo('name'); ?>" title="Go to Kuadra's front page">
@@ -35,13 +35,13 @@
 						// $isMega = ( $primary['label'] === 'Services' ) ? ' mega' : '';
 						$isMega = '';
 						echo sprintf( '<li>
-								<a class="main-link  |  text-lg underline-offset-2  |  " href="%1$s">%2$s</a>
+								<a class="main-link  |  text-lg underline-offset-2  |  " href="%1$s" data-menu="%3$s">%2$s</a>
 								<button type="button" aria-expanded="false" aria-controls="id_%3$s_menu" aria-label="%2$s menu"></button>
 								<div id="id_%3$s_menu" class="dropmenu %5$s" style="display:none">%4$s</div>
 							</li>',
 							$primary['url'],
 							$primary['label'],
-							strtolower( $primary['label'] ),
+							str_replace( ' ', '_', strtolower( $primary['label'] ) ),
 							do_shortcode( $primary['submenuContent'] ),
 							$isMega,
 						);

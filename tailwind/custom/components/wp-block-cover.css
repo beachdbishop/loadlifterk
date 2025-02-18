@@ -1,17 +1,9 @@
-.wp-block-cover:has(.has-background-dim) .wp-block-cover__inner-container {
-	color: var(--color-neutral-50);
-}
-.wp-block-cover__inner-container {
-	@apply container;
-}
+.wp-block-cover:has(.has-background-dim) .wp-block-cover__inner-container { color: var(--color-neutral-50); }
+.wp-block-cover__inner-container { @apply container; }
 
 @media print {
 	.wp-block-cover,
-	.wp-block-cover-image {
-		min-height: unset !important;
-	}
+	.wp-block-cover-image { min-height: unset !important; }
 
-	.wp-block-cover__inner-container {
-		max-width: unset !important;
-	}
+	.wp-block-cover__inner-container { max-width: unset !important; }
 }

@@ -41,14 +41,12 @@ if ( $peepauthor ) {
 <article <?php post_class( 'py-4 md:py-6 lg:py-8' ); ?>>
 	<div class="px-2 container lg:px-[16px]">
 
-		<?php if ( function_exists( 'bcn_display' ) ) { ?>
-			<div class="breadcrumbs | font-head text-neutral-600 pb-4 md:pb-6 lg:pb-8 dark:text-neutral-400" typeof="BreadcrumbList" vocab="https://schema.org"><?php bcn_display(); ?></div>
-		<?php } ?>
+		<?php get_template_part( 'template-parts/layout/chunk', 'breadcrumbs' ); ?>
 
 		<div class="peepgrid peep-<?php echo $peep_class; ?> peep-<?php echo esc_attr( $peep_level['value'] ); ?> | md:grid md:grid-cols-3 gap-4 lg:grid-cols-4 lg:gap-16">
 
 			<div class="peepgrid-a | pb-8 md:pt-2 md:pb-0 md:order-2">
-				<div class="headshot-wrapper | relative before:content-[''] before:absolute before:top-2 before:left-2 before:w-full before:h-full before:bg-aqua-200 dark:before:bg-aqua-600 print:before:bg-none">
+				<div class="headshot-wrapper | relative before:content-[''] before:absolute before:top-2 before:left-2 before:w-full before:h-full before:bg-aqua-200 dark:before:bg-aqua-700 print:before:bg-none">
 					<?php ll_people_headshot(); ?>
 				</div>
 			</div>
@@ -58,7 +56,7 @@ if ( $peepauthor ) {
 					<div>
 					<?php
 					if ( $peep_class === 'internal' ) {
-						the_title( '<h1 class="entry-title | mb-0 ">', '</h1>' );
+						the_title( '<h1 class="entry-titl | mb-0 ">', '</h1>' );
 
 						if( get_field( 'll_people_designations' ) ) {
 							echo sprintf( '<h2 class="leading-normal tracking-tight text-aqua-700 dark:text-aqua-300">%1$s</h2>', get_field( 'll_people_designations' ) );
@@ -130,11 +128,11 @@ if ( $peepauthor ) {
 	</section> -->
 <?php // endif; ?>
 
-<section class="full-bleed bg-aqua-50 ll-equal-vert-padding">
+<section class="full-bleed bg-aqua-50 ll-equal-vert-padding  |  dark:bg-atlantis-800 dark:text-neutral-200">
 	<div class="px-2 lg:px-[16px]">
 		<h3>On a personal note...</h3>
 		<?php if ( get_field( 'll_people_personal' ) ) { ?>
-			<blockquote class="peepquote | font-head italic text-xl text-aqua-800">&quot;<?php echo esc_html( get_field( 'll_people_personal' ) ); ?>&quot;</blockquote>
+			<blockquote class="peepquote | font-head italic text-xl text-aqua-800  |  dark:text-atlantis-200">&quot;<?php echo esc_html( get_field( 'll_people_personal' ) ); ?>&quot;</blockquote>
 		<?php } ?>
 		<p>&hellip;</p>
 		<p>pictures?</p>

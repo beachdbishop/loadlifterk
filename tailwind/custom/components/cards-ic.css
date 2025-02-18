@@ -1,7 +1,7 @@
 
 .cards-ic {
 	list-style-type: none;
-	margin-top: 1rem;
+	margin-top: --spacing(4);
 	transition-property: opacity;
 	transition-timing-function: var(--ease-in-out);
 	transition-duration: 300ms;
@@ -14,11 +14,11 @@
 }
 .card-ic .card-meta a {
 	position: relative;
-	padding: 0.5rem 0;
+	padding: --spacing(2) 0;
 }
 .card-ic .card-text {
 	max-width: 60ch;
-	padding-inline: 0.5rem;
+	padding-inline: --spacing(2);
 }
 
 .card-ic.posttype-locations .card-img {
@@ -26,7 +26,7 @@
 }
 
 .card-ic + .card-ic {
-	margin-top: 1.5rem;
+	margin-top: --spacing(6);
 }
 
 

@@ -32,22 +32,22 @@ $person_level = get_field( 'll_people_level', $person );
 
 
 <div <?php post_class( 'person-card card  |  group' ); ?>>
-	<div class="flex items-center h-full p-4 border rounded-lg border-neutral-200  |  group-hover:border-atlantis-200">
+	<div class="flex items-center h-full p-4 border rounded-lg border-neutral-200  |  dark:border-neutral-500 group-hover:border-atlantis-200">
 
 		<div class="card-text | flex-grow order-1">
 			<?php
 			if ($person_level['value'] !== '900') {
 				$title_classes = '';
 
-				echo sprintf( '<h3 class="leading-none text-brand-gray-dark %1$s"><a href="%3$s" class="group-hover:text-atlantis-600  |  dark:group-hover:text-atlantis-400">%2$s</a></h3>', $title_classes, get_the_title( $person ), esc_url( get_permalink( $person ) ) );
+				echo sprintf( '<h3 class="leading-none text-brand-gray-dark %1$s  |  dark:text-neutral-200"><a href="%3$s" class="group-hover:text-atlantis-600  |  dark:group-hover:text-atlantis-400">%2$s</a></h3>', $title_classes, get_the_title( $person ), esc_url( get_permalink( $person ) ) );
 			} else {
 				$title_classes = '';
 
-				echo sprintf( '<h3 class="leading-none text-brand-gray-dark %1$s">%2$s</h3>', $title_classes, get_the_title( $person ) );
+				echo sprintf( '<h3 class="leading-none text-brand-gray-dark %1$s  |  dark:text-neutral-200">%2$s</h3>', $title_classes, get_the_title( $person ) );
 			}
 
 			if( $person_title ) {
-				echo sprintf( '<p class="text-lg leading-tight text-neutral-600 font-head">%1$s</p>', $person_title );
+				echo sprintf( '<p class="text-lg leading-tight text-neutral-600 font-head  |  dark:text-neutral-400">%1$s</p>', $person_title );
 			}
 			?>
 		</div>

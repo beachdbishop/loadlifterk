@@ -1,6 +1,6 @@
 /*   P A G E   H E R O   */
 .page-hero-overlay {
-	background-color: rgb(255 255 255 / 0.85);
+	background-color: --alpha(var(--color-white) / 85%);
 	background-image: none;
 }
 
@@ -8,6 +8,6 @@
 @media (width >= theme(--breakpoint-lg)) {
 	.page-hero-overlay {
 		background-color: unset;
-		background-image: linear-gradient(to right, rgb(255 255 255 / 1) 0%, rgb(255 255 255 / 0.9) 45%, rgb(255 255 255 / 0.2) 85%, rgb(255 255 255 / 0) 100%);
+		background-image: linear-gradient(to right, --alpha(var(--color-white) / 100%) 0%, --alpha(var(--color-white) / 90%) 45%, --alpha(var(--color-white) / 20%) 85%, --alpha(var(--color-white) / 0%) 100%);
 	}
 }

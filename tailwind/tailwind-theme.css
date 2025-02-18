@@ -91,6 +91,8 @@
 	--animate-fade-in-from-top: fade-in-from-top 600ms ease-out;
 	--animate-move-bg: move-bg 16s ease infinite;
 
+	--mark-mono-size: 320px;
+
 	@keyframes move-bg {
 		0%,
 		100% {

@@ -7,7 +7,7 @@ dl {
 
 dt {
 	font-family: var(--font-head);
-	font-size: theme(fontSize.xl);
+	font-size: var(--text-xl);
 	font-weight: 600;
 }
 
@@ -16,7 +16,7 @@ dd {
 	border-color: var(--color-neutral-200);
 	display: list-item;
 	list-style-type: square;
-	margin-left: 2rem;
+	margin-left: --spacing(8);
 	margin-bottom: var(--wp--preset--spacing--20, 0.5rem);
 	padding-bottom: var(--wp--preset--spacing--20, 0.5rem);
 }
@@ -28,7 +28,7 @@ ol:where(.is-style-default, :not([class]), .wp-block-list) { list-style: decimal
 ol:where(.is-style-default, :not([class]), .wp-block-list) li::marker { color: var(--color-neutral-500); }
 
 ol:where(.is-style-default, :not([class]), .wp-block-list),
-ul:where(.is-style-default, :not([class]), .wp-block-list) { padding-inline-start: 1.5rem; }
+ul:where(.is-style-default, :not([class]), .wp-block-list) { padding-inline-start: --spacing(6); }
 
 ul:where(.is-style-default, :not([class]), .wp-block-list) { list-style: disc; }
 ul:where(.is-style-default, :not([class]), .wp-block-list) li::marker { color: var(--color-neutral-300); }
@@ -63,31 +63,19 @@ ul:where(.is-style-default, :not([class]), .wp-block-list) li::marker { color: v
 	padding: 0;
 }
 [class*="is-style-list-divide-"] li,
-.prose [class*="is-style-list-divide-"] li {
-	padding-left: 0;
-}
+.prose [class*="is-style-list-divide-"] li { padding-left: 0; }
 [class*="is-style-list-divide-"] li:not(:last-of-type),
 .prose [class*="is-style-list-divide-"] li:not(:last-of-type) {
 	border-bottom-width: 2px;
 	border-style: dotted;
 }
 
-.is-style-list-divide-light li:not(:last-of-type) {
-	border-color: var(--color-neutral-400);
-}
-.is-style-list-divide-gray li:not(:last-of-type) {
-	border-color: var(--color-brand-gray);
-}
-.is-style-list-divide-green li:not(:last-of-type) {
-	border-color: var(--color-atlantis-200);
-}
-.is-style-list-divide-aqua li:not(:last-of-type) {
-	border-color: var(--color-aqua-200);
-}
+.is-style-list-divide-light li:not(:last-of-type) { border-color: var(--color-neutral-400); }
+.is-style-list-divide-gray li:not(:last-of-type) { border-color: var(--color-brand-gray); }
+.is-style-list-divide-green li:not(:last-of-type) { border-color: var(--color-atlantis-200);}
+.is-style-list-divide-aqua li:not(:last-of-type) { border-color: var(--color-aqua-200); }
 
-.is-style-list-checked {
-	list-style-type: none;
-}
+.is-style-list-checked { list-style-type: none; }
 .is-style-list-checked li {
 	list-style-type: none !important;
 	padding-left: 10px;
@@ -103,22 +91,22 @@ ul:where(.is-style-default, :not([class]), .wp-block-list) li::marker { color: v
 .is-style-circle,
 .is-style-circle-atlantis,
 .is-style-circle-aqua {
-	margin-block: 1rem;
+	margin-block: --spacing(4);
 	display: flex;
 	width: 100%;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 0.5rem;
+	gap: --spacing(2);
 }
 .is-style-circle > *,
 .is-style-circle-atlantis > *,
 .is-style-circle-aqua > * {
 	aspect-ratio: 1 / 1;
-	font-size: 1.125rem;
 	font-weight: 700;
-  line-height: 1.375;
+	font-size: var(--text-base);
+  line-height: var(--text-xl--line-height);
 	text-align: center;
-	color: rgb(255 255 255 / 0.8);
+	color: --alpha(var(--color-white) / 80%);
 	width: 128px;
 	display: flex;
 	align-items: center;
@@ -127,54 +115,38 @@ ul:where(.is-style-default, :not([class]), .wp-block-list) li::marker { color: v
 }
 .is-style-circle a,
 .is-style-circle-atlantis a,
-.is-style-circle-aqua a {
-	color: rgb(255 255 255 / 0.8);
-}
+.is-style-circle-aqua a { color: --alpha(var(--color-white) / 80%); }
 .is-style-circle a:hover,
 .is-style-circle-atlantis a:hover,
-.is-style-circle-aqua a:hover {
-	color: rgb(255 255 255 / 1);
-}
+.is-style-circle-aqua a:hover { color: --alpha(var(--color-white) / 100%); }
 
-.is-style-circle li {
-	background-color: var(--color-neutral-600);
-}
-.is-style-circle h5 {
-	color: var(--color-neutral-600);
-}
-.is-style-circle-atlantis li {
-	background-color: var(--color-atlantis-500);
-}
-.is-style-circle-atlantis h5 {
-	color: var(--color-atlantis-500);
-}
-.is-style-circle-aqua li {
-	background-color: var(--color-aqua-500);
-}
-.is-style-circle-aqua h5 {
-	color: var(--color-aqua-500);
-}
+.is-style-circle li { background-color: var(--color-neutral-600); }
+.is-style-circle h5 { color: var(--color-neutral-600); }
+.is-style-circle-atlantis li { background-color: var(--color-atlantis-500); }
+.is-style-circle-atlantis h5 { color: var(--color-atlantis-500); }
+.is-style-circle-aqua li { background-color: var(--color-aqua-500); }
+.is-style-circle-aqua h5 { color: var(--color-aqua-500); }
 
 /* Split Ball Lists */
 .split-circle,
 .is-style-split-circle,
 .is-style-split-circle-red,
 .is-style-split-circle-aqua {
-	margin-block: 1rem;
+	margin-block: --spacing(4);
 	display: flex;
 	width: 100%;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 0.5rem;
+	gap: --spacing(2);
 }
 .split-circle > *,
 .is-style-split-circle > *,
 .is-style-split-circle-green > *,
 .is-style-split-circle-aqua > * {
-	@apply aspect-square;
+	aspect-ratio: 1 / 1;
 	font-weight: 700;
-	font-size: 1.25rem/* 20px */;
-	line-height: 1.375;
+	font-size: var(--text-base);
+  line-height: var(--text-lg--line-height);
 	text-align: center;
 	color: var(--color-neutral-200);
 	display: flex;
@@ -189,7 +161,7 @@ ul:where(.is-style-default, :not([class]), .wp-block-list) li::marker { color: v
 .is-style-split-circle-aqua a {
 	color: var(--color-neutral-200);
 	text-decoration-line: underline;
-	text-decoration-color: rgb(245 245 245 / 0.6);
+	text-decoration-color: --alpha(var(--color-neutral-100) / 60%);
 	text-decoration-style: dotted;
 	text-decoration-thickness: 1px;
 }
@@ -201,15 +173,9 @@ ul:where(.is-style-default, :not([class]), .wp-block-list) li::marker { color: v
 	text-decoration-color: white;
 	text-decoration-style: solid;
 }
-.is-style-split-circle > li {
-	background: var(--wp--preset--gradient--gray-split) !important;
-}
-.is-style-split-circle-green > li {
-	background: var(--wp--preset--gradient--green-split) !important;
-}
-.is-style-split-circle-aqua > li {
-	background: var(--wp--preset--gradient--aqua-split) !important;
-}
+.is-style-split-circle > li { background: var(--wp--preset--gradient--gray-split) !important; }
+.is-style-split-circle-green > li { background: var(--wp--preset--gradient--green-split) !important; }
+.is-style-split-circle-aqua > li { background: var(--wp--preset--gradient--aqua-split) !important; }
 
 .is-style-boxed {
 	margin-inline: -0.5rem;
@@ -218,16 +184,16 @@ ul:where(.is-style-default, :not([class]), .wp-block-list) li::marker { color: v
 }
 .is-style-boxed > li {
 	margin-block: 0 !important;
-	border-radius: 0.5rem;
+	border-radius: --spacing(2);
 	border-width: 1px;
 	border-style: solid;
-	border-color: rgb(23 23 23 / 0.1);
-	padding: 1rem;
-	font-size: 1rem/* 16px */;
-  line-height: 1.5rem/* 24px */;
+	border-color: --alpha(var(--color-neutral-900) / 10%);
+	padding: --spacing(4);
+	font-size: var(--text-base);
+  line-height: var(--text-xl--line-height);
 }
 .is-style-boxed li > strong {
-	margin-bottom: 1rem;
+	margin-bottom: --spacing(4);
 }
 
 
@@ -239,13 +205,13 @@ ul:where(.is-style-default, :not([class]), .wp-block-list) li::marker { color: v
 	.is-style-circle,
 	.is-style-circle-atlantis,
 	.is-style-circle-aqua {
-		gap: 2rem;
+		gap: --spacing(8);
 	}
 	.is-style-boxed {
-		margin-bottom: 1rem;
+		margin-bottom: --spacing(4);
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 1rem;
+		gap: --spacing(4);
 	}
 }
 
@@ -257,22 +223,22 @@ ul:where(.is-style-default, :not([class]), .wp-block-list) li::marker { color: v
 	.is-style-circle,
 	.is-style-circle-atlantis,
 	.is-style-circle-aqua {
-		margin-block: 2rem;
-		gap: 3.5rem;
+		margin-block: --spacing(8);
+		gap: --spacing(14);
 	}
 	.split-circle,
 	.is-style-split-circle,
 	.is-style-split-circle-atlantis,
 	.is-style-split-circle-aqua {
-		margin-block: 2rem;
-		gap: 1rem;
+		margin-block: --spacing(8);
+		gap: --spacing(4);
 	}
 	.is-style-boxed {
-		margin-bottom: 2rem;
+		margin-bottom: --spacing(8);
 		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 2rem;
+		gap: --spacing(8);
 	}
 	.is-style-boxed > li {
-		padding: 2rem;
+		padding: --spacing(8);
 	}
 }

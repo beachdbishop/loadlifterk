@@ -30,17 +30,17 @@ html {
 
 
 @media (prefers-color-scheme: dark) {
-  body {
-    color: var(--color-neutral-200);
-  }
+	body {
+		color: var(--color-neutral-200);
+	}
 }
 
 
 @media print {
-  body {
-    background-color: transparent;
-    color: black;
-  }
+	body {
+		background-color: transparent;
+		color: black;
+	}
 }
 
 

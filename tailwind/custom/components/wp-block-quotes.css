@@ -1,13 +1,13 @@
 /* Quotes */
 .wp-block-quote p {
-	margin-block: 1rem;
-	font-size: 1.25rem;
-  line-height: 1.75rem;
+	margin-block: --spacing(4);
+	font-size: var(--text-base);
+  line-height: var(--text-xl--line-height);
 }
 .wp-block-quote cite {
 	font-family: var(--font-head);
-	font-size: 1rem;
-  line-height: 1.5rem;
+	font-size: var(--text-sm);
+  line-height: var(--text-lg--line-height);
 	font-style: normal;
 }
 .wp-block-quote cite::before {
@@ -17,12 +17,12 @@
 	color: var(--color-aqua-800);
 	border-color: var(--color-aqua-500);
 	position: relative;
-	border-radius: 0.5rem;
+	border-radius: --spacing(2);
 	border-top-width: 4px;
 	border-right-width: 0px;
 	border-bottom-width: 4px;
 	border-left-width: 0px;
-	padding: 1rem;
+	padding: --spacing(4);
 }
 
 
@@ -35,16 +35,16 @@
 
 @media (width >= theme(--breakpoint-lg)) {
 	.wp-block-quote p {
-		font-size: 1.5rem;
-    line-height: 2rem;
+		font-size: var(--text-xl);
+  	line-height: var(--text-2xl--line-height);
 	}
 
 	.wp-block-quote cite {
-		font-size: 1.125rem;
-    line-height: 1.75rem;
+		font-size: var(--text-base);
+  	line-height: var(--text-2xl--line-height);
 	}
 
 	.wp-block-quote.is-style-default {
-		padding-inline: 2rem;
+		padding-inline: --spacing(8);
 	}
 }

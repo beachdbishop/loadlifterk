@@ -5,9 +5,9 @@
  @reference "./tailwind-theme.css";
 
 .a11y-slider-container {
-	margin-block: 1rem;
+	margin-block: --spacing(4);
 	position: relative;
-  direction: ltr;
+	direction: ltr;
 }
 
 .a11y-slider-container:has(.slider-people) {
@@ -16,24 +16,24 @@
 
 .a11y-slider-container > button {
 	--tw-shadow-color: #262626;
-  --tw-shadow: var(--tw-shadow-colored);
+	--tw-shadow: var(--tw-shadow-colored);
 	background-color: transparent;
-	border-radius: 0.5rem;
+	border-radius: --spacing(2);
 	border-width: 1px;
-  color: currentColor;
+	color: currentColor;
 	font-family: serenity, sans-serif;
 	font-weight: 600;
-	margin-bottom: 0.5rem;
-	padding-block: 0.75rem;
-	padding-inline: 1.25rem;
+	margin-bottom: --spacing(2);
+	padding-block: --spacing(3);
+	padding-inline: --spacing(5);
 
 	&:active {
 		--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 		--tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  	background-color: var(--color-aqua-200);
+		background-color: var(--color-aqua-200);
 		box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 		outline: 2px solid transparent;
-  	outline-offset: 2px;
+		outline-offset: 2px;
 	}
 
 	&:focus {
@@ -45,20 +45,20 @@
 
 	&:hover {
 		--tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+		--tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
 		--tw-text-opacity: 1;
-    border-color: var(--color-aqua-600);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    color: rgb(0 102 142 / var(--tw-text-opacity));
+		border-color: var(--color-aqua-600);
+		box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+		color: rgb(0 102 142 / var(--tw-text-opacity));
 	}
 }
 
 .a11y-slider {
-  position: relative;
-  overflow: hidden;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-  box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+	scroll-snap-type: x mandatory;
+	scrollbar-width: none;
+	box-sizing: border-box;
 
 	&::-webkit-scrollbar {
 		width: 0;
@@ -82,52 +82,52 @@
 
 .a11y-slider-sr-only,
 .a11y-slider-status {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-  text-align: center;
-  font-family: inherit;
-  font-size: 1em;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+	text-align: center;
+	font-family: inherit;
+	font-size: var(--wp--preset--font-size--base);
 }
 
 .a11y-slider-sr-only:focus {
-  position: static;
-  background: #000;
-  color: #fff;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  clip: auto;
-  padding: 10px;
+	position: static;
+	background: #000;
+	color: #fff;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	clip: auto;
+	padding: 10px;
 }
 
 .a11y-slider-hide {
-  display: none;
+	display: none;
 }
 
 .a11y-slider-scrolling {
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-  scroll-snap-type: none;
+	cursor: -webkit-grabbing;
+	cursor: grabbing;
+	scroll-snap-type: none;
 	user-select: none;
-  scroll-behavior: auto;
+	scroll-behavior: auto;
 }
 
 [data-autoplaying] {
-	margin-left: 1rem;
+	margin-left: --spacing(4);
 	white-space: normal;
 }
 [data-autoplaying]::after {
 	background-image: none;
-	font-size: 0.75rem;
-  line-height: 1rem;
+	font-size: var(--text-xs);
+	line-height: var(--text-base--line-height);
 	opacity: 1;
 	position: static;
 	transform: none;
@@ -147,13 +147,13 @@
 	padding: 0px;
 
 	li {
-		margin-left: 0.25rem;
-  	margin-right: 0.25rem;
-		margin-top: 0.5rem;
-  	margin-bottom: 0.5rem;
+		margin-left: --spacing(1);
+		margin-right: --spacing(1);
+		margin-top: --spacing(2);
+		margin-bottom: --spacing(2);
 		display: block;
-		height: 1rem;
-		width: 1rem;
+		height: --spacing(4);
+		width: --spacing(4);
 		padding: 0px;
 	}
 
@@ -188,7 +188,7 @@
 } */
 
 .slider {
-	margin-block: 1rem;
+	margin-block: --spacing(4);
 }
 
 .slider-quotes {
@@ -197,24 +197,24 @@
 	}
 	.a11y-slider-active {
 		--tw-bg-opacity: 1;
-  	background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+		background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 	}
 }
 
 .slide .quote::before {
 	--tw-content: '"';
-  content: var(--tw-content);
+	content: var(--tw-content);
 }
 .slide .quote::after {
 	--tw-content: '"';
-  content: var(--tw-content);
+	content: var(--tw-content);
 }
 
 .slider-people {
 	display: flex;
-	gap: 0.5rem;
-	padding-bottom: 1rem;
-	padding-top: 0.5rem;
+	gap: --spacing(2);
+	padding-bottom: --spacing(4);
+	padding-top: --spacing(2);
 
 	& > * {
 		width: 13rem;
@@ -258,12 +258,12 @@
 
 @media (width >= theme(--breakpoint-lg)) {
 	.a11y-slider-container > button {
-		font-size: 1.125rem;
-		line-height: 1.75;
+		font-size: var(--text-base);
+		line-height: var(--text-lg--line-height);
 	}
 
 	.slider-people {
-		padding-bottom: 2rem;
+		padding-bottom: --spacing(8);
 	}
 }
 
@@ -283,12 +283,12 @@
 		}
 		.a11y-slider-active {
 			--tw-bg-opacity: 1;
-    	background-color: rgb(23 23 23 / var(--tw-bg-opacity));
+			background-color: rgb(23 23 23 / var(--tw-bg-opacity));
 		}
 	}
 
 	.a11y-slider-dots button {
-    border-color: var(--color-neutral-400);
+		border-color: var(--color-neutral-400);
 
 		:active,
 		:focus,

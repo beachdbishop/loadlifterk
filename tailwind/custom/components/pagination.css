@@ -9,15 +9,9 @@ ul.page-numbers {
 	list-style-type: none;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 1rem;
+	gap: --spacing(4);
 
 }
-a.page-numbers {
-	color: var(--color-aqua-700);
-}
-a.page-numbers:hover {
-	color: var(--color-atlantis-900);
-}
-span.current {
-	opacity: 0.5;
-}
+a.page-numbers { color: var(--color-aqua-700); }
+a.page-numbers:hover { color: var(--color-atlantis-900); }
+span.current { opacity: 0.5; }

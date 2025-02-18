@@ -1,6 +1,6 @@
 /*! tailwindcss v4.0.4 | MIT License | https://tailwindcss.com */
 .a11y-slider-container {
-  margin-block: 1rem;
+  margin-block: calc(var(--spacing) * 4);
   position: relative;
   direction: ltr;
 }
@@ -11,14 +11,14 @@
   --tw-shadow-color: #262626;
   --tw-shadow: var(--tw-shadow-colored);
   background-color: transparent;
-  border-radius: 0.5rem;
+  border-radius: calc(var(--spacing) * 2);
   border-width: 1px;
   color: currentColor;
   font-family: serenity, sans-serif;
   font-weight: 600;
-  margin-bottom: 0.5rem;
-  padding-block: 0.75rem;
-  padding-inline: 1.25rem;
+  margin-bottom: calc(var(--spacing) * 2);
+  padding-block: calc(var(--spacing) * 3);
+  padding-inline: calc(var(--spacing) * 5);
   &:active {
     --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
@@ -73,7 +73,7 @@
   border: 0;
   text-align: center;
   font-family: inherit;
-  font-size: 1em;
+  font-size: var(--wp--preset--font-size--base);
 }
 .a11y-slider-sr-only:focus {
   position: static;
@@ -96,13 +96,13 @@
   scroll-behavior: auto;
 }
 [data-autoplaying] {
-  margin-left: 1rem;
+  margin-left: calc(var(--spacing) * 4);
   white-space: normal;
 }
 [data-autoplaying]::after {
   background-image: none;
-  font-size: 0.75rem;
-  line-height: 1rem;
+  font-size: var(--text-xs);
+  line-height: var(--text-base--line-height);
   opacity: 1;
   position: static;
   transform: none;
@@ -120,13 +120,13 @@
   justify-content: center;
   padding: 0px;
   li {
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-left: calc(var(--spacing) * 1);
+    margin-right: calc(var(--spacing) * 1);
+    margin-top: calc(var(--spacing) * 2);
+    margin-bottom: calc(var(--spacing) * 2);
     display: block;
-    height: 1rem;
-    width: 1rem;
+    height: calc(var(--spacing) * 4);
+    width: calc(var(--spacing) * 4);
     padding: 0px;
   }
   button {
@@ -147,7 +147,7 @@
   }
 }
 .slider {
-  margin-block: 1rem;
+  margin-block: calc(var(--spacing) * 4);
 }
 .slider-quotes {
   > * {
@@ -168,9 +168,9 @@
 }
 .slider-people {
   display: flex;
-  gap: 0.5rem;
-  padding-bottom: 1rem;
-  padding-top: 0.5rem;
+  gap: calc(var(--spacing) * 2);
+  padding-bottom: calc(var(--spacing) * 4);
+  padding-top: calc(var(--spacing) * 2);
   & > * {
     width: 13rem;
     flex-shrink: 0;
@@ -204,11 +204,11 @@
 }
 @media (width >= 64rem) {
   .a11y-slider-container > button {
-    font-size: 1.125rem;
-    line-height: 1.75;
+    font-size: var(--text-base);
+    line-height: var(--text-lg--line-height);
   }
   .slider-people {
-    padding-bottom: 2rem;
+    padding-bottom: calc(var(--spacing) * 8);
   }
 }
 @media (prefers-color-scheme: dark) {

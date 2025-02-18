@@ -1,11 +1,11 @@
 /* Paragraphs / Notes */
 p[class*="is-style-note-"] {
 	width: 100%;
-	border-radius: 0.5rem;
+	border-radius: --spacing(2);
 	border-width: 1px;
 	border-style: solid;
-	padding-inline: 2rem;
-	padding-block: 1rem;
+	padding-inline: --spacing(8);
+	padding-block: --spacing(4);
 	line-height: 1.375;
 	border-color: var(--_border);
 	background-color: var(--_bg);
@@ -16,35 +16,28 @@ p[class*="is-style-note-"] {
 	--_bg: var(--color-cyan-50);
 	--_text: var(--color-cyan-800);
 }
-.is-style-note-info strong {
-	color: var(--color-cyan-700);
-}
+.is-style-note-info strong { color: var(--color-cyan-700); }
 
 .is-style-note-success {
 	--_border: var(--color-emerald-100);
 	--_bg: var(--color-emerald-50);
 	--_text: var(--color-emerald-800);
 }
-.is-style-note-success strong {
-	color: var(--color-emerald-700);
-}
+.is-style-note-success strong { color: var(--color-emerald-700); }
 
 .is-style-note-warning {
 	--_border: var(--color-amber-100);
 	--_bg: var(--color-amber-50);
 	--_text: var(--color-amber-800);
 }
-.is-style-note-warning strong {
-	color: var(--color-amber-700);
-}
+.is-style-note-warning strong { color: var(--color-amber-700); }
+
 .is-style-note-error {
 	--_border: var(--color-red-100);
 	--_bg: var(--color-red-50);
 	--_text: var(--color-red-800);
 }
-.is-style-note-error strong {
-	color: var(--color-red-700);
-}
+.is-style-note-error strong { color: var(--color-red-700); }
 
 
 @media (prefers-color-scheme: dark) {

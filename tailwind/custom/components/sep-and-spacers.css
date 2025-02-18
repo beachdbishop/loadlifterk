@@ -1,6 +1,6 @@
 /* Separators */
 [class*="is-style-sep-"] {
-	margin-block: 1rem;
+	margin-block: --spacing(4);
 	height: 3px;
 	width: 100%;
 	border-width: 0;
@@ -14,14 +14,10 @@
 	);
 }
 @media (width >= theme(--breakpoint-md)) {
-	[class*="is-style-sep-"] {
-		margin-block: 1.5rem;
-	}
+	[class*="is-style-sep-"] { margin-block: --spacing(6); }
 }
 @media (width >= theme(--breakpoint-lg)) {
-	[class*="is-style-sep-"] {
-		margin-block: 2rem;
-	}
+	[class*="is-style-sep-"] { margin-block: --spacing(8); }
 }
 
 .is-style-sep-aqua {
@@ -42,19 +38,9 @@
 .wp-block-spacer {
 	margin-block: 0;
 
-	&.is-style-xs {
-		height: clamp(8px, 2vw, 24px) !important;
-	}
-	&.is-style-sm {
-		height: clamp(12px, 3vw, 36px) !important;
-	}
-	&.is-style-md {
-		height: clamp(24px, 5vw, 48px) !important;
-	}
-	&.is-style-lg {
-		height: clamp(36px, 8vw, 72px) !important;
-	}
-	&.is-style-xl {
-		height: clamp(48px, 9vw, 96px) !important;
-	}
+	&.is-style-xs { height: clamp(8px, 2vw, 24px) !important; }
+	&.is-style-sm {	height: clamp(12px, 3vw, 36px) !important; }
+	&.is-style-md { height: clamp(24px, 5vw, 48px) !important; }
+	&.is-style-lg { height: clamp(36px, 8vw, 72px) !important; }
+	&.is-style-xl { height: clamp(48px, 9vw, 96px) !important; }
 }

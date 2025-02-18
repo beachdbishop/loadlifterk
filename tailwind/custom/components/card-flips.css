@@ -9,7 +9,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	place-content: center;
-	gap: 1rem;
+	gap: --spacing(4);
 
 	list-style: none;
 }
@@ -22,8 +22,8 @@
 
 .ind-card-flips	.card-back p,
 .ind-card-flips	.card-back li {
-	font-size: 0.875rem;
-	line-height: 1.25rem;
+	font-size: var(--text-sm);
+	line-height: var(--text-base--line-height);
 }
 
 .ind-card-flips:has(.card-ic-flip) {
@@ -123,7 +123,7 @@
 
 @media (width >= theme(--breakpoint-lg)) {
 	.ind-card-flips {
-		gap: 2rem;
+		gap: --spacing(8);
 	}
 
 	.ind-card-flips:has(.card-ic-flip) {

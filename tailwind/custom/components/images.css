@@ -1,12 +1,12 @@
 
 .ll-img-float-right {
 	float: right;
-	margin: 0 0 1rem 2rem !important;
+	margin: 0 0 --spacing(4) --spacing(8) !important;
 }
 
 .ll-img-float-left {
 	float: left;
-	margin: 0 2rem 1rem 0 !important;
+	margin: 0 --spacing(8) --spacing(4) 0 !important;
 }
 
 .ll-img-float-right,

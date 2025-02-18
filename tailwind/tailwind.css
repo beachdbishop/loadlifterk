@@ -66,10 +66,9 @@
 @import "./custom/components/components.css";
 @import "./custom/components/zzz-dev.css";
 
- /**
-	* Add Tailwind's utility classes and any utility classes registered by
-	* plugins, then add custom utility classes.
-	*/
+/**
+ * Add Tailwind's utility classes and any utility classes registered by
+ * plugins, then add custom utility classes.
+ */
 @import "tailwindcss/utilities";
 @import "./custom/utilities.css";
-

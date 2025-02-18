@@ -3,7 +3,7 @@ via: https://www.bram.us/2022/11/17/style-a-parent-element-based-on-its-number-o
 
 [class*="dps-grid-"] {
 	display: grid;
-	gap: 1rem;
+	gap: --spacing(4);
 	max-width: 28rem !important;
 	margin-inline: auto;
 }
@@ -17,7 +17,7 @@ via: https://www.bram.us/2022/11/17/style-a-parent-element-based-on-its-number-o
 
 .grid-team {
 	display: grid;
-	gap: 1rem;
+	gap: --spacing(4);
 }
 
 :root :where(.grid-team.is-layout-flow) > * {
@@ -49,7 +49,7 @@ via: https://www.bram.us/2022/11/17/style-a-parent-element-based-on-its-number-o
 	}
 
 	.grid-team {
-		gap: 1.5rem;
+		gap: --spacing(6);
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 }

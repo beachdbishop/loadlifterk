@@ -43,7 +43,7 @@
 		"lint-fix:prettier": "npx prettier --write .",
 		"lint-fix": "run-p \"lint-fix:*\"",
 		"pa11yci:few": "pa11y-ci",
-		"pa11yci:all": "pa11y-ci --sitemap http://kuadradev.local/wp-sitemap.xml --sitemap-exclude \"sample-page\"",
+		"pa11yci:all": "pa11y-ci --sitemap https://kuadradev.local/wp-sitemap.xml",
 		"production:tailwind:frontend": "npm run development:tailwind:frontend -- --minify",
 		"production:tailwind:slidercss": "npm run development:tailwind:slidercss -- --minify",
 		"production:tailwind:editor": "npm run development:tailwind:editor -- --minify",

@@ -23,6 +23,6 @@
 }
 
 lite-vimeo {
-	min-height: 1rem;
+	min-height: --spacing(4);
 	background-color: var(--color-neutral-500);
 }

@@ -5,7 +5,7 @@
 	border-color: var(--_title-bg);
 }
 .llcallout .acf-innerblocks-container {
-	padding: 0.5rem;
+	padding: --spacing(2);
 }
 .llcallout-title {
 	background-color: var(--_title-bg);
