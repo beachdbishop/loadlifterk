@@ -129,3 +129,149 @@ function ll_litevimeoembed_shortcode( $atts ) {
 	return $html_out;
 }
 add_shortcode( 'litevimeo', 'll_litevimeoembed_shortcode' );
+
+
+function ll_designrough_plain_shortcode() {
+	$html = '
+	<div class="flex items-start gap-4 md:gap-6">
+		<div class="mt-2 block">
+			<span class="fa-stack fa-2x">
+				<i class="text-atlantis-600 fa-solid fa-circle fa-stack-2x"></i>
+				<i class="fa-sharp fa-light fa-users fa-stack-1x text-white"></i>
+			</span>
+		</div>
+		<div>
+			<h3 class="">Qualified remote professionals</h3>
+			<p class="mt-0.5 text-neutral-700">
+				Recruiting, hiring, and retaining qualified accounting talent is often time-consuming and costly. Through our trusted network in Mexico, we connect you with highly educated and experienced professionals at a significantly lower cost than traditional U.S. salaries.
+			</p>
+		</div>
+	</div>
+
+	<div class="flex items-start gap-4 md:gap-6">
+		<div class="mt-2 block">
+			<span class="fa-stack fa-2x">
+				<i class="text-aqua-800 fa-solid fa-circle fa-stack-2x"></i>
+				<i class="fa-sharp fa-light fa-flag fa-stack-1x text-white"></i>
+			</span>
+		</div>
+		<div>
+			<h3 class="">Cultural alignment</h3>
+			<p class="mt-0.5 text-neutral-700">
+				Our sourced professionals are fluent in English and understand U.S. business standards and practices. This cultural alignment enables them to integrate quickly and function as an extension of your team.
+			</p>
+		</div>
+	</div>
+
+	<div class="flex items-start gap-4 md:gap-6">
+		<div class="mt-2 block">
+			<span class="fa-stack fa-2x">
+				<i class="text-neutral-200 fa-solid fa-circle fa-stack-2x"></i>
+				<i class="fa-sharp fa-light fa-business-time fa-stack-1x text-atlantis-800"></i>
+			</span>
+		</div>
+		<div>
+			<h3 class="">Real-time collaboration</h3>
+			<p class="mt-0.5 text-neutral-700">
+				Our location in Mexico allows us to operate in sync with your business. Unlike offshore providers with teams based across the globe, we work within U.S. time zones and are available to collaborate during your business hours.
+			</p>
+		</div>
+	</div>
+	';
+
+	return $html;
+}
+add_shortcode( 'designrough_plain', 'll_designrough_plain_shortcode' );
+
+
+function ll_designrough_dressy_shortcode() {
+	$html = '
+		<div class="offset-box offset-box-aqua  |  text-orient-950 grid gap-y-3 mb-12 p-8 relative z-[1]">
+			<h3 class="text-sm font-semibold">Qualified remote professionals</h3>
+			<p>Recruiting, hiring, and retaining qualified accounting talent is often time-consuming and costly. Through our trusted network in Mexico, we connect you with highly educated and experienced accountants, auditors, tax, and finance professionals at a significantly lower cost than traditional U.S. salaries.</p>
+
+			<h3 class="text-sm font-semibold">Cultural alignment</h3>
+			<p>Our sourced professionals are fluent in English and understand U.S. business standards and practices. This cultural alignment enables them to integrate quickly and function as an extension of your team.</p>
+
+			<h3 class="text-sm font-semibold">Real-time collaboration</h3>
+			<p>Our location in Mexico allows us to operate in sync with your business. Unlike offshore providers with teams based across the globe, we work within U.S. time zones and are available to collaborate during your business hours.</p>
+		</div>
+
+		<hr />
+
+		<div class="offset-box offset-box-atlantis  |  text-orient-950 grid gap-y-3 mb-12 p-8 relative z-[1]">
+			<h3 class="text-sm font-semibold">Qualified remote professionals</h3>
+			<p>Recruiting, hiring, and retaining qualified accounting talent is often time-consuming and costly. Through our trusted network in Mexico, we connect you with highly educated and experienced accountants, auditors, tax, and finance professionals at a significantly lower cost than traditional U.S. salaries.</p>
+		</div>
+
+		<div class="offset-box offset-box-atlantis  |  text-orient-950 grid gap-y-3 mb-12 p-8 relative z-[1]">
+			<h3 class="text-sm font-semibold">Cultural alignment</h3>
+			<p>Our sourced professionals are fluent in English and understand U.S. business standards and practices. This cultural alignment enables them to integrate quickly and function as an extension of your team.</p>
+		</div>
+
+		<div class="offset-box offset-box-atlantis  |  text-orient-950 grid gap-y-3 mb-12 p-8 relative z-[1]">
+		  <h3 class="text-sm font-semibold">Real-time collaboration</h3>
+			<!-- p class="font-head text-xl font-semibold">Real-time collaboration</p -->
+			<p>Our location in Mexico allows us to operate in sync with your business. Unlike offshore providers with teams based across the globe, we work within U.S. time zones and are available to collaborate during your business hours.</p>
+		</div>
+	';
+
+	return $html;
+}
+add_shortcode( 'designrough_dressy', 'll_designrough_dressy_shortcode' );
+
+
+function ll_designrough_flipcards_shortcode( $atts, $content = null ) {
+	extract(
+		shortcode_atts(
+			[
+				'style' => 'default',
+			],
+			$atts
+		)
+	);
+	$items = [
+		[
+			'icon' => 'fa-users',
+			'title' => 'Qualified remote professionals',
+			'text' => 'Recruiting, hiring, and retaining qualified accounting talent is often time-consuming and costly. Through our trusted network in Mexico, we connect you with highly educated and experienced professionals at a significantly lower cost than traditional U.S. salaries.',
+		],
+		[
+			'icon' => 'fa-flag',
+			'title' => 'Cultural alignment',
+			'text' => 'Our sourced professionals are fluent in English and understand U.S. business standards and practices. This cultural alignment enables them to integrate quickly and function as an extension of your team.',
+		],
+		[
+			'icon' => 'fa-business-time',
+			'title' => 'Real-time collaboration',
+			'text' => 'Our location in Mexico allows us to operate in sync with your business. Unlike offshore providers with teams based across the globe, we work within U.S. time zones and are available to collaborate during your business hours.',
+		],
+	];
+
+	$html_out = '<ul class="ind-card-flips is-style-' . $style . ' mx-auto">';
+	foreach ( $items as $item ) {
+		$html_out .= '<li>
+			<div class="card card-ic card-ic-flip  | group relative inline-block float-left w-(--card-size) h-(--card-size)" style="--card-size: 288px">
+				<div class="card-content | absolute w-full h-full rounded-lg shadow-lg shadow-neutral-300 transition-transform ease-out duration-700 [transform-style:preserve-3d] dark:shadow-none">
+					<div class="card-front | text-center bg-(--_card-front-bg) text-(--_card-front-text) absolute w-full h-full flex flex-col items-center justify-center rounded-lg px-4 [backface-visibility:hidden]">
+						<div class="card-icon | text-(--_card-front-icon)">
+							<span class="fa-stack fa-2x">
+								<i class="text-white fa-solid fa-circle fa-stack-2x dark:text-neutral-700"></i>
+								<i class="fa-sharp fa-light ' . $item['icon'] . ' fa-stack-1x "></i>
+							</span>
+						</div>
+						<p class="mt-2 font-head font-semibold text-lg leading-none text-current">' . $item['title'] . '</p>
+					</div>
+					<div class="card-back | absolute w-full h-full flex flex-col items-center justify-center rounded-lg px-4 bg-(--_card-back-bg) text-(--_card-back-text) bg-no-repeat bg-cover bg-blend-multiply shadow-neutral-900/50 [backface-visibility:hidden]  [transform:rotateY(180deg)]">
+						<p class="font-head font-semibold my-2 !text-lg leading-none text-center text-white text-shadow">' . $item['title'] . '</p>
+						<p class="text-white text-shadow">' . $item['text'] . '</p>
+					</div>
+				</div>
+			</div>
+		</li>';
+	}
+	$html_out .= '</ul>';
+
+	return $html_out;
+}
+add_shortcode( 'designrough_flipcards', 'll_designrough_flipcards_shortcode' );

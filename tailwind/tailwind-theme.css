@@ -62,6 +62,9 @@
 	--color-brand-gray: #525252;
 	--color-brand-gray-dark: #262626;
 
+	--color-dot-atlantis: color-mix(in oklch, var(--color-atlantis-200) 60%, white 50%);
+	--color-dot-aqua: color-mix(in oklch, var(--color-aqua-200) 60%, white 50%);
+
 
 	--font-head: serenity, sans-serif;
 	--font-serif: Georgia, serif;

@@ -34,7 +34,7 @@ $person_level = get_field( 'll_people_level', $person );
 <div <?php post_class( 'person-card card  |  group' ); ?>>
 	<div class="flex items-center h-full p-4 border rounded-lg border-neutral-200  |  dark:border-neutral-500 group-hover:border-atlantis-200">
 
-		<div class="card-text | flex-grow order-1">
+		<div class="card-text | grow order-1">
 			<?php
 			if ($person_level['value'] !== '900') {
 				$title_classes = '';

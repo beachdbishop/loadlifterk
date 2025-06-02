@@ -7,10 +7,6 @@
  * https://tailwindcss.com/docs/adding-custom-styles#adding-custom-utilities
  */
 
- @utility container {
-	margin-inline: auto;
-}
-
 
 /* via: https://piccalil.li/tutorial/creating-a-full-bleed-css-utility/ */
 /* div:not(.block-editor-block-list__layout) .full-bleed {
@@ -44,11 +40,11 @@ body {
 }
 
 .ll-equal-vert-padding {
-	padding-block: var(--_padding);
+	padding-block: var(--_padding) !important;
 }
 
 .ll-equal-vert-spacing {
-	margin-block: var(--_spacing);
+	margin-block: var(--_spacing) !important;
 }
 
 

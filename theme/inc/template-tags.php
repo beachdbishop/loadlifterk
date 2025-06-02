@@ -146,8 +146,8 @@ if ( ! function_exists( 'll_posted_by_cards' ) ) :
 							$avatar_markup = '<li class="person-card | group @container">
 								<div class="flex flex-col @2xs:flex-row gap-3 items-center h-full p-4 border rounded-lg border-neutral-200 lg:flex-row dark:border-neutral-600">
 
-									<div class="card-text | flex-grow order-1 ">
-										<h3 class="font-semibold text-xl lg:text-2xl !leading-none text-brand-gray-dark group-hover:text-aqua-500 dark:text-neutral-400">
+									<div class="card-text | grow order-1 ">
+										<h3 class="font-semibold text-xl lg:text-2xl leading-none! text-brand-gray-dark group-hover:text-aqua-500 dark:text-neutral-400">
 											<a href="/author/' . $coauthor->user_nicename . '/" rel="bookmark">' . $coauthor->display_name . '</a> <small class="font-normal text-ellipsis overflow-hidden">' . $desigs . '</small>
 										</h3>
 										<p class="text-lg leading-tight text-neutral-600 font-head dark:text-neutral-500">' . $title . '</p>
@@ -167,8 +167,8 @@ if ( ! function_exists( 'll_posted_by_cards' ) ) :
 							$avatar_markup = '<li class="person-card | group @container">
 								<div class="flex flex-col @2xs:flex-row gap-3 items-center h-full p-4 border rounded-lg border-neutral-200 lg:flex-row dark:border-neutral-600">
 
-									<div class="card-text | flex-grow order-1 ">
-										<h3 class="font-semibold text-xl lg:text-2xl !leading-none text-brand-gray-dark group-hover:text-aqua-500 dark:text-neutral-400">
+									<div class="card-text | grow order-1 ">
+										<h3 class="font-semibold text-xl lg:text-2xl leading-none! text-brand-gray-dark group-hover:text-aqua-500 dark:text-neutral-400">
 											<a href="/author/' . $coauthor->user_nicename . '/" rel="bookmark">' . $coauthor->display_name . '</a> <small class="font-normal text-ellipsis overflow-hidden">' . $desigs . '</small>
 										</h3>
 										<p class="text-lg leading-tight text-neutral-600 font-head dark:text-neutral-500">' . $title . '</p>
@@ -292,14 +292,14 @@ if ( ! function_exists( 'll_better_page_hero' ) ) :
 	function ll_better_page_hero( $h1, $h2, $cta1_text = null, $cta1_url = null, $cta2_text = null, $cta2_url = null ) {
 		?>
 
-		<div class="page-hero  |  wp-block-cover bg-white !px-0 min-h-[unset]  |  print:py-8 print:bg-white print:text-black">
-			<span aria-hidden="true" class="page-hero-overlay | z-[1] absolute top-0 right-0 bottom-0 left-0  | print:hidden"></span>
+		<div class="page-hero  |  wp-block-cover bg-white px-0! min-h-[unset]  |  print:py-8 print:bg-white print:text-black">
+			<span aria-hidden="true" class="page-hero-overlay | z-1 absolute top-0 right-0 bottom-0 left-0  | print:hidden"></span>
 			<?php echo the_post_thumbnail( 'full', ['class' => 'wp-block-cover__image-background not-transparent wp-post-image print:hidden'] ); ?>
 
-			<div class="wp-block-cover__inner-container  |  px-2  |  lg:px-4 print:!px-0">
-				<div class="text-neutral-900 flex flex-col justify-center space-y-6 min-h-[200px]  |  md:min-h-(--height-hero) print:min-h-min">
-					<h1 class="text-neutral-900 leading-none tracking-light text-pretty shadow-neutral-50 drop-shadow-lg  |  lg:print:!text-xl print:text-black"><?php echo $h1; ?></h1>
-					<?php if ( !empty( $h2 ) ) { ?><h2 class="leading-none text-pretty !text-neutral-700 shadow-neutral-50 drop-shadow-lg  |  md:max-w-5xl lg:print:!text-base print:!text-black"><?php echo $h2; ?></h2><?php } ?>
+			<div class="wp-block-cover__inner-container  |  px-2  |  lg:px-4 print:px-0!">
+				<div class="text-neutral-900 flex flex-col justify-center space-y-6 min-h-[200px]  |  md:min-h-hero print:min-h-min">
+					<h1 class="text-neutral-900 leading-none tracking-light text-pretty shadow-neutral-50 drop-shadow-lg  |  lg:print:text-xl! print:text-black"><?php echo $h1; ?></h1>
+					<?php if ( !empty( $h2 ) ) { ?><h2 class="leading-none text-pretty text-neutral-700! shadow-neutral-50 drop-shadow-lg  |  md:max-w-5xl lg:print:text-base! print:text-black!"><?php echo $h2; ?></h2><?php } ?>
 				</div>
 				<?php if ( !is_front_page() ) { ?>
 					<ol class="breadcrumbs  |  list-none mt-4 grow-0 font-head text-neutral-800  |  *:inline md:mt-0 print:mt-8"><?php echo bcn_display( true ); ?></ol>
@@ -568,9 +568,9 @@ endif;
 if ( ! function_exists( 'll_no_link_card' ) ) :
 	function ll_no_link_card( $card ) {
 		echo '<div>
-			<div class="card | relative inline-block float-left w-(--card-size) h-(--card-size) [perspective:600px]" style="--card-back-bg: #092f42">
-				<div class="card-content | absolute w-full h-full rounded-lg shadow-lg shadow-neutral-300 transition-transform ease-out duration-700 [transform-style:preserve-3d] dark:shadow-none">
-					<div class="card-front | text-center bg-(--card-front-bg) text-(--card-front-text) absolute w-full h-full flex flex-col items-center justify-center rounded-lg px-4 [backface-visibility:hidden]">
+			<div class="card | relative inline-block float-left w-(--card-size) h-(--card-size) perspective-[600px]" style="--card-back-bg: #092f42">
+				<div class="card-content | absolute w-full h-full rounded-lg shadow-lg shadow-neutral-300 transition-transform ease-out duration-700 transform-3d dark:shadow-none">
+					<div class="card-front | text-center bg-(--card-front-bg) text-(--card-front-text) absolute w-full h-full flex flex-col items-center justify-center rounded-lg px-4 backface-hidden">
 						<div class="card-icon | text-(--card-front-icon)">
 							<span class="fa-stack fa-2x">
 								<i class="text-white fa-solid fa-circle fa-stack-2x dark:text-neutral-700"></i>
@@ -579,7 +579,7 @@ if ( ! function_exists( 'll_no_link_card' ) ) :
 						</div>
 						<h3 class="mt-2 font-light leading-none text-current">' . $card['label'] . '</h3>
 					</div>
-					<div class="card-back | absolute w-full h-full flex flex-col items-center justify-center rounded-lg px-4 bg-(--card-back-bg) text-(--card-back-text) bg-no-repeat bg-cover bg-blend-multiply shadow-neutral-900/50 [backface-visibility:hidden]  [transform:rotateY(180deg)]">
+					<div class="card-back | absolute w-full h-full flex flex-col items-center justify-center rounded-lg px-4 bg-(--card-back-bg) text-(--card-back-text) bg-no-repeat bg-cover bg-blend-multiply shadow-neutral-900/50 backface-hidden  [transform:rotateY(180deg)]">
 							<h6 class="my-2 leading-none tracking-wide text-center text-current text-shadow">' . $card['label'] . '</h6>
 							<p class="text-center text-shadow">' . $card['backContent'] . '</p>
 					</div>

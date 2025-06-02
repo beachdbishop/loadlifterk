@@ -29,6 +29,11 @@ html {
 }
 
 
+:is(.disclosure-nav, .grid-team, .site-footer) a:where(:not(.wp-element-button)) {
+	text-decoration: none !important;
+}
+
+
 @media (prefers-color-scheme: dark) {
 	body {
 		color: var(--color-neutral-200);

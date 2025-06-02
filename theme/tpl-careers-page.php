@@ -92,7 +92,7 @@ if ( $page_featimg == true ) {
 										// foreach ( LL_STAFF_TESTOMONIALS as $stafftest ) {
 										?>
 											<div class="keen-slider__slide flex flex-col opacity-40 transition-opacity duration-500">
-												<div class="flex-grow rounded-lg bg-neutral-50 p-6 shadow-xs sm:p-8">
+												<div class="grow rounded-lg bg-neutral-50 p-6 shadow-xs sm:p-8">
 													<div class="flex items-center gap-4">
 														<div class="fa-4x">
 															<span class="fa-layers fa-fw">

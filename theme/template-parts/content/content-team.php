@@ -48,7 +48,7 @@ if ( $peepauthor ) {
 		<div class="peepgrid peep-<?php echo $peep_class; ?> peep-<?php echo esc_attr( $peep_level['value'] ); ?> | md:grid md:grid-cols-3 gap-4 lg:grid-cols-4 lg:gap-16">
 
 			<div class="peepgrid-a | pb-8 md:pt-2 md:pb-0 md:order-2">
-				<div class="headshot-wrapper | relative before:content-[''] before:absolute before:top-2 before:left-2 before:w-full before:h-full before:bg-transparent before:bg-repeat before:bg-[bottom_right] before:bg-headshot print:w-[2in] print:h-auto print:before:bg-none">
+				<div class="headshot-wrapper | relative before:content-[''] before:absolute before:top-2 before:left-2 before:w-full before:h-full before:bg-transparent before:bg-repeat before:bg-position-[bottom_right] before:bg-headshot print:w-[2in] print:h-auto print:before:bg-none">
 					<?php ll_people_headshot(); ?>
 				</div>
 			</div>

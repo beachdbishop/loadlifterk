@@ -19,7 +19,7 @@ if ( !is_page_template( 'tpl-landing-page-bare.php' ) ) {
 	<footer id="colophon" class="site-footer bg-neutral-800 dark:bg-neutral-950 wp-block-cover">
 
 		<div class="text-white on-darkbg print:text-neutral-700">
-		<?php /* <div class="on-darkbg bg-neutral-500 bg-phoenix-desert-small md:bg-phoenix-desert3 bg-fixed bg-no-repeat bg-cover text-white bg-blend-multiply lg:bg-[center_top_5rem] print:bg-none print:text-neutral-700"> */ ?>
+		<?php /* <div class="on-darkbg bg-neutral-500 bg-phoenix-desert-small md:bg-phoenix-desert3 bg-fixed bg-no-repeat bg-cover text-white bg-blend-multiply lg:bg-position-[center_top_5rem] print:bg-none print:text-neutral-700"> */ ?>
 
 			<div class="px-2 py-16 container lg:px-[16px]">
 				<div class="grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:gap-x-8">

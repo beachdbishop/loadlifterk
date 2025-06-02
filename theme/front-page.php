@@ -32,7 +32,7 @@ $hero_cta2_url									= get_field( 'll_hero_cta2_url' );
 
 			<?php if ( $featvideo ) { ?>
 				<div class="page-hero | wp-block-cover bg-white min-h-min  |  print:py-8">
-					<span aria-hidden="true" class="page-hero-overlay  |  z-[1] absolute top-0 right-0 bottom-0 left-0"></span>
+					<span aria-hidden="true" class="page-hero-overlay  |  z-1 absolute top-0 right-0 bottom-0 left-0"></span>
 
 					<video playsinline autoplay muted loop poster="<?php echo $featimg[0]; ?>" class="wp-block-cover__video-background print:hidden" data-object-fit="cover">
 						<source src="<?php echo $featvideo; ?>">
@@ -41,12 +41,12 @@ $hero_cta2_url									= get_field( 'll_hero_cta2_url' );
 
 					<div class="wp-block-cover__inner-container p-2 container flex flex-col gap-0  |  lg:p-4">
 
-						<div class="text-neutral-900 flex flex-col justify-center space-y-6  |  md:min-h-(--height-hero) print:min-h-min">
-							<h1 class="text-neutral-900 max-w-[20ch] leading-none tracking-light text-pretty shadow-neutral-50 drop-shadow-lg  |  lg:print:!text-xl print:text-black">
+						<div class="text-neutral-900 flex flex-col justify-center space-y-6  |  md:min-h-hero print:min-h-min">
+							<h1 class="text-neutral-900 leading-none tracking-light text-pretty shadow-neutral-50 drop-shadow-lg  |  lg:print:text-xl! print:text-black">
 								<?php echo $page_title; ?>
 							</h1>
 
-							<h2 class="leading-none text-pretty !text-neutral-700 shadow-neutral-50 drop-shadow-lg  |  md:max-w-5xl lg:print:!text-base print:!text-black"><?php echo $brand_message; ?></h2>
+							<h2 class="leading-none text-pretty text-neutral-700! shadow-neutral-50 drop-shadow-lg  |  md:max-w-5xl lg:print:text-base! print:text-black!"><?php echo $brand_message; ?></h2>
 
 							<?php if ( ( !empty( $hero_cta1_text ) ) && ( !empty( $hero_cta1_url ) ) ) : ?>
 							<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">

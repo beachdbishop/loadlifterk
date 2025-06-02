@@ -20,14 +20,14 @@ $peep_level 										= get_field( 'll_people_level' );
 <li class="person-card card-ic | group @container">
 	<div class="flex flex-col @2xs:flex-row gap-2 items-center h-full p-4 border rounded-lg bg-white border-neutral-200 dark:border-neutral-600 dark:bg-neutral-800">
 
-		<div class="card-text | flex-grow order-1">
+		<div class="card-text | grow order-1">
 			<?php
 			if ($peep_level['value'] !== '900') {
 				$title_classes = 'group-hover:text-brand-red';
-				echo sprintf( '<h3 class="text-xl lg:text-2xl !leading-none text-brand-gray-dark %1$s dark:text-neutral-400"><a href="%3$s" rel="bookmark">%2$s</a> <small>%4$s</small></h3>', $title_classes, get_the_title(), esc_url( get_permalink() ), get_field( 'll_people_designations' ) );
+				echo sprintf( '<h3 class="text-xl lg:text-2xl leading-none! text-brand-gray-dark %1$s dark:text-neutral-400"><a href="%3$s" rel="bookmark">%2$s</a> <small>%4$s</small></h3>', $title_classes, get_the_title(), esc_url( get_permalink() ), get_field( 'll_people_designations' ) );
 			} else {
 				$title_classes = '';
-				echo sprintf( '<h3 class="text-xl lg:text-2xl !leading-none text-brand-gray-dark %1$s dark:text-neutral-400">%2$s</h3>', $title_classes, get_the_title() );
+				echo sprintf( '<h3 class="text-xl lg:text-2xl leading-none! text-brand-gray-dark %1$s dark:text-neutral-400">%2$s</h3>', $title_classes, get_the_title() );
 			}
 
 			if( get_field( 'll_people_title' ) ) {

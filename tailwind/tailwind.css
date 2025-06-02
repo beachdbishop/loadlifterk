@@ -14,61 +14,65 @@
 /**
  * Add the WordPress file header.
  */
- @import "./custom/file-header.css";
+@import './custom/file-header.css' layer(utilities);
 /**
  * Add both the default Tailwind theme and your custom theme.
  */
-@import "./tailwind-theme.css";
+@import './tailwind-theme.css' layer(utilities);
 /**
  * Add custom `@font-face` rules.
  */
-@import "./custom/fonts.css";
+@import './custom/fonts.css' layer(utilities);
+
+/**
+* Add Tailwind’s Preflight styles followed by your custom base styles.
+*/
+@import 'tailwindcss/preflight' layer(utilities);
+@import './custom/base.css' layer(utilities);
+@import './custom/base-front-end-only.css' layer(utilities);
+
+/**
+* Add Tailwind's component classes and any component classes registered by
+* plugins, then add custom component classes.
+*
+* The `components.css` file is located in a subfolder to allow for additional
+* components files from, e.g., vendor packages. Those files need to be
+* manually added below.
+*/
+@import './custom/components/nav.css' layer(utilities);
+@import './custom/components/accordions.css' layer(utilities);
+@import './custom/components/block-ad.css' layer(utilities);
+@import './custom/components/block-callout.css' layer(utilities);
+@import './custom/components/breadcrumbs.css' layer(utilities);
+@import './custom/components/buttons.css' layer(utilities);
+@import './custom/components/card-flips.css' layer(utilities);
+@import './custom/components/cards-ic.css' layer(utilities);
+@import './custom/components/dps-parts.css' layer(utilities);
+@import './custom/components/footnotes.css' layer(utilities);
+@import './custom/components/forms.css' layer(utilities);
+@import './custom/components/grid-builder.css' layer(utilities);
+@import './custom/components/images.css' layer(utilities);
+@import './custom/components/lists.css' layer(utilities);
+@import './custom/components/notes.css' layer(utilities);
+@import './custom/components/page-hero.css' layer(utilities);
+@import './custom/components/pagination.css' layer(utilities);
+@import './custom/components/sep-and-spacers.css' layer(utilities);
+@import './custom/components/social-links.css' layer(utilities);
+@import './custom/components/tables.css' layer(utilities);
+@import './custom/components/wp-block-cover.css' layer(utilities);
+@import './custom/components/wp-block-quotes.css' layer(utilities);
+
+@import './custom/components/components.css' layer(utilities);
+@import './custom/components/zzz-dev.css' layer(utilities);
+
+/**
+* Add Tailwind's utility classes and any utility classes registered by
+* plugins, then add custom utility classes.
+*/
+@import 'tailwindcss/utilities' layer(utilities);
+@import './custom/utilities.css' layer(utilities);
+@utility container {
+	margin-inline: auto;
+}
+
 @source "./safelist.txt";
-
-/**
- * Add Tailwind’s Preflight styles followed by your custom base styles.
- */
-@import "tailwindcss/preflight";
-@import "./custom/base.css";
-@import "./custom/base-front-end-only.css";
-
-/**
- * Add Tailwind's component classes and any component classes registered by
- * plugins, then add custom component classes.
- *
- * The `components.css` file is located in a subfolder to allow for additional
- * components files from, e.g., vendor packages. Those files need to be
- * manually added below.
- */
-@import "./custom/components/nav.css";
-@import "./custom/components/accordions.css";
-@import "./custom/components/block-ad.css";
-@import "./custom/components/block-callout.css";
-@import "./custom/components/breadcrumbs.css";
-@import "./custom/components/buttons.css";
-@import "./custom/components/card-flips.css";
-@import "./custom/components/cards-ic.css";
-@import "./custom/components/dps-parts.css";
-@import "./custom/components/footnotes.css";
-@import "./custom/components/forms.css";
-@import "./custom/components/grid-builder.css";
-@import "./custom/components/images.css";
-@import "./custom/components/lists.css";
-@import "./custom/components/notes.css";
-@import "./custom/components/page-hero.css";
-@import "./custom/components/pagination.css";
-@import "./custom/components/sep-and-spacers.css";
-@import "./custom/components/social-links.css";
-@import "./custom/components/tables.css";
-@import "./custom/components/wp-block-cover.css";
-@import "./custom/components/wp-block-quotes.css";
-
-@import "./custom/components/components.css";
-@import "./custom/components/zzz-dev.css";
-
-/**
- * Add Tailwind's utility classes and any utility classes registered by
- * plugins, then add custom utility classes.
- */
-@import "tailwindcss/utilities";
-@import "./custom/utilities.css";

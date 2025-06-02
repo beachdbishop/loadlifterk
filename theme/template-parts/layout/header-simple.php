@@ -12,7 +12,7 @@
 <?php //   P R E H E A D E R   A R E A   ?>
 <?php get_template_part( 'template-parts/siteblocks/pre', 'header' ); ?>
 
-<header id="masthead" class="nav-header  |  bg-white sticky top-0 z-[39]  |  dark:bg-neutral-900 dark:text-neutral-100 dark:shadow-none md:shadow-neutral-400/50 md:shadow-md print:bg-white print:shadow-none">
+<header id="masthead" class="nav-header  |  bg-white sticky top-0 z-39  |  dark:bg-neutral-900 dark:text-neutral-100 dark:shadow-none md:shadow-neutral-400/50 md:shadow-md print:bg-white print:shadow-none">
 	<div class="flex items-center justify-between px-2 py-3  |  md:container lg:px-[16px]">
 
 		<div class="w-40 order-1  |  sm:w-50 lg:w-80">

@@ -24,7 +24,7 @@ if ( ( !is_page_template( LL_LP_TEMPLATES ) ) && ( $show_expanded_menus ) ) {
 get_template_part( 'template-parts/siteblocks/pre', 'footer' );
 ?>
 
-<footer id="colophon" class="site-footer  |  wp-block-cover alignfull ll-equal-vert-padding !px-0 bg-aqua-900  |  dark:bg-aqua-950 print:bg-white">
+<footer id="colophon" class="site-footer  |  wp-block-cover alignfull ll-equal-vert-padding px-0! bg-aqua-900  |  dark:bg-aqua-950 print:bg-white">
 
 	<div class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow px-2  |  lg:px-[16px]">
 		<div class="footer-grid  |  grid grid-cols-1 gap-x-8 gap-y-12 text-neutral-100 text-shadow shadow-neutral-900 z-10  |  md:grid-cols-2 md:items-center lg:grid-cols-5 print:hidden print:text-neutral-700">

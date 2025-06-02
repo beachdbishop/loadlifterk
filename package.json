@@ -2,7 +2,7 @@
 	"private": true,
 	"devDependencies": {
 		"@_tw/typography": "^0.5.17",
-		"@tailwindcss/cli": "^4.0.0",
+		"@tailwindcss/cli": "^4.1.8",
 		"@wordpress/prettier-config": "^4.16.0",
 		"adm-zip": "^0.5.16",
 		"archiver": "^7.0.1",
@@ -17,8 +17,8 @@
 		"pa11y-ci": "^3.1.0",
 		"pa11y-ci-reporter-html": "^7.0.0",
 		"prettier": "^3.4.2",
-		"prettier-plugin-tailwindcss": "^0.6.10",
-		"tailwindcss": "^4.0.4"
+		"prettier-plugin-tailwindcss": "^0.6.11",
+		"tailwindcss": "^4.1.8"
 	},
 	"scripts": {
 		"development:tailwind:frontend": "npx @tailwindcss/cli -i ./tailwind/tailwind.css -o ./theme/style.css",
