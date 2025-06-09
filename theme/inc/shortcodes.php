@@ -187,13 +187,13 @@ add_shortcode( 'designrough_plain', 'll_designrough_plain_shortcode' );
 function ll_designrough_dressy_shortcode() {
 	$html = '
 		<div class="offset-box offset-box-aqua  |  text-orient-950 grid gap-y-3 mb-12 p-8 relative z-[1]">
-			<h3 class="text-sm font-semibold">Qualified remote professionals</h3>
+			<h3 class="text-lg font-semibold">Qualified remote professionals</h3>
 			<p>Recruiting, hiring, and retaining qualified accounting talent is often time-consuming and costly. Through our trusted network in Mexico, we connect you with highly educated and experienced accountants, auditors, tax, and finance professionals at a significantly lower cost than traditional U.S. salaries.</p>
 
-			<h3 class="text-sm font-semibold">Cultural alignment</h3>
+			<h3 class="text-lg font-semibold">Cultural alignment</h3>
 			<p>Our sourced professionals are fluent in English and understand U.S. business standards and practices. This cultural alignment enables them to integrate quickly and function as an extension of your team.</p>
 
-			<h3 class="text-sm font-semibold">Real-time collaboration</h3>
+			<h3 class="text-lg font-semibold">Real-time collaboration</h3>
 			<p>Our location in Mexico allows us to operate in sync with your business. Unlike offshore providers with teams based across the globe, we work within U.S. time zones and are available to collaborate during your business hours.</p>
 		</div>
 

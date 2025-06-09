@@ -1,0 +1,108 @@
+:root :where(.img-grid) {
+	@apply flex flex-col flex-wrap items-center gap-8 my-8 place-content-center  md:place-content-start md:flex-row lg:gap-x-16;
+}
+:root :where(.img-grid.is-layout-flow) > * {
+	margin-block-start: unset;
+}
+
+
+.wp-block-group:is(.is-style-default-offset, .is-style-green-offset, .is-style-aqua-offset) {
+	display: grid;
+	margin-block-end: --spacing(8);
+	padding: --spacing(4);
+	position: relative;
+	z-index: 1;
+
+	&::before {
+		background-position:
+			0 0,
+			2px 2px;
+		background-size: 4px 4px;
+		border-radius: --spacing(2);
+		content: "";
+		display: block;
+		inset: 0;
+		position: absolute;
+		z-index: -1;
+	}
+
+	&::after {
+		background-position:
+			0 0,
+			2px 2px;
+		background-size: 4px 4px;
+		border-radius: calc(--spacing(2) + 6px/ 2);
+		content: "";
+		display: block;
+		inset: 6px calc(-1 * 6px) calc(-1 * 6px) 6px;
+		position: absolute;
+		z-index: -2;
+	}
+}
+
+.is-style-default-offset {
+	&::before {
+		background-image:
+			radial-gradient(var(--color-dot-neutral) 30%, transparent 30%),
+			radial-gradient(var(--color-dot-neutral) 30%, transparent 30%);
+		box-shadow:
+			0 0 0 --spacing(0.5) var(--color-neutral-300) inset,
+			calc(6px - --spacing(0.5)) calc(6px - --spacing(0.5)) 0 --spacing(0.5) #fff inset;
+	}
+
+	&::after {
+		background-image:
+			radial-gradient(var(--color-neutral-500) 30%,transparent 30%),
+			radial-gradient(var(--color-neutral-500) 30%,transparent 30%);
+	}
+}
+
+.is-style-green-offset {
+	&::before {
+		background-image:
+			radial-gradient(var(--color-dot-atlantis) 30%, transparent 30%),
+			radial-gradient(var(--color-dot-atlantis) 30%, transparent 30%);
+		box-shadow:
+			0 0 0 --spacing(0.5) var(--color-atlantis-300) inset,
+			calc(6px - --spacing(0.5)) calc(6px - --spacing(0.5)) 0 --spacing(0.5) #fff inset;
+	}
+
+	&::after {
+		background-image:
+			radial-gradient(var(--color-atlantis-500) 30%,transparent 30%),
+			radial-gradient(var(--color-atlantis-500) 30%,transparent 30%);
+	}
+}
+
+.is-style-aqua-offset {
+	&::before {
+		background-image:
+			radial-gradient(var(--color-dot-aqua) 30%, transparent 30%),
+			radial-gradient(var(--color-dot-aqua) 30%, transparent 30%);
+		box-shadow:
+			0 0 0 --spacing(0.5) var(--color-aqua-300) inset,
+			calc(6px - --spacing(0.5)) calc(6px - --spacing(0.5)) 0 --spacing(0.5) #fff inset;
+	}
+
+	&::after {
+		background-image:
+			radial-gradient(var(--color-aqua-500) 30%,transparent 30%),
+			radial-gradient(var(--color-aqua-500) 30%,transparent 30%);
+	}
+}
+
+
+
+
+@media screen and (width >= 48rem) {
+	.wp-block-group:is(.is-style-default-offset, .is-style-green-offset, .is-style-aqua-offset) {
+		margin-block-end: --spacing(12);
+		padding: --spacing(6);
+	}
+}
+
+@media screen and (width >= 64rem) {
+	.wp-block-group:is(.is-style-default-offset, .is-style-green-offset, .is-style-aqua-offset) {
+		padding: --spacing(8);
+	}
+}
