@@ -50,9 +50,6 @@ if ( $page_featimg == true ) {
 
 						<div class="ll-page-grid-area-b  |  my-16  |  md:my-0 md:col-span-3">
 
-							<h3 class="text-pink-500">block_template_part() test...</h3>
-							<?php block_template_part( 'img-grid-awards' ); ?>
-
 							<?php
 							$qargs = [
 								'post_type' => 'testimonial',
