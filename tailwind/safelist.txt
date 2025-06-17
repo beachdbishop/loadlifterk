@@ -3,3 +3,15 @@ gap-6
 order-2
 order-3
 order-4
+papercorners-4
+papercorners-6
+papercorners-8
+papercorners-12
+papercorners-16
+papercorners-24
+papercorners-36
+papercorners-48
+papercorners-60
+papercorners-72
+papercorners-84
+papercorners-144

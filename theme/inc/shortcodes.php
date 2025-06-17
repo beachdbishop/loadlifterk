@@ -136,12 +136,12 @@ function ll_designrough_plain_shortcode() {
 	<div class="flex items-start gap-4 md:gap-6">
 		<div class="mt-2 block">
 			<span class="fa-stack fa-2x">
-				<i class="text-atlantis-600 fa-solid fa-circle fa-stack-2x"></i>
-				<i class="fa-sharp fa-light fa-users fa-stack-1x text-white"></i>
+				<i class="text-neutral-200 fa-solid fa-circle fa-stack-2x"></i>
+				<i class="fa-sharp fa-light fa-users fa-stack-1x text-atlantis-800"></i>
 			</span>
 		</div>
 		<div>
-			<h3 class="">Qualified remote professionals</h3>
+			<h3 class="text-lg font-semibold">Qualified remote professionals</h3>
 			<p class="mt-0.5 text-neutral-700">
 				Recruiting, hiring, and retaining qualified accounting talent is often time-consuming and costly. Through our trusted network in Mexico, we connect you with highly educated and experienced professionals at a significantly lower cost than traditional U.S. salaries.
 			</p>
@@ -151,12 +151,12 @@ function ll_designrough_plain_shortcode() {
 	<div class="flex items-start gap-4 md:gap-6">
 		<div class="mt-2 block">
 			<span class="fa-stack fa-2x">
-				<i class="text-aqua-800 fa-solid fa-circle fa-stack-2x"></i>
-				<i class="fa-sharp fa-light fa-flag fa-stack-1x text-white"></i>
+				<i class="text-neutral-200 fa-solid fa-circle fa-stack-2x"></i>
+				<i class="fa-sharp fa-light fa-flag fa-stack-1x text-atlantis-800"></i>
 			</span>
 		</div>
 		<div>
-			<h3 class="">Cultural alignment</h3>
+			<h3 class="text-lg font-semibold">Cultural alignment</h3>
 			<p class="mt-0.5 text-neutral-700">
 				Our sourced professionals are fluent in English and understand U.S. business standards and practices. This cultural alignment enables them to integrate quickly and function as an extension of your team.
 			</p>
@@ -171,7 +171,7 @@ function ll_designrough_plain_shortcode() {
 			</span>
 		</div>
 		<div>
-			<h3 class="">Real-time collaboration</h3>
+			<h3 class="text-lg font-semibold">Real-time collaboration</h3>
 			<p class="mt-0.5 text-neutral-700">
 				Our location in Mexico allows us to operate in sync with your business. Unlike offshore providers with teams based across the globe, we work within U.S. time zones and are available to collaborate during your business hours.
 			</p>

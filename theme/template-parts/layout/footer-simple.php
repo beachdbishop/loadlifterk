@@ -48,7 +48,7 @@ get_template_part( 'template-parts/siteblocks/pre', 'footer' );
 					</a>
 				</div>
 				<?php echo ll_show_social_links(); ?>
-				<p class="font-head text-2xl"><a href="tel:<?php echo ll_format_phone_number( 15209087702 ); ?>" rel="nofollow" onclick="ga('send', 'event', 'Phone Call Tracking', 'Click to Call', '<?php echo ll_format_phone_number( 15209087702, 'us'); ?>', 0);"><?php echo  ll_format_phone_number( 15209087702, 'beach'); ?></a></p>
+				<p class="font-head text-lg leading-tight"><a href="tel:<?php echo ll_format_phone_number( 15209087702 ); ?>" rel="nofollow" onclick="ga('send', 'event', 'Phone Call Tracking', 'Click to Call', '<?php echo ll_format_phone_number( 15209087702, 'us'); ?>', 0);"><?php echo  ll_format_phone_number( 15209087702, 'beach'); ?></a></p>
 			</div>
 
 		</div>

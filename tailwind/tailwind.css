@@ -76,3 +76,10 @@
 @utility container {
 	margin-inline: auto;
 }
+@utility papercorners-* {
+	border-radius: --value(--papercorner-*) 0 --value(--papercorner-*);
+}
+.papercorners {
+	--_corner: clamp(3.75rem, 2.659rem + 5.45vw, 6.75rem);
+	border-radius: var(--_corner) 0 var(--_corner);
+}

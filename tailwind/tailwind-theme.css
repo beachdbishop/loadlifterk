@@ -92,6 +92,19 @@
 	--aspect-feat-43: 4.3 / 1;
 	--aspect-card: 2 / 1;
 
+	--papercorner-4: 4px;
+	--papercorner-6: 6px;
+	--papercorner-8: 8px;
+	--papercorner-12: 12px;
+	--papercorner-16: 16px;
+	--papercorner-24: 24px;
+	--papercorner-36: 36px;
+	--papercorner-48: 48px;
+	--papercorner-60: 60px;
+	--papercorner-72: 72px;
+	--papercorner-84: 84px;
+	--papercorner-144: 144px;
+
 	--animate-fade-in-from-top: fade-in-from-top 600ms ease-out;
 	--animate-move-bg: move-bg 16s ease infinite;
 
