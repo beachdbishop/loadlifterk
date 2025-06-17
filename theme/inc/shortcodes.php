@@ -142,7 +142,7 @@ function ll_designrough_plain_shortcode() {
 		</div>
 		<div>
 			<h3 class="text-lg font-semibold">Qualified remote professionals</h3>
-			<p class="mt-0.5 text-neutral-700">
+			<p class="mt-0.5 ">
 				Recruiting, hiring, and retaining qualified accounting talent is often time-consuming and costly. Through our trusted network in Mexico, we connect you with highly educated and experienced professionals at a significantly lower cost than traditional U.S. salaries.
 			</p>
 		</div>
@@ -157,7 +157,7 @@ function ll_designrough_plain_shortcode() {
 		</div>
 		<div>
 			<h3 class="text-lg font-semibold">Cultural alignment</h3>
-			<p class="mt-0.5 text-neutral-700">
+			<p class="mt-0.5 ">
 				Our sourced professionals are fluent in English and understand U.S. business standards and practices. This cultural alignment enables them to integrate quickly and function as an extension of your team.
 			</p>
 		</div>
@@ -172,7 +172,7 @@ function ll_designrough_plain_shortcode() {
 		</div>
 		<div>
 			<h3 class="text-lg font-semibold">Real-time collaboration</h3>
-			<p class="mt-0.5 text-neutral-700">
+			<p class="mt-0.5 ">
 				Our location in Mexico allows us to operate in sync with your business. Unlike offshore providers with teams based across the globe, we work within U.S. time zones and are available to collaborate during your business hours.
 			</p>
 		</div>

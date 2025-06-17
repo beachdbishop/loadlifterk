@@ -298,8 +298,8 @@ if ( ! function_exists( 'll_better_page_hero' ) ) :
 
 			<div class="wp-block-cover__inner-container  |  px-2  |  lg:px-4 print:px-0!">
 				<div class="text-neutral-900 flex flex-col justify-center space-y-6 min-h-[200px]  |  md:min-h-hero print:min-h-min">
-					<h1 class="text-neutral-900 leading-none tracking-light text-pretty shadow-neutral-50 drop-shadow-lg  |  lg:print:text-xl! print:text-black"><?php echo $h1; ?></h1>
-					<?php if ( !empty( $h2 ) ) { ?><h2 class="leading-none text-pretty text-neutral-700! shadow-neutral-50 drop-shadow-lg  |  md:max-w-5xl lg:print:text-base! print:text-black!"><?php echo $h2; ?></h2><?php } ?>
+					<h1 class="text-neutral-900 leading-none tracking-light text-pretty shadow-neutral-50 drop-shadow-lg  |  lg:print:text-xl! print:text-black dark:text-neutral-100"><?php echo $h1; ?></h1>
+					<?php if ( !empty( $h2 ) ) { ?><h2 class="leading-none text-pretty text-neutral-700! shadow-neutral-50 drop-shadow-lg  |  md:max-w-5xl lg:print:text-base! print:text-black! dark:text-atlantis-200!"><?php echo $h2; ?></h2><?php } ?>
 				</div>
 				<?php if ( !is_front_page() ) { ?>
 					<ol class="breadcrumbs  |  list-none mt-4 grow-0 font-head text-neutral-800  |  *:inline md:mt-0 print:mt-8"><?php echo bcn_display( true ); ?></ol>

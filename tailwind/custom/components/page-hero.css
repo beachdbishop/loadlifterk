@@ -11,3 +11,18 @@
 		background-image: linear-gradient(to right, --alpha(var(--color-white) / 100%) 0%, --alpha(var(--color-white) / 90%) 45%, --alpha(var(--color-white) / 20%) 85%, --alpha(var(--color-white) / 0%) 100%);
 	}
 }
+
+
+@media (prefers-color-scheme: dark) {
+	.page-hero-overlay {
+		background-color: --alpha(var(--color-neutral-900) / 85%);
+		background-image: none;
+	}
+}
+
+@media ((prefers-color-scheme: dark) and (width > theme(--breakpoint-md))) {
+	.page-hero-overlay {
+		background-color: unset;
+		background-image: linear-gradient(to right, --alpha(var(--color-neutral-900) / 100%) 0%, --alpha(var(--color-neutral-900) / 90%) 45%, --alpha(var(--color-neutral-900) / 20%) 85%, --alpha(var(--color-neutral-900) / 0%) 100%);
+	}
+}
