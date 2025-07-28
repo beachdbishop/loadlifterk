@@ -47,14 +47,20 @@ if ($peepauthor) {
 		<div
 			class="peepgrid peep-<?php echo $peep_class; ?> peep-<?php echo esc_attr($peep_level['value']); ?> | md:grid md:grid-cols-3 gap-4 lg:grid-cols-4 lg:gap-16">
 
-			<div class="peepgrid-a | pb-8 md:pt-2 md:pb-0 md:order-2">
-				<div
-					class="headshot-wrapper | relative before:content-[''] before:absolute before:top-2 before:left-2 before:w-full before:h-full before:bg-aqua-200 dark:before:bg-aqua-700 print:before:bg-none">
-					<?php ll_people_headshot(); ?>
+			<div class="peepgrid-a  |  pb-8  |  md:pt-2 md:pb-0 md:order-2">
+				<div>
+					<div
+						class="headshot-wrapper  |  relative mb-4  |  before:content-[''] before:absolute before:top-2 before:left-2 before:w-full before:h-full before:bg-aqua-200 dark:before:bg-aqua-700 print:before:bg-none">
+						<?php ll_people_headshot(); ?>
+					</div>
+					<?php if (get_field('ll_people_personal')) { ?>
+						<blockquote class="peepquote  |  font-head italic text-lg text-aqua-800 mb-4  |  dark:text-atlantis-200">
+							&quot;<?php echo esc_html(get_field('ll_people_personal')); ?>&quot;</blockquote>
+					<?php } ?>
 				</div>
 			</div>
 
-			<div class="peepgrid-b |  md:col-span-2 md:row-span-2 md:order-1 lg:col-span-3">
+			<div class="peepgrid-b  |  md:col-span-2 md:row-span-2 md:order-1 lg:col-span-3">
 				<header class="mb-4 flex flex-col items-center sm:flex-row sm:justify-between">
 					<div>
 						<?php
@@ -111,7 +117,7 @@ if ($peepauthor) {
 				</div>
 			</div>
 
-			<aside class="peepgrid-c |  md:mt-0 md:order-3">
+			<aside class="peepgrid-c  |  md:mt-0 md:order-3">
 
 				<?php get_template_part('template-parts/form/form-contact', 'sidebar'); ?>
 
@@ -121,31 +127,3 @@ if ($peepauthor) {
 	</div>
 
 </article>
-
-<?php // if ( $peeppostcount > 0 ) : 
-?>
-<!-- <section id="posts-by-<?php // the_ID(); 
-														?>" <?php // post_class( 'bg-neutral-100 md:py-6 lg:py-8 dark:bg-neutral-950' ); 
-																									?>>
-		<div class="px-2 container lg:px-[16px]">
-			<h3 id="posts" class="mt-2 mb-4 text-4xl md:mb-8 text-brand-blue head-last-bold dark:text-neutral-300">Recent Insights by <strong><?php // echo $person_archivelink; 
-																																																																				?></strong></h3>
-			<?php // echo do_shortcode( '[display-posts wrapper="ul" wrapper_class="dps-grid-4max cards-ic" layout="card-ic" author="'.$peepnicename.'" date_query_after="' .$recent_year_barrier. '-01-01" posts_per_page="3" orderby="modified"	no_posts_message="No recent posts found by this author." /]' ); 
-			?>
-		</div>
-	</section> -->
-<?php // endif; 
-?>
-
-<section class="full-bleed bg-aqua-50 ll-equal-vert-padding  |  dark:bg-atlantis-800 dark:text-neutral-200">
-	<div class="px-2 lg:px-[16px]">
-		<h3>On a personal note...</h3>
-		<?php if (get_field('ll_people_personal')) { ?>
-			<blockquote class="peepquote | font-head italic text-xl text-aqua-800  |  dark:text-atlantis-200">
-				&quot;<?php echo esc_html(get_field('ll_people_personal')); ?>&quot;</blockquote>
-		<?php } ?>
-		<!-- p>&hellip;</p>
-		<p>pictures?</p>
-		<p>Q&A?</p -->
-	</div>
-</section>

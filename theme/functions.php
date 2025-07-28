@@ -16,7 +16,7 @@ if (! defined('LL_VERSION')) {
 	 * to create your production build, the value below will be replaced in the
 	 * generated zip file with a timestamp, converted to base 36.
 	 */
-	define('LL_VERSION', '2.2.4');
+	define('LL_VERSION', '2.2.5');
 }
 
 if (! defined('LL_COMPANY_LEGAL_NAME')) {
