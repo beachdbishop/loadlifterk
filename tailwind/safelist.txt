@@ -1,5 +1,21 @@
 // See <a href="https://github.com/gregsullivan/_tw/discussions/153#discussioncomment-11939388">gregsullivan s comment on Github re: this file
+bg-atlantis-100
+bg-atlantis-200
+bg-atlantis-300
+bg-atlantis-500
+bg-atlantis-600
+bg-atlantis-800
+bg-atlantis-900
+bg-atlantis-950
+bg-aqua-200
+bg-aqua-300
+bg-aqua-400
+bg-aqua-500
+bg-aqua-600
+bg-aqua-700
+bg-aqua-950
 gap-6
+max-w-sm
 order-2
 order-3
 order-4

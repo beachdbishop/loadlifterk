@@ -10,3 +10,16 @@ img.todo {
 div.todo {
 	background-color: var(--color-pink-100);
 }
+
+.color-chips figure {
+	width: 7rem;
+}
+.color-chips figcaption {
+	text-align: center;
+}
+.color-chips figcaption span {
+	font-family: var(--font-mono);
+	font-size: var(--text-xs);
+	font-weight: 400;
+	line-height: 1.1;
+}
