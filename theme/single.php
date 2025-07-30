@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all single posts
  *
@@ -12,13 +13,13 @@
 get_header();
 ?>
 
-<main id="primary" class="bg-white dark:bg-neutral-900">
+<main id="primary" class="bg-white relative z-10 shadow-xl  |  lg:shadow-2xl dark:bg-neutral-900">
 
 	<?php
-	while ( have_posts() ) :
+	while (have_posts()) :
 		the_post();
 
-		get_template_part( 'template-parts/content/content', get_post_type() );
+		get_template_part('template-parts/content/content', get_post_type());
 
 	endwhile; // End of the loop.
 	?>
